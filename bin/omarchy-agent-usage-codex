@@ -528,7 +528,7 @@ def fetch_codex_rpc():
 
   try:
     proc = subprocess.Popen(
-      [codex, "-s", "read-only", "-a", "untrusted", "app-server"],
+      [codex, "-s", "read-only", "-a", "never", "app-server"],
       stdin=subprocess.PIPE,
       stdout=subprocess.PIPE,
       stderr=subprocess.DEVNULL,
@@ -556,9 +556,12 @@ def fetch_codex_rpc():
       entry = limit_window(window)
       if entry:
         result["limits"].append(entry)
-  except Exception as exc:
+  except Exception:
     result["usageStatusText"] = "Codex limits unavailable"
-    result["authHelpText"] = str(exc)
+    # RPC exception strings can be internal method names (for example,
+    # "initialize" on a timeout). Do not expose implementation details in
+    # the user-facing agents panel.
+    result["authHelpText"] = "Could not read Codex limits. Try refreshing."
   finally:
     try:
       proc.terminate()

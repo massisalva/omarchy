@@ -55,6 +55,21 @@ pass "Codex collector does not double-count cache or reasoning tokens"
   fail "Codex collector identifies itself with an empty limits list" "$result"
 pass "Codex collector identifies itself with an empty limits list"
 
+# App-server failures must not leak RPC method names into the visible panel.
+BROKEN_HOME=$(mktemp -d)
+trap 'rm -rf "$TEST_HOME" "$BROKEN_HOME"' EXIT
+mkdir -p "$BROKEN_HOME/bin"
+cat >"$BROKEN_HOME/bin/codex" <<'EOF'
+#!/bin/bash
+exit 1
+EOF
+chmod +x "$BROKEN_HOME/bin/codex"
+
+broken_result=$(HOME="$BROKEN_HOME" CODEX_HOME="$BROKEN_HOME/.codex" XDG_DATA_HOME="$BROKEN_HOME/.local/share" PATH="$BROKEN_HOME/bin:$PATH" "$ROOT/bin/omarchy-agent-usage-codex")
+[[ $(jq -r '.usageStatusText' <<<"$broken_result") == "Codex limits unavailable" ]] || fail "Codex collector reports unavailable limits" "$broken_result"
+[[ $(jq -r '.authHelpText' <<<"$broken_result") == "Could not read Codex limits. Try refreshing." ]] || fail "Codex collector hides internal RPC method names" "$broken_result"
+pass "Codex collector hides internal RPC method names on app-server failure"
+
 # Pi and omp can both spend a Codex subscription without creating native
 # Codex sessions. Their compatible JSONL transcripts must be included.
 PI_HOME=$(mktemp -d)
