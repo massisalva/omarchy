@@ -6,6 +6,8 @@
 
 set -euo pipefail
 
+source "$OMARCHY_PATH/default/bash/i18n"
+
 STATE_DIR="$HOME/.local/state/omarchy/windows"
 
 usage() {
@@ -40,14 +42,14 @@ notify_missing_width() {
   local key="$1"
   local workspace="$2"
 
-  omarchy-notification-send -g  "No saved width found for $key on workspace $workspace" "Use Super + Alt + Home to save one for this workspace."
+  omarchy-notification-send -g  "$(omarchy_t "No saved width found for %1 on workspace %2" "$key" "$workspace")" "$(omarchy_t "Use Super + Alt + Home to save one for this workspace.")"
 }
 
 notify_saved_width() {
   local key="$1"
   local workspace="$2"
 
-  omarchy-notification-send -g  "Saved width for $key on workspace $workspace" "Restore using Super + Home on this workspace."
+  omarchy-notification-send -g  "$(omarchy_t "Saved width for %1 on workspace %2" "$key" "$workspace")" "$(omarchy_t "Restore using Super + Home on this workspace.")"
 }
 
 hypr_dispatch() {

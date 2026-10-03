@@ -4,6 +4,8 @@
 # omarchy:args=[alacritty|foot|ghostty|kitty]
 # omarchy:examples=omarchy default terminal ghostty | omarchy default terminal kitty
 
+source "$OMARCHY_PATH/default/bash/i18n"
+
 installing=false
 if [[ ${1:-} == "--install" ]]; then
   installing=true
@@ -48,4 +50,4 @@ cat >~/.config/xdg-terminals.list <<EOF
 $desktop_id
 EOF
 
-omarchy-notification-send -g $glyph "$name is now the default terminal"
+omarchy-notification-send -g $glyph "$(omarchy_t "%1 is now the default terminal" "$name")"

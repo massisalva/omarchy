@@ -5,9 +5,11 @@
 
 set -e
 
+source "$OMARCHY_PATH/default/bash/i18n"
+
 # Install voxtype and configure it for use.
 
-if gum confirm "Install Voxtype + AI model (~150MB) to enable dictation?"; then
+if gum confirm "$(omarchy_t "Install Voxtype + AI model (~150MB) to enable dictation?")"; then
   omarchy-pkg-add wtype voxtype-bin
 
   # Setup voxtype
@@ -22,5 +24,5 @@ if gum confirm "Install Voxtype + AI model (~150MB) to enable dictation?"; then
 
   hyprctl reload >/dev/null
   omarchy-restart-shell
-  omarchy-notification-send -g  "Voxtype Dictation Ready" "Hold F9 to dictate (or toggle with Super + Ctrl + X)." -t 10000
+  omarchy-notification-send -g  "$(omarchy_t "Voxtype Dictation Ready")" "$(omarchy_t "Hold F9 to dictate (or toggle with Super + Ctrl + X).")" -t 10000
 fi
