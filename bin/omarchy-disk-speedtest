@@ -201,7 +201,7 @@ run_phase() {
   # The figure the dial settles on is the steady-state mean over the whole
   # phase, not whatever rate the final second happened to catch.
   if (( samples > 1 )); then
-    rate=$(awk -v before="$baseline_sectors" -v after="$after" -v start="$baseline_time" -v end="$end_time" 'BEGIN {
+    rate=$(awk -v before="$baseline_sectors" -v after="$after" -v start="${baseline_time/,/.}" -v end="${end_time/,/.}" 'BEGIN {
       secs = end - start
       if (secs <= 0 || after < before) print 0
       else print (after - before) * 512 / 1000000 / secs
