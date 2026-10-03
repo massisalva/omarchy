@@ -1,0 +1,479 @@
+#!/usr/bin/python3
+# omarchy:summary=Print the Antigravity usage record as JSON
+# omarchy:args=[--force] [--limits-only]
+# omarchy:hidden=true
+"""Collect Antigravity usage into one display-ready JSON record.
+
+Local stats come from ~/.gemini/antigravity-cli transcripts and history,
+plus any pi/omp and opencode sessions running on Google/Gemini providers.
+The agents panel only ever reads the JSON this prints.
+"""
+
+import argparse
+import fcntl
+import glob
+import json
+import os
+import re
+import shutil
+import sqlite3
+import subprocess
+import sys
+import tempfile
+import time
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+
+AGENT_ID = "agy"
+AGENT_NAME = "Antigravity"
+AUTH_HELP = "Run `agy` to start a session or authenticate."
+
+SCAN_REUSE_SECONDS = 20
+LIMITS_ONLY_REUSE_SECONDS = 900
+
+
+def local_day(value):
+  if value is None:
+    return datetime.now().strftime("%Y-%m-%d")
+  if isinstance(value, (int, float)):
+    if value > 10_000_000_000:
+      value = value / 1000
+    return datetime.fromtimestamp(value).strftime("%Y-%m-%d")
+  text = str(value)
+  try:
+    if text.endswith("Z"):
+      dt = datetime.fromisoformat(text[:-1] + "+00:00")
+    else:
+      dt = datetime.fromisoformat(text)
+    if dt.tzinfo is not None:
+      dt = dt.astimezone()
+    return dt.strftime("%Y-%m-%d")
+  except Exception:
+    return datetime.now().strftime("%Y-%m-%d")
+
+
+def number(value):
+  try:
+    return int(value or 0)
+  except Exception:
+    return 0
+
+
+def normalize_model_name(raw):
+  if not raw:
+    return "gemini-3.8-flash"
+  text = str(raw).strip()
+  m = re.search(r"Model Selection`?[^`]*to\s+([A-Za-z0-9_.\- ()]+?)(?:\.\s|\.$|\n)", text)
+  if m:
+    text = m.group(1).strip()
+  lower = text.lower().replace(" ", "-").replace("(", "").replace(")", "")
+  if "gemini-3.8-flash" in lower:
+    return "gemini-3.8-flash"
+  if "gemini-3.7-flash" in lower:
+    return "gemini-3.7-flash"
+  if "gemini-3.6-flash" in lower:
+    return "gemini-3.6-flash"
+  if "gemini-3.1-pro" in lower:
+    return "gemini-3.1-pro"
+  if "claude-sonnet-4-6" in lower:
+    return "claude-sonnet-4-6"
+  if "claude-opus-4-6" in lower:
+    return "claude-opus-4-6"
+  if "gpt-oss-120b" in lower:
+    return "gpt-oss-120b"
+  # Strip trailing variant like -high, -medium, -low if known gemini
+  cleaned = re.sub(r"-(high|medium|low)$", "", lower)
+  return cleaned if cleaned else "gemini-3.8-flash"
+
+
+def runtime_env():
+  home = str(Path.home())
+  path_parts = [
+    os.environ.get("PATH", ""),
+    f"{home}/.local/bin",
+    f"{home}/.npm-global/bin",
+    f"{home}/.local/share/mise/shims",
+  ]
+  env = os.environ.copy()
+  env["PATH"] = os.pathsep.join(part for part in path_parts if part)
+  return env
+
+
+ENV = runtime_env()
+
+
+def find_command(name):
+  return shutil.which(name, path=ENV.get("PATH"))
+
+
+def config_dir():
+  override = os.environ.get("AGY_CONFIG_DIR")
+  if override:
+    return Path(override)
+  return Path.home() / ".gemini" / "antigravity-cli"
+
+
+class AntigravityScanner:
+  def __init__(self):
+    self.now = datetime.now()
+    self.today = self.now.strftime("%Y-%m-%d")
+    self.recent_dates = [(self.now - timedelta(days=offset)).strftime("%Y-%m-%d") for offset in range(6, -1, -1)]
+    self.recent = {day: {"date": day, "messageCount": 0} for day in self.recent_dates}
+    self.today_tokens_by_model = {}
+    self.model_usage = {}
+    self.today_sessions = set()
+    self.active_days = set()
+
+    self.today_prompts = 0
+    self.today_total_tokens = 0
+    self.total_prompts = 0
+    self.total_sessions = set()
+    self.seen_messages = set()
+
+  def add_usage(self, day, session_key, model, input_tokens, output_tokens, cache_read, cache_write):
+    total = input_tokens + output_tokens + cache_read + cache_write
+    self.total_sessions.add(session_key)
+    self.active_days.add(day)
+
+    bucket = self.model_usage.setdefault(model, {
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+    })
+    bucket["inputTokens"] += input_tokens
+    bucket["outputTokens"] += output_tokens
+    bucket["cacheReadInputTokens"] += cache_read
+    bucket["cacheCreationInputTokens"] += cache_write
+
+    if day in self.recent:
+      self.recent[day]["messageCount"] += total
+
+    if day == self.today:
+      self.today_sessions.add(session_key)
+      self.today_total_tokens += total
+      self.today_tokens_by_model[model] = self.today_tokens_by_model.get(model, 0) + total
+
+  def scan_native_history(self, agy_dir):
+    history_file = agy_dir / "history.jsonl"
+    if not history_file.is_file():
+      return
+    try:
+      with history_file.open("r", encoding="utf-8", errors="replace") as f:
+        for line in f:
+          line = line.strip()
+          if not line:
+            continue
+          try:
+            entry = json.loads(line)
+          except Exception:
+            continue
+          self.total_prompts += 1
+          ts = entry.get("timestamp")
+          day = local_day(ts)
+          self.active_days.add(day)
+          cid = entry.get("conversationId") or f"history_{self.total_prompts}"
+          self.total_sessions.add(cid)
+          if day == self.today:
+            self.today_prompts += 1
+            self.today_sessions.add(cid)
+    except Exception:
+      pass
+
+  def scan_native_transcripts(self, agy_dir):
+    brain_dir = agy_dir / "brain"
+    if not brain_dir.is_dir():
+      return
+    pattern = str(brain_dir / "*" / ".system_generated" / "logs" / "transcript.jsonl")
+    for transcript_path in glob.glob(pattern):
+      cid = Path(transcript_path).parts[-4]
+      current_model = "gemini-3.8-flash"
+      try:
+        with open(transcript_path, "r", encoding="utf-8", errors="replace") as f:
+          for line in f:
+            line = line.strip()
+            if not line:
+              continue
+            try:
+              step = json.loads(line)
+            except Exception:
+              continue
+            stype = step.get("type")
+            if stype == "USER_INPUT":
+              content = step.get("content", "")
+              if "Model Selection" in content:
+                current_model = normalize_model_name(content)
+            elif stype == "PLANNER_RESPONSE":
+              step_idx = step.get("step_index", 0)
+              msg_key = f"{cid}:{step_idx}"
+              if msg_key in self.seen_messages:
+                continue
+              self.seen_messages.add(msg_key)
+
+              in_tok = number(step.get("input_tokens"))
+              out_tok = number(step.get("output_tokens"))
+              cache_read = number(step.get("cache_read_tokens"))
+              day = local_day(step.get("created_at"))
+              self.add_usage(day, cid, current_model, in_tok, out_tok, cache_read, 0)
+      except Exception:
+        continue
+
+  def scan_native_db_fallback(self, agy_dir):
+    # If history.jsonl was absent, count conversations from summaries DB
+    if self.total_prompts > 0:
+      return
+    db_file = agy_dir / "conversation_summaries.db"
+    if not db_file.is_file():
+      return
+    try:
+      conn = sqlite3.connect(db_file.resolve().as_uri() + "?mode=ro", uri=True, timeout=2)
+      conn.execute("PRAGMA query_only = ON")
+      for cid, count, modified in conn.execute(
+        "SELECT conversation_id, step_count, last_modified_time FROM conversation_summaries"
+      ):
+        day = local_day(modified)
+        self.total_prompts += max(1, count // 2)
+        self.total_sessions.add(cid)
+        self.active_days.add(day)
+        if day == self.today:
+          self.today_prompts += max(1, count // 2)
+          self.today_sessions.add(cid)
+      conn.close()
+    except Exception:
+      pass
+
+  def scan_pi_sessions(self):
+    roots = [
+      Path.home() / ".pi" / "agent" / "sessions",
+      Path.home() / ".omp" / "agent" / "sessions",
+    ]
+    rg = find_command("rg") or "rg"
+    for root in roots:
+      if not root.exists():
+        continue
+      try:
+        proc = subprocess.Popen(
+          [rg, "--json", "-e", r'"provider"\s*:\s*"(?:google|gemini)"', "-e", r'"api"\s*:\s*"(?:google|gemini)', str(root)],
+          stdout=subprocess.PIPE,
+          stderr=subprocess.DEVNULL,
+          text=True,
+          errors="replace",
+          env=ENV,
+        )
+      except FileNotFoundError:
+        return
+
+      assert proc.stdout is not None
+      for raw in proc.stdout:
+        try:
+          event = json.loads(raw)
+          if event.get("type") != "match":
+            continue
+          line = event.get("data", {}).get("lines", {}).get("text", "")
+          path = event.get("data", {}).get("path", {}).get("text", "pi-session")
+          entry = json.loads(line)
+        except Exception:
+          continue
+
+        if entry.get("type") != "message":
+          continue
+        message_key = path + ":" + str(entry.get("id") or "")
+        if message_key in self.seen_messages:
+          continue
+        self.seen_messages.add(message_key)
+        message = entry.get("message") or {}
+        if message.get("role") != "assistant":
+          continue
+        provider = str(message.get("provider") or "")
+        api = str(message.get("api") or "")
+        if provider not in ("google", "gemini") and not (api.startswith("google") or api.startswith("gemini")):
+          continue
+
+        usage = message.get("usage") or {}
+        if not usage:
+          continue
+        total = number(usage.get("totalTokens"))
+        input_tokens = number(usage.get("input"))
+        output_tokens = number(usage.get("output"))
+        cache_read = number(usage.get("cacheRead"))
+        cache_write = number(usage.get("cacheWrite"))
+        if total and not (input_tokens or output_tokens or cache_read or cache_write):
+          input_tokens = total
+        if not (input_tokens or output_tokens or cache_read or cache_write):
+          continue
+
+        day = local_day(entry.get("timestamp") or message.get("timestamp"))
+        self.add_usage(day, path, normalize_model_name(message.get("model")), input_tokens, output_tokens, cache_read, cache_write)
+
+      try:
+        proc.wait(timeout=1)
+      except Exception:
+        proc.kill()
+
+  def scan_opencode_sessions(self):
+    db = Path(os.environ.get("XDG_DATA_HOME") or (Path.home() / ".local" / "share")) / "opencode" / "opencode.db"
+    if not db.is_file():
+      return True
+    try:
+      conn = sqlite3.connect(db.resolve().as_uri() + "?mode=ro", uri=True, timeout=2)
+    except sqlite3.Error:
+      return False
+    try:
+      conn.execute("PRAGMA query_only = ON")
+      for session_id, raw in conn.execute(
+        "SELECT session_id, data FROM message"
+        " WHERE data LIKE '%\"role\"%:%\"assistant\"%'"
+        " AND (data LIKE '%\"providerID\"%:%\"google\"%' OR data LIKE '%\"providerID\"%:%\"gemini\"%')"
+        " AND CASE WHEN json_valid(data) THEN json_extract(data, '$.role') END = 'assistant'"
+        " AND CASE WHEN json_valid(data) THEN json_extract(data, '$.providerID') END IN ('google', 'gemini')"
+      ):
+        try:
+          entry = json.loads(raw)
+          if not isinstance(entry, dict) or entry.get("role") != "assistant":
+            continue
+          tokens = entry.get("tokens") or {}
+          cache = tokens.get("cache") or {}
+          input_tokens = number(tokens.get("input"))
+          output_tokens = number(tokens.get("output")) + number(tokens.get("reasoning"))
+          cache_read = number(cache.get("read"))
+          cache_write = number(cache.get("write"))
+          if not (input_tokens or output_tokens or cache_read or cache_write):
+            continue
+          day = local_day((entry.get("time") or {}).get("created"))
+          model = normalize_model_name(str(entry.get("modelID") or "").rstrip("/").split("/")[-1])
+        except Exception:
+          continue
+        self.add_usage(day, "opencode:" + str(session_id), model, input_tokens, output_tokens, cache_read, cache_write)
+    except sqlite3.Error:
+      return False
+    return True
+
+  def to_stats(self):
+    return {
+      "todayPrompts": self.today_prompts,
+      "todaySessions": len(self.today_sessions),
+      "todayTotalTokens": self.today_total_tokens,
+      "todayTokensByModel": self.today_tokens_by_model,
+      "recentDays": [self.recent[day] for day in self.recent_dates],
+      "totalPrompts": self.total_prompts,
+      "totalSessions": len(self.total_sessions),
+      "activeDays": len(self.active_days),
+      "activeDates": sorted(self.active_days),
+      "modelUsage": self.model_usage,
+    }
+
+
+def scan_cache_paths():
+  cache_dir = Path(os.environ.get("XDG_CACHE_HOME") or (Path.home() / ".cache")) / "omarchy" / "agents"
+  cache_dir.mkdir(parents=True, exist_ok=True)
+  return cache_dir / "agy-usage.json", cache_dir / "agy-usage.lock"
+
+
+def read_cached_stats(cache_file, max_age):
+  if max_age <= 0 or not cache_file.is_file():
+    return None
+  try:
+    if time.time() - cache_file.stat().st_mtime > max_age:
+      return None
+    with cache_file.open("r", encoding="utf-8") as f:
+      cached = json.load(f)
+  except Exception:
+    return None
+  if not isinstance(cached, dict) or cached.get("schemaVersion") != 1:
+    return None
+  today = datetime.now().strftime("%Y-%m-%d")
+  if cached.get("scanDate") != today:
+    return None
+  stats = cached.get("stats")
+  if not isinstance(stats, dict):
+    return None
+  if not all(k in stats for k in ("todayPrompts", "todayTotalTokens", "recentDays", "activeDates", "modelUsage")):
+    return None
+  return stats
+
+
+def write_cached_stats(cache_file, stats):
+  try:
+    today = datetime.now().strftime("%Y-%m-%d")
+    payload = json.dumps({"schemaVersion": 1, "scanDate": today, "stats": stats}, separators=(",", ":"))
+    tmp = tempfile.NamedTemporaryFile("w", dir=str(cache_file.parent), delete=False, encoding="utf-8")
+    tmp.write(payload)
+    tmp.flush()
+    os.fsync(tmp.fileno())
+    tmp.close()
+    os.replace(tmp.name, str(cache_file))
+  except Exception as exc:
+    print(f"omarchy-agent-usage-agy: could not write usage cache ({exc})", file=sys.stderr)
+
+
+def run_local_scans():
+  scanner = AntigravityScanner()
+  agy_dir = config_dir()
+  scanner.scan_native_history(agy_dir)
+  scanner.scan_native_transcripts(agy_dir)
+  scanner.scan_native_db_fallback(agy_dir)
+  scanner.scan_pi_sessions()
+  complete = scanner.scan_opencode_sessions()
+  return scanner.to_stats(), complete
+
+
+def cached_local_stats(max_age):
+  try:
+    cache_file, lock_file = scan_cache_paths()
+    cached = read_cached_stats(cache_file, max_age)
+    if cached is not None:
+      return cached
+
+    with lock_file.open("w") as lock:
+      fcntl.flock(lock, fcntl.LOCK_EX)
+      cached = read_cached_stats(cache_file, max_age)
+      if cached is not None:
+        return cached
+      stats, complete = run_local_scans()
+      if complete:
+        write_cached_stats(cache_file, stats)
+      return stats
+  except Exception as exc:
+    print(f"omarchy-agent-usage-agy: cache unavailable ({exc}); scanning directly", file=sys.stderr)
+    stats, _ = run_local_scans()
+    return stats
+
+
+def main():
+  parser = argparse.ArgumentParser(description="Collect Antigravity usage record")
+  parser.add_argument("--force", action="store_true", help="force rescan")
+  parser.add_argument("--limits-only", action="store_true", help="limits only refresh")
+  args = parser.parse_args()
+
+  max_age = 0 if args.force else (LIMITS_ONLY_REUSE_SECONDS if args.limits_only else SCAN_REUSE_SECONDS)
+  stats = cached_local_stats(max_age)
+
+  agy_dir = config_dir()
+  is_installed = bool(find_command("agy"))
+  has_data = number(stats.get("totalPrompts")) > 0 or len(stats.get("modelUsage", {})) > 0
+  ready = is_installed or has_data or agy_dir.is_dir()
+
+  usage_status_text = ""
+  auth_help_text = ""
+  if not ready:
+    usage_status_text = "Not configured"
+    auth_help_text = AUTH_HELP
+
+  record = {
+    "schemaVersion": 1,
+    "id": AGENT_ID,
+    "name": AGENT_NAME,
+    "updatedAt": datetime.now(timezone.utc).isoformat(),
+    "ready": ready,
+    "hasLocalStats": True,
+    "tierLabel": "Active" if ready else "",
+    "usageStatusText": usage_status_text,
+    "authHelpText": auth_help_text,
+    "limits": [],
+  }
+  record.update(stats)
+  print(json.dumps(record, separators=(",", ":")))
+
+
+if __name__ == "__main__":
+  main()
