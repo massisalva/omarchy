@@ -1,44 +1,44 @@
-# Instalación en arranque dual
+# Instalación con arranque dual
 
-Puedes instalar Omarchy en una sola partición junto a Windows u otras instalaciones.
+Podés instalar Omarchy en una sola partición junto a Windows u otras instalaciones.
 
-Este método de instalación también trae cifrado LUKS para la partición por defecto, así que en la práctica no hay diferencia con respecto a la unidad completa y simplemente requiere espacio libre disponible en el disco.
+Este método de instalación también trae cifrado LUKS para la partición por defecto, así que en la práctica no cambia nada respecto del disco completo; solo necesita espacio libre en el disco.
 
-## Hacer espacio en Windows
+## Hacer lugar en Windows
 
-Para instalar junto a Windows, escribe `disk management` en el menú de inicio y selecciona la opción **Create and format hard disk partitions**.
+Para instalar junto a Windows, escribí `disk management` en el menú Inicio y elegí la opción **Create and format hard disk partitions**.
 
  ![dual-boot-1](images/dual-boot-1.webp)
 
-Encuentra la partición adecuada, haz clic derecho y elige **Shrink Volume**.
+Buscá la partición que corresponda, hacé clic derecho y elegí **Shrink Volume**.
 
 ![dual-boot-2](images/dual-boot-2.webp)
 
- Ingresa la cantidad en que quieres reducir el volumen. Ten en cuenta que este será el tamaño de tu futura instalación de Omarchy, incluida la partición de arranque.
+ Escribí cuánto querés achicar el volumen. Tené en cuenta que ese va a ser el tamaño de tu futura instalación de Omarchy, partición de arranque incluida.
 
  ![dual-boot-3](images/dual-boot-3.webp)
 
-Cuando termines, deberías ver algo como esto, donde la sección de 50 GB es donde instalaremos Omarchy en este ejemplo.
+Cuando termines, deberías ver algo así, donde la sección de 50 GB es donde vamos a instalar Omarchy en este ejemplo.
 
  ![dual-boot-4](images/dual-boot-4.webp)
 
 ## Instalar Omarchy
 
-El proceso de instalación de Omarchy es en la práctica igual al normal. Después de seleccionar tu disco, se te dará la opción **Free space install**. Selecciona esa opción para evitar borrar el disco completo.
+La instalación de Omarchy es prácticamente igual a la normal. Después de elegir el disco, te va a aparecer la opción **Free space install**. Elegila para no borrar el disco entero.
 
  ![dual-boot-5](images/dual-boot-5.webp)
 
-Confirma que todo se vea bien y espera a que termine la instalación como siempre. Aquí también es donde podrías elegir instalar sin cifrado (no recomendado), igual que en una instalación de unidad completa.
+Confirmá que todo esté bien y esperá a que termine la instalación como siempre. Acá también podrías elegir instalar sin cifrado (no recomendado), igual que en una instalación de disco completo.
  ![dual-boot-6](images/dual-boot-6.webp)
 
-## Agregar otras instalaciones al cargador de arranque
+## Agregar otras instalaciones al gestor de arranque
 
-Al terminar tu instalación de Omarchy, notarás que el cargador de arranque Limine es ahora el predeterminado. Con esto, también puedes agregar opciones a Limine para tus otras instalaciones, como Windows.
+Al terminar la instalación de Omarchy, vas a ver que ahora el gestor de arranque predeterminado es Limine. Así que también podés agregarle a Limine opciones para tus otras instalaciones, como Windows.
 
-Para hacerlo, ejecuta `limine-scan` y sigue las instrucciones para agregar lo que quieras a tu configuración de limine. Entonces, al arrancar, verás tus opciones normales de Omarchy, además del Administrador de arranque de Windows y otros.
+Para eso, ejecutá `limine-scan` y seguí las instrucciones para agregar lo que quieras a la configuración de limine. Después, al arrancar, vas a ver tus opciones normales de Omarchy, más el Administrador de arranque de Windows y los demás.
 
 ## Bitlocker
 
-Es importante tener en cuenta que este método de instalación no es compatible con Bitlocker, ya que cifra toda la unidad, no solo la partición. Si te encuentras con un error que indica que Bitlocker está activado, arranca en Windows, entra a **Settings -> Privacy & Security -> Device encryption** y desactiva Bitlocker. Descifrar la unidad puede tardar un rato.
+Ojo: este método de instalación no es compatible con Bitlocker, porque Bitlocker cifra todo el disco, no solo la partición. Si te aparece un error que dice que Bitlocker está activado, arrancá Windows, entrá a **Settings -> Privacy & Security -> Device encryption** y desactivá Bitlocker. Descifrar el disco puede tardar un rato.
 
  ![dual-boot-7](images/dual-boot-7.webp)

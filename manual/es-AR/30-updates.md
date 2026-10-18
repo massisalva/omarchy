@@ -1,37 +1,37 @@
 # Actualizaciones
 
-Omarchy y tus paquetes se mantienen actualizados mediante _Actualizar > Omarchy_ en el menú de Omarchy (`Super + Space`).
+Omarchy y tus paquetes se mantienen al día con _Actualizar > Omarchy_ en el menú de Omarchy (`Super + Space`).
 
-Omarchy mismo se instala como paquetes normales de pacman desde el [Repositorio de paquetes de Omarchy](https://github.com/omacom-io/omarchy-pkgs), así que una actualización instala [la última versión de Omarchy](https://github.com/omacom/omarchy/releases), ejecuta cualquier migración pendiente para poner tu sistema en sincronía con lo más reciente, y actualiza todos los paquetes del sistema desde el [Mirror de Arch de Omarchy](https://github.com/omacom-io/omarchy-mirror) y el [AUR](https://aur.archlinux.org/) (si has instalado algún paquete del AUR).
+Omarchy en sí se instala como paquetes comunes de pacman desde el [Repositorio de paquetes de Omarchy](https://github.com/omacom-io/omarchy-pkgs), así que una actualización instala [la última versión de Omarchy](https://github.com/omacom/omarchy/releases), corre las migraciones pendientes para poner tu sistema al día y actualiza todos los paquetes del sistema desde el [Mirror de Arch de Omarchy](https://github.com/omacom-io/omarchy-mirror) y el [AUR](https://aur.archlinux.org/) (si instalaste algún paquete del AUR).
 
-Cuando se publiquen nuevas versiones, aparecerá un ícono de flecha circular a la derecha de tu reloj. Haz clic en él y el proceso de actualización comenzará.
+Cuando salen versiones nuevas, aparece un ícono de flecha circular a la derecha del reloj. Hacé clic y arranca la actualización.
 
 ![update-available](images/update-available.webp)
 
 ### Cuatro canales
 
-Omarchy se actualiza por cuatro canales: stable, RC, edge y dev. Las instalaciones nuevas empiezan en el canal stable, que sigue las [versiones oficiales](https://github.com/omacom/omarchy/releases/), así como el [mirror estable de Arch de Omarchy](https://github.com/omacom-io/omarchy-mirror) que va un mes detrás de lo más reciente, para que podamos detectar cualquier incompatibilidad nueva que requiera cambios de configuración antes de que cause problemas a la gente.
+Omarchy se actualiza por cuatro canales: stable, RC, edge y dev. Las instalaciones nuevas arrancan en el canal stable, que sigue las [versiones oficiales](https://github.com/omacom/omarchy/releases/) y el [mirror estable de Arch de Omarchy](https://github.com/omacom-io/omarchy-mirror), que va un mes atrás de lo último, así podemos detectar cualquier incompatibilidad nueva que necesite cambios de configuración antes de que le cause problemas a la gente.
 
-Pero si quieres ayudar a detectar esos posibles problemas, puedes usar el canal edge. Eso mantendrá tus paquetes de Omarchy siguiendo las últimas compilaciones de desarrollo, y te permite actualizar a los últimos paquetes de Arch en cuanto estén disponibles. Solo deberías hacer esto si tienes experiencia con Linux y sabes cómo recuperar un sistema que tiene problemas.
+Pero si querés ayudar a encontrar esos problemas, podés usar el canal edge. Así tus paquetes de Omarchy siguen las últimas compilaciones de desarrollo, y podés actualizar a los últimos paquetes de Arch apenas salen. Hacelo solo si tenés experiencia con Linux y sabés cómo recuperar un sistema con problemas.
 
-Antes de cualquier nueva versión mayor, haremos la validación final usando el canal RC. Si te interesa ayudar con el pulido final, ven a pasar el rato en #omarchy-release-candidates en el Discord.
+Antes de cada versión mayor, hacemos la validación final con el canal RC. Si te interesa ayudar con los últimos retoques, date una vuelta por #omarchy-release-candidates en el Discord.
 
-Por último, está el canal dev, que vincula Omarchy directamente a una copia git del código fuente en `~/omarchy`, combinada con los paquetes edge. Solo deberías usar este canal si eres un usuario experimentado de Linux, trabajas directamente en Omarchy y estás dispuesto a tolerar que algo se rompa.
+Por último está el canal dev, que conecta Omarchy directamente a una copia git del código fuente en `~/omarchy`, junto con los paquetes de edge. Usalo solo si sos un usuario de Linux con experiencia, trabajás directamente en Omarchy y te bancás que algo se rompa.
 
-Puedes cambiar entre canales usando _Actualizar > Canal_ desde el menú de Omarchy (o `omarchy-channel-set` en la terminal).
+Podés cambiar de canal con _Actualizar > Canal_ desde el menú de Omarchy (o con `omarchy-channel-set` en la terminal).
 
 ### Actualizaciones de firmware
 
-Tus paquetes no son lo único que se queda viejo. Muchas laptops y periféricos distribuyen firmware de BIOS, SSD y dock mediante el Linux Vendor Firmware Service, y _Actualizar > Firmware_ en el menú de Omarchy obtendrá e instalará lo que tu hardware tenga esperando. Instala `fwupd` la primera vez que lo ejecutas. Mucho firmware solo se puede escribir durante un reinicio, así que no te sorprendas si te piden uno.
+Tus paquetes no son lo único que queda viejo. Muchas notebooks y periféricos distribuyen firmware de BIOS, SSD y docks a través del Linux Vendor Firmware Service, y _Actualizar > Firmware_ en el menú de Omarchy busca e instala lo que tu hardware tenga pendiente. La primera vez que lo usás instala `fwupd`. Mucho firmware solo se puede escribir durante un reinicio, así que no te sorprendas si te pide uno.
 
-### Advertencia sobre actualizaciones directas con pacman/yay
+### Ojo con actualizar directo con pacman/yay
 
-Si ya estás familiarizado con Arch, podrías tener la tentación de simplemente ejecutar `pacman -Syu` o `yay -Syu` por tu cuenta, pero si haces eso, te perderás la instantánea, las migraciones y las actualizaciones de configuración que Omarchy ejecuta junto con los paquetes nuevos. Por eso Omarchy en realidad detendrá una actualización directa del sistema y te dirigirá a `omarchy update` en su lugar. (Si de verdad sabes lo que haces, la protección te dirá cómo omitirla para una sola transacción).
+Si ya conocés Arch, capaz te tienta ejecutar `pacman -Syu` o `yay -Syu` por tu cuenta, pero si lo hacés te perdés la instantánea, las migraciones y las actualizaciones de configuración que Omarchy corre junto con los paquetes nuevos. Por eso Omarchy frena una actualización directa del sistema y te manda a usar `omarchy update`. (Si de verdad sabés lo que hacés, la protección te dice cómo saltearla para una sola transacción).
 
-### Revertir actualizaciones malas
+### Deshacer una mala actualización
 
-Si alguna vez tienes un problema después de hacer una actualización, puedes revertir tu sistema a la instantánea tomada antes de la actualización. Solo reinicia y elige en el menú de arranque la instantánea de antes de que empezaras la actualización.
+Si alguna vez tenés un problema después de actualizar, podés volver tu sistema a la instantánea que se sacó antes de la actualización. Reiniciá y, en el menú de arranque, elegí la instantánea de antes de empezar la actualización.
 
 ![bootloader](images/bootloader.webp)
 
-Si de algún modo tus archivos de configuración se han corrompido, también puedes realizar una reinstalación de Omarchy usando `omarchy reinstall` en la terminal. Esto reinstalará todos los paquetes predeterminados de Omarchy, te pondrá en stable y bajará de versión cualquier paquete que sea demasiado nuevo, y restablecerá todos los archivos de configuración. ¡Ten en cuenta que al hacer esto se sobrescribirán todos tus cambios de configuración de usuario sobre los valores predeterminados de Omarchy!
+Si por algún motivo tus archivos de configuración se rompieron, también podés reinstalar Omarchy con `omarchy reinstall` en la terminal. Eso reinstala todos los paquetes predeterminados de Omarchy, te pasa a stable y baja de versión cualquier paquete demasiado nuevo, y restablece todos los archivos de configuración. ¡Tené en cuenta que esto pisa todos los cambios que le hayas hecho a la configuración predeterminada de Omarchy!

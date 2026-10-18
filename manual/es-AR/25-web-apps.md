@@ -1,91 +1,91 @@
-# Aplicaciones web
+# Web apps
 
-Puedes agregar tus propias aplicaciones web usando _Instalar > Aplicación web_ en el menú de Omarchy (`Super + Space`). Te pedirá el nombre de la aplicación, la URL de la aplicación y la URL del ícono, si no puede obtenerla mediante el favicon. Puedes conseguir excelentes íconos PNG para muchas aplicaciones web populares en [Dashboard Icons](https://dashboardicons.com).
+Podés agregar tus propias web apps con _Instalar > Aplicación web_ en el menú de Omarchy (`Super + Space`). Te va a pedir el nombre de la app, su URL y la URL del ícono, si no lo puede sacar del favicon. Hay íconos PNG buenísimos para muchas web apps populares en [Dashboard Icons](https://dashboardicons.com).
 
-Después serán accesibles desde el lanzador de aplicaciones (`Super + Space`), y usarán la hermosa ventana de aplicación web sin marco.
+Después vas a encontrarlas en el lanzador de aplicaciones (`Super + Space`), y usan la hermosa ventana de web app sin bordes.
 
-Si quieres quitar una aplicación web, solo ve a _Quitar > Aplicación web_ en el menú de Omarchy.
+Si querés sacar una web app, andá a _Eliminar > Aplicación web_ en el menú de Omarchy.
 
-Es mejor que inicies sesión en todas tus cuentas usando un navegador normal antes de usar los atajos de aplicaciones web. El delgado marco contenedor no funciona bien con 1password, así que es más fácil haber iniciado sesión directamente primero.
+Conviene que inicies sesión en todas tus cuentas con un navegador común antes de usar los atajos de las web apps. El marco finito que las envuelve no se lleva bien con 1password, así que es más fácil haber iniciado sesión directamente antes.
 
-Todos los atajos de teclado para estas aplicaciones web se pueden cambiar en `~/.config/hypr/bindings.lua`.
+Todos los atajos de teclado de estas web apps se pueden cambiar en `~/.config/hypr/bindings.lua`.
 
-Cuando estés en una aplicación web, puedes copiar la URL actual al portapapeles usando `Shift + Alt + L`.
+Cuando estás en una web app, podés copiar la URL actual al portapapeles con `Shift + Alt + L`.
 
-De forma predeterminada, Omarchy ya viene con un surtido de aplicaciones predeterminadas:
+Omarchy ya viene de fábrica con un surtido de apps:
 
 ## HEY
 
-[HEY](https://www.hey.com/) es un servicio de correo electrónico y calendario que sirve como una gran alternativa para la gente cansada de Gmail, Outlook o Apple Mail. Lo hace [37signals](https://37signals.com/), donde se originó Omarchy.
+[HEY](https://www.hey.com/) es un servicio de mail y calendario que es una gran alternativa para la gente cansada de Gmail, Outlook o Apple Mail. Lo hace [37signals](https://37signals.com/), donde nació Omarchy.
 
-Puedes iniciar HEY Email usando `Super + Shift + E`, saltar directo a redactar un correo nuevo usando `Super + Shift + Alt + E`, e iniciar HEY Calendar usando `Super + Shift + C`.
+Abrís HEY Email con `Super + Shift + E`, vas directo a escribir un mail nuevo con `Super + Shift + Alt + E` y abrís HEY Calendar con `Super + Shift + C`.
 
 ## Basecamp
 
-[Basecamp](https://basecamp.com/) es un servicio de gestión de proyectos que ayuda a los equipos pequeños a moverse más rápido y avanzar más. En lugar de unir una mezcolanza de Trello, Slack, Asana, Notion o lo que sea, puedes tenerlo todo en un solo lugar con Basecamp. Lo hace [37signals](https://37signals.com/), donde se originó Omarchy.
+[Basecamp](https://basecamp.com/) es un servicio de gestión de proyectos que ayuda a los equipos chicos a moverse más rápido y avanzar más. En vez de emparchar una mezcla de Trello, Slack, Asana, Notion o lo que sea, tenés todo en un solo lugar con Basecamp. Lo hace [37signals](https://37signals.com/), donde nació Omarchy.
 
-Puedes iniciar Basecamp usando el lanzador de aplicaciones (`Super + Space`)
+Abrís Basecamp desde el lanzador de aplicaciones (`Super + Space`)
 
 ## ChatGPT
 
 [ChatGPT](https://chatgpt.com) es el chatbot de IA más popular del mundo.
 
-Puedes iniciar ChatGPT usando `Super + Shift + A`.
+Abrís ChatGPT con `Super + Shift + A`.
 
 ## Grok
 
 [Grok](https://grok.com) es el chatbot de xAI.
 
-Puedes iniciar Grok usando `Super + Shift + Alt + A`.
+Abrís Grok con `Super + Shift + Alt + A`.
 
 ## WhatsApp
 
 [WhatsApp](https://www.whatsapp.com/) es uno de los servicios de mensajería más populares del mundo, y la versión web es una gran opción para Linux.
 
-Puedes iniciar WhatsApp usando `Super + Shift + Alt + G`.
+Abrís WhatsApp con `Super + Shift + Alt + G`.
 
-## Aplicaciones de Google
+## Apps de Google
 
-Google Messages, Google Photos, Google Maps y Google Contacts también están incluidos como aplicaciones web.
+Google Messages, Google Photos, Google Maps y Google Contacts también vienen como web apps.
 
-Puedes iniciar Google Messages usando `Super + Shift + Ctrl + G`, Google Photos usando `Super + Shift + P`, y Google Maps usando `Super + Shift + S`. Google Contacts está disponible desde el lanzador de aplicaciones (`Super + Space`).
+Abrís Google Messages con `Super + Shift + Ctrl + G`, Google Photos con `Super + Shift + P` y Google Maps con `Super + Shift + Alt + S`. Google Contacts está en el lanzador de aplicaciones (`Super + Space`).
 
 ## X
 
-X es donde estallan las noticias.
+X es donde salen primero las noticias.
 
-Puedes iniciar X usando `Super + Shift + X` e ir directo a escribir una publicación nueva con `Super + Shift + Alt + X`.
+Abrís X con `Super + Shift + X` y vas directo a escribir un posteo nuevo con `Super + Shift + Alt + X`.
 
 ## YouTube
 
 [YouTube](https://youtube.com/) es la plataforma de video más popular del mundo.
 
-Puedes iniciar YouTube usando `Super + Shift + Y`.
+Abrís YouTube con `Super + Shift + Y`.
 
 ## Zoom
 
-[Zoom](https://zoom.us/) es el sistema de videochat más popular usado en EE. UU. Grandes conexiones en todo el mundo. Y se pueden hacer reuniones de 40 minutos sin una cuenta de pago. Omarchy envuelve el cliente web de Zoom, y los enlaces de reuniones de Zoom se abrirán directo en él.
+[Zoom](https://zoom.us/) es el sistema de videollamadas más usado en Estados Unidos. Muy buenas conexiones en todo el mundo. Y se pueden hacer reuniones de 40 minutos sin cuenta paga. Omarchy envuelve el cliente web de Zoom, y los enlaces a reuniones de Zoom se abren directo ahí.
 
-Inicias Zoom usando el lanzador de aplicaciones (`Super + Space`).
+Abrís Zoom desde el lanzador de aplicaciones (`Super + Space`).
 
 ## Discord
 
-[Discord](https://discord.com/) es donde se reúne la mayoría de las comunidades de videojuegos y código abierto, incluida [la propia de Omarchy](https://discord.gg/tXFUdasqhY).
+[Discord](https://discord.com/) es donde se junta la mayoría de las comunidades de videojuegos y de código abierto, incluida [la de Omarchy](https://discord.gg/tXFUdasqhY).
 
-Inicias Discord usando el lanzador de aplicaciones (`Super + Space`).
+Abrís Discord desde el lanzador de aplicaciones (`Super + Space`).
 
-## Aplicaciones de Microsoft
+## Apps de Microsoft
 
-Selecciona _Instalar > Servicio > Microsoft_ para agregar Outlook, Word, Excel, PowerPoint, Teams y OneDrive como aplicaciones web. Cada aplicación tiene su propio lanzador y se abre directamente, usando las URL comerciales de Microsoft 365 y tu perfil de navegador existente. Se abren en las mismas ventanas de aplicación de navegador que las demás aplicaciones web de Omarchy; no instalan el cliente separado de Teams para Linux.
+Elegí _Instalar > Servicio > Microsoft_ para agregar Outlook, Word, Excel, PowerPoint, Teams y OneDrive como web apps. Cada app tiene su propio lanzador y se abre directamente, con las URLs comerciales de Microsoft 365 y el perfil de navegador que ya tenés. Se abren en las mismas ventanas de navegador que las demás web apps de Omarchy; no instalan el cliente aparte de Teams para Linux.
 
-Quita el paquete con _Quitar > Servicio > Microsoft_, o quita aplicaciones individuales con _Quitar > Aplicación web_. También puedes instalar solo las aplicaciones que quieras mediante _Instalar > Aplicación web_.
+Sacá el paquete completo con _Eliminar > Servicio > Microsoft_, o apps sueltas con _Eliminar > Aplicación web_. También podés instalar solo las apps que quieras con _Instalar > Aplicación web_.
 
-Para una nube gubernamental o soberana, edita la URL en la línea `Exec=` del lanzador correspondiente en `~/.local/share/applications/`, como `Microsoft Teams.desktop`, usando la URL que te dé tu organización. Escribe cualquier `%` literal en esa línea como `%%`. Los cambios se aplican en el próximo lanzamiento. Ejecutar de nuevo el instalador del paquete reemplaza sus lanzadores con las URL predeterminadas.
+Para una nube gubernamental o soberana, editá la URL en la línea `Exec=` del lanzador que corresponda en `~/.local/share/applications/`, como `Microsoft Teams.desktop`, con la URL que te dé tu organización. Escribí cualquier `%` literal de esa línea como `%%`. Los cambios se aplican la próxima vez que la abras. Si volvés a ejecutar el instalador del paquete, sus lanzadores vuelven a las URLs predeterminadas.
 
-Para mantener separados los inicios de sesión del trabajo, agrega un directorio de datos del navegador a la línea `Exec=` de cada lanzador:
+Para mantener separados los inicios de sesión del trabajo, agregá una carpeta de datos del navegador a la línea `Exec=` de cada lanzador:
 
 ```ini
 Exec=omarchy-launch-webapp "https://teams.cloud.microsoft/" --user-data-dir=/absolute/path/to/work-browser-profile
 ```
 
-Reemplaza el directorio de ejemplo con una ruta absoluta de tu elección y usa la misma ruta para los seis lanzadores para compartir los inicios de sesión del trabajo entre ellos. Las aplicaciones web usan el navegador compatible seleccionado de Omarchy, recurriendo a Chromium cuando el navegador predeterminado no es compatible.
+Reemplazá la carpeta de ejemplo por una ruta absoluta que elijas y usá la misma ruta en los seis lanzadores para que compartan los inicios de sesión del trabajo. Las web apps usan el navegador compatible que tengas elegido en Omarchy, y si el navegador predeterminado no es compatible, usan Chromium.

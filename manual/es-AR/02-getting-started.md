@@ -1,43 +1,43 @@
 # Primeros pasos
 
-Omarchy se instala usando una ISO. Puedes elegir entre una instalación de disco completo, que se apodera de todo el disco, o una instalación en espacio libre, que coloca Omarchy en el espacio no asignado de un disco — así es como haces arranque dual junto a Windows u otro sistema operativo (consulta [instalación con arranque dual](50-dual-boot-install.md) — ten en cuenta que primero tendrás que desactivar BitLocker en Windows). De cualquier manera, la instalación usa cifrado completo de forma predeterminada, y la opción de disco completo borrará el disco seleccionado, ¡así que asegúrate de hacer una copia de seguridad antes de usar uno que ya tengas!
+Omarchy se instala con una ISO. Podés elegir entre una instalación de disco completo, que ocupa todo el disco, o una instalación en espacio libre, que pone Omarchy en el espacio sin asignar de un disco — así es como hacés arranque dual junto a Windows u otro sistema operativo (mirá [instalación con arranque dual](50-dual-boot-install.md) — tené en cuenta que primero vas a tener que desactivar BitLocker en Windows). En cualquier caso, la instalación usa cifrado completo por defecto, y la opción de disco completo borra el disco elegido, ¡así que asegurate de hacer una copia de seguridad antes de usar uno que ya tengas!
 
-[Descarga la ISO de Omarchy](https://omarchy.org/) primero, ponla en una memoria USB (usa [balenaEtcher](https://etcher.balena.io/) en Mac/Windows o [caligula](https://github.com/ifd3f/caligula) en Linux) y arranca desde la memoria.
+Primero [descargá la ISO de Omarchy](https://omarchy.org/), pasala a un pendrive (usá [balenaEtcher](https://etcher.balena.io/) en Mac/Windows o [caligula](https://github.com/ifd3f/caligula) en Linux) y arrancá desde el pendrive.
 
-_Debes desactivar Secure Boot y/o TPM en el BIOS. Tienes que desactivarlos para poder instalar Omarchy. Son esquemas de seguridad de Microsoft pensados para Windows y para distribuciones de Linux afiliadas a Microsoft._
+_Tenés que desactivar Secure Boot y/o TPM en el BIOS. Si no, no vas a poder instalar Omarchy. Son esquemas de seguridad de Microsoft pensados para Windows y para distribuciones de Linux afiliadas a Microsoft._
 
-Luego responde las preguntas de configuración y confírmalas así:
+Después respondé las preguntas de configuración y confirmalas así:
 
  ![install-config](images/install-config.webp)
 
-Luego selecciona un disco para tu instalación, relájate y mira el espectáculo de la instalación. Puede terminar en menos de un minuto en las máquinas modernas más rápidas, pero no debería tardar más de 5 minutos ni siquiera en una computadora más vieja.
+Después elegí un disco para la instalación, relajate y disfrutá el espectáculo. En las máquinas modernas más rápidas puede terminar en menos de un minuto, y no debería tardar más de 5 minutos ni siquiera en una computadora más vieja.
 
  ![install-done](images/install-done.webp)
 
-¡Ya estás listo para usar Omarchy!
+¡Ya podés usar Omarchy!
 
-### ¡Usa un teclado con cable o de 2.4ghz!
+### ¡Usá un teclado con cable o de 2.4ghz!
 
-El cifrado completo de disco no te permitirá ingresar la contraseña desde un teclado Bluetooth al arrancar. Igual que no puedes usar un teclado Bluetooth para entrar al BIOS en una PC. Necesitarás un teclado que use un dongle de 2.4ghz o un cable (¡que de todos modos es mucho mejor para la latencia!). ¡A mí en lo personal me encanta el [Lofree Flow84](https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard)!
+Con el cifrado completo de disco no vas a poder escribir la contraseña desde un teclado Bluetooth al arrancar. Es lo mismo que pasa con el BIOS de una PC: tampoco podés entrar con un teclado Bluetooth. Vas a necesitar un teclado con dongle de 2.4ghz o con cable (¡que igual es mucho mejor para la latencia!). ¡A mí personalmente me encanta el [Lofree Flow84](https://www.lofree.co/products/lofree-flow-the-smoothest-mechanical-keyboard)!
 
 ### Instalar para otro dueño
 
-Si estás preparando una máquina para alguien más — un familiar, un empleado nuevo, un comprador — no deberías estar respondiendo las preguntas personales en su nombre. Presiona `Ctrl + C` en la primerísima pantalla del instalador (la de selección de teclado) y Omarchy te ofrecerá preparar la máquina para otro dueño. El sistema se instala de inmediato, pero toda la configuración personal — distribución de teclado, nombre de usuario, contraseña — se pospone hasta que la máquina arranca por primera vez. El disco sigue cifrado de forma predeterminada, y la contraseña que el nuevo dueño elija en ese primer arranque se convierte también en la contraseña de cifrado. (Una máquina que ya hayas estado usando también se puede entregar sin reinstalar — consulta [restablecer la computadora](48-security.md).)
+Si estás preparando una máquina para otra persona — un familiar, un empleado nuevo, un comprador — no deberías responder las preguntas personales por ella. Apretá `Ctrl + C` en la primerísima pantalla del instalador (la de elegir el teclado) y Omarchy te va a ofrecer preparar la máquina para otro dueño. El sistema se instala enseguida, pero toda la configuración personal — distribución de teclado, nombre de usuario, contraseña — queda para cuando la máquina arranque por primera vez. El disco sigue cifrado por defecto, y la contraseña que el nuevo dueño elija en ese primer arranque pasa a ser también la contraseña de cifrado. (Una máquina que ya venías usando también se puede entregar sin reinstalar — mirá [restablecer la computadora](48-security.md).)
 
 ### Instalaciones desatendidas
 
-La ISO también puede instalarse completamente por sí sola — sin teclado, sin asistente — cuando se le entrega su configuración en un segundo disco. Esa es la manera de tratar a Omarchy como una imagen base para VMs y máquinas de una flota. Consulta [instalaciones desatendidas](51-unattended-installs.md).
+La ISO también puede instalarse completamente sola — sin teclado, sin asistente — cuando le pasás su configuración en un segundo disco. Esa es la forma de usar Omarchy como imagen base para VMs y para las máquinas de una flota. Mirá [instalaciones desatendidas](51-unattended-installs.md).
 
 ### Instalaciones sin cifrado
 
-Omarchy se instala con cifrado de forma predeterminada. Es la opción segura y responsable para cualquier computadora que pueda perderse o ser robada. ¡No quieres que cualquiera que tenga acceso a tu hardware pueda obtener tus datos!
+Omarchy se instala cifrado por defecto. Es la opción segura y responsable para cualquier computadora que se pueda perder o que te puedan robar. ¡No querés que cualquiera que agarre tu hardware pueda llevarse tus datos!
 
-Pero en circunstancias especiales, como instalaciones remotas de Omarchy en computadoras protegidas o instalaciones desechables sin datos sensibles, quizá quieras instalar sin cifrado. Puedes presionar `Ctrl + C` en la confirmación de formateo del disco para cambiar a una instalación sin cifrado.
+Pero en casos especiales, como instalaciones remotas de Omarchy en computadoras protegidas o instalaciones descartables sin datos sensibles, capaz quieras instalar sin cifrado. Podés apretar `Ctrl + C` en la confirmación de formateo del disco para pasar a una instalación sin cifrado.
 
 ### Idioma
 
-Omarchy habla 50 idiomas — el mismo conjunto que omarchy.org — y el inglés es el predeterminado. Para cambiarlo, abre el menú de Omarchy y ve a _Configuración > Idioma_, o ejecuta `omarchy language <code>` en una terminal (`omarchy language list` muestra los códigos). El menú, el escritorio y las notificaciones propias de Omarchy cambian de idioma de inmediato, y cada aplicación que abras después también. Las apps que ya estaban abiertas cambian una vez que las reinicias.
+Omarchy habla 50 idiomas — los mismos que omarchy.org — y el inglés es el predeterminado. Para cambiarlo, abrí el menú de Omarchy y andá a _Configurar > Idioma_, o ejecutá `omarchy language <code>` en una terminal (`omarchy language list` muestra los códigos). El menú, el escritorio y las notificaciones de Omarchy cambian de idioma al instante, y también cada aplicación que abras después. Las apps que ya estaban abiertas cambian cuando las reiniciás.
 
-### Ayuda si te atoras
+### Ayuda si te trabás
 
-Si te atoras, normalmente puedes encontrar a alguien dispuesto a ayudar en el canal _#omarchy-help_ en [el Discord de la comunidad](https://omarchy.org/discord).
+Si te trabás, casi siempre vas a encontrar a alguien con ganas de ayudar en el canal _#omarchy-help_ del [Discord de la comunidad](https://omarchy.org/discord).

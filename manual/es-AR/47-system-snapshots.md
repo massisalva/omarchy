@@ -1,25 +1,25 @@
 # Instantáneas del sistema
 
-Creamos instantáneas automáticamente en cada actualización de Omarchy, pero si quieres crear las tuyas, puedes usar `omarchy-snapshot create`.
+Sacamos instantáneas automáticamente en cada actualización de Omarchy, pero si querés crear las tuyas, podés usar `omarchy-snapshot create`.
 
-Para arrancar y restaurar una instantánea, la seleccionas desde el cargador de arranque Limine. (Si actualmente arrancas directo a la pantalla de descifrado de Omarchy, primero tendrás que seleccionar Limine como opción de arranque desde el BIOS).
+Para arrancar desde una instantánea y restaurarla, la elegís en el gestor de arranque Limine. (Si hoy arrancás directo a la pantalla de descifrado de Omarchy, primero vas a tener que elegir Limine como opción de arranque desde el BIOS).
 
-Desde esa pantalla, elige la instantánea en la que quieres arrancar según la fecha y la versión. La versión de Omarchy al momento de la instantánea se puede ver en la esquina inferior izquierda.
+En esa pantalla, elegí la instantánea desde la que querés arrancar según la fecha y la versión. La versión de Omarchy del momento de la instantánea se ve en la esquina de abajo a la izquierda.
 
  ![snapshots-bootloader](images/snapshots-bootloader.webp)
 
-Al llegar adentro, aparecerá una notificación avisándote que estás en una instantánea arrancable y, si haces clic en ella, empezará el proceso de restauración. Como alternativa, puedes usar `omarchy-snapshot restore`.
+Una vez adentro, aparece una notificación que te avisa que estás en una instantánea de arranque y, si le hacés clic, arranca la restauración. Si no, también podés usar `omarchy-snapshot restore`.
 
  ![snapshots-restore](images/snapshots-restore.webp)
 
-Esto restaurará tu sistema de archivos raíz, pero no tu `/home`. Así que sirve para revertir una actualización del sistema rota, pero no para recuperar archivos personales perdidos.
+Esto restaura tu sistema de archivos raíz, pero no tu `/home`. Así que sirve para deshacer una actualización del sistema que salió mal, pero no para recuperar archivos personales perdidos.
 
-Esto también significa que tu directorio `~/.config` se conserva tal cual. Así que si estás regresando a una versión anterior de una biblioteca o aplicación que guarda archivos de configuración en un formato nuevo, tendrás que resolverlo manualmente.
+Eso también significa que tu carpeta `~/.config` queda tal cual. Así que si volvés a una versión anterior de una biblioteca o aplicación que guarda la configuración en un formato nuevo, lo vas a tener que resolver a mano.
 
-_Nota: Esta función solo está disponible en instalaciones que usan el cargador de arranque Limine, que ha sido el predeterminado desde Omarchy 2.0. No está disponible si estás en GRUB o systemd-boot._
+_Nota: Esta función solo está disponible en instalaciones que usan el gestor de arranque Limine, que es el predeterminado desde Omarchy 2.0. No está disponible si usás GRUB o systemd-boot._
 
-### Saltarse el menú de arranque
+### Saltear el menú de arranque
 
-Si nunca tocas el menú de arranque y solo quieres que la computadora vaya directo a la pantalla de descifrado, ejecuta _Configurar > Arranque directo_ en el menú de Omarchy. Eso agrega una entrada EFI que apunta directamente a Omarchy, para que el firmware lo arranque sin detenerse en Limine.
+Si nunca tocás el menú de arranque y solo querés que la computadora vaya directo a la pantalla de descifrado, abrí _Configurar > Arranque directo_ en el menú de Omarchy. Eso agrega una entrada EFI que apunta directamente a Omarchy, así el firmware lo arranca sin frenar en Limine.
 
-La desventaja es la mencionada al principio: con el arranque directo activado, llegar a una instantánea significa primero elegir Limine desde el menú de arranque de tu BIOS. Ejecuta _Configurar > Arranque directo_ de nuevo para quitar la entrada y volver a arrancar a través de Limine. Algunos firmware no se llevan bien con entradas EFI personalizadas, así que la configuración se niega a ejecutarse en firmware de American Megatrends y Apple.
+La contra es la que mencionamos al principio: con el arranque directo activado, para llegar a una instantánea primero tenés que elegir Limine desde el menú de arranque del BIOS. Abrí _Configurar > Arranque directo_ de nuevo para sacar la entrada y volver a arrancar con Limine. Algunos firmwares no se llevan bien con entradas EFI personalizadas, así que la configuración no se ejecuta en firmwares de American Megatrends ni de Apple.

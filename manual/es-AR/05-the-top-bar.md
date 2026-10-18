@@ -1,41 +1,41 @@
 # La barra superior
 
-La franja a lo largo de la parte superior de tu pantalla es la barra de Omarchy. No es una barra de estado pegada con tornillos, sino parte del shell de Omarchy, el proceso único y de larga duración de Quickshell que también dibuja el menú, las notificaciones, los emergentes OSD y la pantalla de bloqueo. Por eso combina a la perfección con todo lo demás y por eso un panel se abre al instante en lugar de lanzar una aplicación nueva.
+La franja de arriba de la pantalla es la barra de Omarchy. No es una barra de estado agregada a la fuerza, sino parte de la shell de Omarchy: el único proceso de Quickshell, siempre en ejecución, que también dibuja el menú, las notificaciones, los avisos en pantalla (OSD) y la pantalla de bloqueo. Por eso combina perfecto con todo lo demás y por eso un panel se abre al instante en vez de lanzar una aplicación nueva.
 
-También es la única pieza del escritorio que siempre está en pantalla, así que vale la pena saber qué hacen todos esos glifos pequeños.
+También es la única parte del escritorio que está siempre en pantalla, así que vale la pena saber qué hacen todos esos glifitos.
 
 ## Qué trae por defecto
 
-La barra tiene tres secciones. A la izquierda está el logo de Omarchy (el lanzador del menú) y los indicadores de espacios de trabajo. En el centro están los indicadores de estado, el reloj, Elsewhen (un reloj mundial), el clima y una insignia de actualización de Omarchy. A la derecha: la distribución de teclado (cuando hay más de una configurada), la bandeja del sistema, agentes, bluetooth, red, audio, pantalla y energía.
+La barra tiene tres secciones. A la izquierda están el logo de Omarchy (que abre el menú) y los indicadores de espacios de trabajo. En el centro tenés los indicadores de estado, el reloj, Elsewhen (un reloj mundial), el clima y una insignia de actualización de Omarchy. A la derecha: la bandeja del sistema, la distribución de teclado (cuando hay más de una configurada), agentes, bluetooth, red, audio, pantalla y energía.
 
-Algunos de esos solo aparecen cuando tienen algo que decir. La distribución de teclado aparece solo si has configurado más de una distribución. La insignia de actualización aparece solo cuando hay una actualización de Omarchy en espera. Y el icono de agentes aparece la primera vez que Omarchy encuentra uso de agentes de IA para código en la máquina (consulta [IA](17-ai.md)).
+Algunos aparecen solo cuando tienen algo para decir. La distribución de teclado aparece solo si configuraste más de una. La insignia de actualización aparece solo cuando hay una actualización de Omarchy esperando. Y el ícono de agentes aparece la primera vez que Omarchy encuentra uso de IA para programar en la máquina (mirá [IA](17-ai.md)).
 
-## Hacer clic por ahí
+## A hacer clic
 
-Casi todos los widgets hacen algo con clic izquierdo, derecho y central, y varios responden al desplazamiento. Esta es la parte que la gente se pierde — los botones derecho y central son donde se esconde mucha de la parte buena.
+Casi todos los widgets hacen algo con el clic izquierdo, el derecho y el del medio, y varios responden a la rueda del mouse. Esta es la parte que la gente se pierde — en los botones derecho y del medio se esconde mucho de lo bueno.
 
-| Widget | Izquierdo | Derecho | Central / desplazamiento |
+| Widget | Izquierdo | Derecho | Medio / rueda |
 | --- | --- | --- | --- |
 | Menú | Menú de Omarchy | Terminal nueva | — |
-| Espacios de trabajo | Enfocar ese espacio de trabajo | — | Desplazamiento: espacio siguiente/anterior |
-| Reloj | Calendario emergente | Cambiar el formato de la etiqueta | Central: selector de zona horaria |
-| Clima | Pronóstico emergente | Clima completo como notificación | Central: actualizar |
-| Audio | Panel de audio | Silenciar | Central: panel · desplazamiento: volumen |
-| Micrófono | Silenciar el micrófono | — | Central: panel de audio · desplazamiento: volumen de entrada |
+| Espacios de trabajo | Mostrar ese espacio de trabajo en este monitor | — | Rueda: espacio siguiente/anterior |
+| Reloj | Calendario | Cambiar el formato de la etiqueta | Medio: elegir zona horaria |
+| Clima | Pronóstico | Clima completo como notificación | Medio: actualizar |
+| Audio | Panel de audio | Silenciar | Medio: panel · rueda: volumen |
+| Micrófono | Silenciar el micrófono | — | Medio: panel de audio · rueda: volumen de entrada |
 | Red | Panel de red | — | — |
-| Bluetooth | Panel de Bluetooth | Activar/desactivar la radio | — |
-| Pantalla | Panel de pantalla | — | Desplazamiento: brillo |
+| Bluetooth | Panel de Bluetooth | Prender/apagar la radio | — |
+| Pantalla | Panel de pantalla | — | Rueda: brillo |
 | Energía | Panel de energía | Mostrar/ocultar el porcentaje de batería | — |
-| Multimedia | Reproducir/pausar | Portada emergente | Central: siguiente · desplazamiento: anterior/siguiente |
-| Agentes | Panel de agentes | Abrir tu agente | Central: siguiente suscripción |
-| Bandeja | Pasar el cursor para mostrar el cajón | Clic derecho en el chevrón para administrar | — |
+| Multimedia | Reproducir/pausar | Portada del disco | Medio: siguiente · rueda: anterior/siguiente |
+| Agentes | Panel de agentes | Abrir tu agente | Medio: siguiente suscripción |
+| Bandeja | Pasá el cursor para abrir el cajón | Derecho en la flechita para administrar | — |
 | Actualización de Omarchy | Ejecutar la actualización | — | — |
 
-No todo lo de esa tabla está en tu barra desde el principio. El widget de multimedia (lo que suena según MPRIS, con pista y artista en desplazamiento) y el widget de micrófono vienen integrados pero desactivados por defecto — agrégalos si los quieres, como se describe abajo.
+No todo lo de esa tabla viene en la barra de entrada. El widget de multimedia (lo que está sonando según MPRIS, con el tema y el artista desplazándose) y el widget de micrófono vienen incluidos pero apagados por defecto — agregalos si los querés, como se explica más abajo.
 
 ## Los paneles
 
-Al hacer clic en un icono de la barra se abre un panel, que es un emergente en forma con deslizadores, listas y navegación con teclado, no un tooltip. Cada uno también tiene un atajo, así que nunca tienes que apuntarle a un glifo de 16 píxeles:
+Al hacer clic en un ícono de la barra se abre un panel, que es una ventanita en serio, con deslizadores, listas y navegación con teclado, no un simple tooltip. Cada uno tiene además su atajo, así nunca tenés que apuntarle a un glifo de 16 píxeles:
 
 | Atajo | Panel |
 | --- | --- |
@@ -46,72 +46,74 @@ Al hacer clic en un icono de la barra se abre un panel, que es un emergente en f
 | `Super + Ctrl + P` | Energía |
 | `Super + Ctrl + Alt + D` | Calendario |
 | `Super + Ctrl + Alt + E` | Reloj mundial |
-| `Super + Ctrl + 1-9` | Mostrar/ocultar el enésimo panel de la sección derecha |
+| `Super + Ctrl + 1-9` | Abrir/cerrar el panel número n de la sección derecha |
 
-Los paneles no son lecturas de estado. Ahí es donde de verdad haces la cosa:
+Los paneles no son solo para mirar. Ahí es donde hacés las cosas de verdad:
 
-- **Audio** tiene un deslizador de volumen maestro, un selector de dispositivo de salida y un mezclador por aplicación, para que puedas bajarle a esa pestaña del navegador sin tocar todo lo demás.
+- **Audio** tiene un deslizador de volumen general, un selector de dispositivo de salida y un mezclador por aplicación, así podés bajarle el volumen a esa pestaña del navegador sin tocar todo lo demás.
 - **Red** busca redes Wi-Fi, muestra la intensidad de la señal, se conecta y te deja elegir un proveedor de DNS.
-- **Bluetooth** enumera tus dispositivos con conectar/desconectar y niveles de batería.
-- **Energía** muestra estadísticas de la batería, cambia perfiles de energía (recuerda una elección distinta para batería y para corriente) e imprime información del sistema.
-- **Pantalla** incluye un deslizador de brillo, tamaño del texto, ajustes de escala de monitor y — cuando tienes más de una pantalla — controles por monitor. Consulta [monitores](33-monitors.md) para la historia completa.
-- **Reloj** abre una cuadrícula mensual con números de semana ISO y cambio de mes.
+- **Bluetooth** lista tus dispositivos con conectar/desconectar y nivel de batería.
+- **Energía** muestra estadísticas de la batería, cambia de perfil de energía (recuerda una elección distinta para batería y para enchufado) y muestra algo de información del sistema.
+- **Pantalla** trae un deslizador de brillo, tamaño de texto, escalas predefinidas para el monitor y — cuando tenés más de una pantalla — controles por monitor. Mirá [monitores](33-monitors.md) para la historia completa.
+- **Reloj** abre una grilla del mes con números de semana ISO y botones para cambiar de mes.
 
-Cada panel acepta tanto el teclado como el ratón: las flechas mueven, Return activa, Tab pasa al panel vecino y Escape cierra.
+Todos los paneles se manejan tanto con el teclado como con el mouse: las flechas mueven, Return activa, Tab pasa al panel de al lado y Escape cierra.
 
-`Super + Ctrl + 1-9` cuenta los paneles de izquierda a derecha en la sección derecha, saltándose la bandeja porque no tiene panel propio. Así, el número coincide con el icono al que apuntarías.
+`Super + Ctrl + 1-9` cuenta los paneles de izquierda a derecha en la sección derecha, salteando la bandeja porque no tiene panel propio. Así el número coincide con el ícono al que apuntarías.
 
 ### Tailscale y Dropbox
 
-Dos widgets más aparecen en la barra solo cuando instalas el servicio correspondiente desde **Instalar → Servicio**, y vale la pena conocer ambos porque hacen más que reportar estado.
+Hay dos widgets más que aparecen en la barra solo cuando instalás el servicio correspondiente desde **Instalar → Servicio**, y conviene conocerlos porque hacen más que mostrar un estado.
 
-El panel de **Tailscale** conecta y desconecta la tailnet, cambia entre cuentas y elige un nodo de salida (tus propias máquinas y las regiones de Mullvad aparecen en esa lista). También explora tus máquinas — y con una seleccionada, `s` le envía archivos por Taildrop, que es la manera más rápida de pasar un archivo a tu teléfono o a otra laptop. `c` copia la IP de la máquina, `n` su nombre y `d` su nombre DNS completo. También hay un botón de enviar en la fila de cada máquina, si prefieres hacer clic. Lo mismo desde la terminal es `omarchy tailscale send <machine> [file...]`.
+El panel de **Tailscale** conecta y desconecta la tailnet, cambia de cuenta y elige un nodo de salida (en esa lista aparecen tanto tus máquinas como las regiones de Mullvad). También te deja recorrer tus máquinas — y con una elegida, `s` le manda archivos por Taildrop, que es la forma más rápida de pasar un archivo a tu celular o a otra notebook. `c` copia la IP de la máquina, `n` su nombre y `d` su nombre DNS completo. Si preferís hacer clic, cada máquina tiene también un botón de enviar. Lo mismo desde la terminal es `omarchy tailscale send <machine> [file...]`.
 
-El panel de **Dropbox** maneja el inicio de sesión, muestra cuánto almacenamiento has usado y enumera los archivos sincronizados recientemente.
+El panel de **Dropbox** se encarga del inicio de sesión, muestra cuánto almacenamiento usaste y lista los archivos sincronizados hace poco.
 
-Quitar cualquiera de los dos servicios retira su widget de la barra.
+Si desinstalás cualquiera de los dos servicios, su widget desaparece de la barra.
 
 ## Indicadores
 
-El grupito en el centro es el widget de indicadores. Son glifos de estado para los modos que has activado: no molestar, luz nocturna, un [recordatorio](09-reminders.md) en cola, una grabación de pantalla activa, mantenerse despierto y [dictado](11-text-extraction-dictation.md). Se encienden cuando el modo está activo y, si no, no estorban — pasa el cursor a la izquierda del reloj (encima de él en una barra vertical) para echar un vistazo a los inactivos. Al hacer clic en un indicador se activa o desactiva ese modo. Uno más es solo de estado: una sesión remota se enciende en rojo mientras alguien está conectado a esta máquina a través de gliff.
+El grupito del centro es el widget de indicadores. Son glifos de estado para los modos que activaste: no molestar, luz nocturna, un [recordatorio](09-reminders.md) pendiente, una grabación de pantalla en curso, mantener despierto y [dictado](11-text-extraction-dictation.md). Se prenden cuando el modo está activo y, si no, no molestan — pasá el cursor por cualquier parte de la barra para ver los que están apagados. Hacer clic en un indicador activa o desactiva ese modo. Hay uno más que solo muestra estado: una sesión remota se prende en rojo mientras alguien está conectado a esta máquina por gliff.
 
-Si prefieres que siempre estén visibles, pon `alwaysShow` en `true` en el widget. Y si solo te importan algunos, enumera los que quieres en `items`: `["Dnd", "Reminder", "NightLight"]`. Puedes tener más de un widget de indicadores, para que distintas secciones muestren distintos subconjuntos.
+Si preferís que estén siempre visibles, poné `alwaysShow` en `true` en el widget. Y si solo te interesan algunos, listá los que querés en `items`: `["Dnd", "Reminder", "NightLight"]`. Podés tener más de un widget de indicadores, así cada sección muestra un grupo distinto.
 
 ## Reacomodar la barra
 
-La barra se configura sola. No tienes que abrir un archivo de configuración para mover las cosas.
+La barra se configura sola. No hace falta abrir ningún archivo de configuración para mover cosas.
 
-Agarra un pedazo vacío de la barra alrededor del centro y arrástralo hacia otro borde de la pantalla, y la barra se mueve ahí — izquierda, derecha, arriba o abajo funcionan, y cada widget se adapta (las barras verticales recurren a formas compactas de solo icono). Hacer clic y mantener inicia el mismo arrastre. Haz doble clic izquierdo en ese mismo espacio vacío para cambiar el fondo de la barra de transparente a cristalino a opaco. Y arrastra cualquier widget para reordenarlo o aventarlo a otra sección.
+Agarrá un pedazo vacío de la barra, cerca del centro, y arrastralo hacia otro borde de la pantalla: la barra se muda ahí — izquierda, derecha, arriba o abajo, y cada widget se adapta (las barras verticales pasan a versiones compactas, solo con íconos). Hacer clic y mantener apretado arranca el mismo arrastre. Hacé doble clic izquierdo en ese mismo espacio vacío para que el fondo de la barra vaya de transparente a cristalino a opaco. Y arrastrá cualquier widget para reordenarlo o mandarlo a otra sección; los demás widgets se corren para hacerle lugar donde va a caer.
 
-Un widget que quieres tener a la mano pero no siempre a la vista puede ir en el cajón de la bandeja: arrástralo sobre la bandeja y el cajón se abre para recibirlo. Ahí queda, después de los iconos de las aplicaciones, aparece cada vez que aparece el cajón y lo mantiene abierto mientras su panel está visible. Arrástralo de vuelta a la barra para regresarlo a su lugar.
+El medio de la barra es una caja: lo que esté adentro queda centrado como un solo grupo, y los widgets de cada lado se cuelgan de sus bordes. Mientras arrastrás un widget, la caja se ve como un contorno, o como una línea a lo ancho de la barra cuando está vacía, y podés soltarlo adentro o al costado. Cuando el widget va a caer en la caja, la caja se agranda para recibirlo.
 
-Si prefieres elegir desde un menú, **Activar → Apariencia → Barra de menú** tiene la posición, y **Fondo de barra** elige cómo se dibuja la barra: **Barra opaca**, **Barra cristalina** (translúcida, con lo que hay detrás difuminado) o **Barra transparente**.
+Un widget que querés tener a mano pero no siempre a la vista puede ir en el cajón de la bandeja: arrastralo sobre la bandeja y el cajón se abre para recibirlo. Queda ahí, después de los íconos de las aplicaciones, aparece cada vez que se abre el cajón y lo mantiene abierto mientras su panel esté abierto. Arrastralo de vuelta a la barra para devolverlo a su lugar.
 
-Esas mismas cosas tienen comandos, que es lo que quieres para una configuración con [dotfiles](31-dotfiles.md):
+Si preferís elegir desde un menú, **Acciones → Apariencia → Barra de menú** tiene la posición, y **Fondo de barra** elige cómo se dibuja la barra: **Barra opaca**, **Barra cristalina** (translúcida, con lo de atrás desenfocado) o **Barra transparente**.
+
+Todo esto también tiene comandos, que es lo que te conviene para una configuración con [dotfiles](31-dotfiles.md):
 
 ```bash
 omarchy bar position bottom
 omarchy bar background glassy  # opaque, glassy, none, or cycle
-omarchy bar move omarchy.clock --section center --index 0
+omarchy bar move omarchy.weather --section centerBegin --index 0
 omarchy bar move omarchy.bluetooth --section tray  # into the tray's drawer
 omarchy bar set omarchy.clock format "HH:mm"
 omarchy bar defaults          # back to the shipped layout
 ```
 
-Para agregar o quitar un widget por completo, usa los comandos de plugin. `omarchy plugin list` imprime cada widget que el shell conoce con su id, y luego:
+Para agregar o sacar un widget del todo, usá los comandos de plugins. `omarchy plugin list` muestra todos los widgets que conoce la shell con su id, y después:
 
 ```bash
-omarchy plugin enable omarchy.media --section center
+omarchy plugin enable omarchy.media --section centerEnd
 omarchy plugin disable omarchy.weather
 ```
 
 ## Ocultar la barra
 
-`Super + Shift + Space` apaga la barra y la vuelve a encender sin matar el shell — los paneles y los atajos siguen funcionando, solo recuperas los píxeles. También está en el menú en **Activar → Apariencia → Barra de menú → Ocultar barra**.
+`Super + Shift + Space` oculta la barra y la vuelve a mostrar sin cerrar la shell — los paneles y los atajos siguen andando, solo recuperás esos píxeles. También está en el menú, en **Acciones → Apariencia → Barra de menú → Ocultar barra**.
 
 ## El archivo de configuración
 
-Todo se guarda en `~/.config/omarchy/shell.json`, bajo la clave `bar`. Aquí tienes una versión recortada:
+Todo se guarda en `~/.config/omarchy/shell.json`, bajo la clave `bar`. Acá tenés una versión recortada:
 
 ```json
 {
@@ -119,20 +121,21 @@ Todo se guarda en `~/.config/omarchy/shell.json`, bajo la clave `bar`. Aquí tie
   "bar": {
     "position": "top",
     "background": "opaque",
-    "centerAnchor": "omarchy.clock",
     "layout": {
       "left": [{ "id": "omarchy.menu" }, { "id": "omarchy.workspaces" }],
+      "centerBegin": [{ "id": "omarchy.indicators" }],
       "center": [{ "id": "omarchy.clock", "format": "HH:mm" }],
+      "centerEnd": [{ "id": "omarchy.weather" }],
       "right": [{ "id": "omarchy.audio" }, { "id": "omarchy.power" }]
     }
   }
 }
 ```
 
-Cada widget es una entrada en uno de los tres arreglos de distribución, y sus ajustes viven en línea en esa entrada — no hay un archivo de ajustes aparte ni un subobjeto `config`. El `format`, el `formatAlt` (al que cambia el clic derecho) y el `verticalFormat` del reloj viven todos justo ahí en `{ "id": "omarchy.clock" }`.
+Cada widget es una entrada en uno de los cinco arreglos de `layout`, y sus ajustes van directamente en esa entrada — no hay un archivo de ajustes aparte ni un subobjeto `config`. El `format` del reloj, el `formatAlt` (al que cambia el clic derecho) y el `verticalFormat` están todos ahí mismo, en `{ "id": "omarchy.clock" }`.
 
-`centerAnchor` nombra el único widget central que se fija al centro exacto de la pantalla, con los demás flanqueándolo. Así es como el reloj se queda justo al centro aunque el clima y la insignia de actualización vayan y vengan. Ponlo como cadena vacía y la lista central simplemente se centra como grupo.
+`center` es la caja del medio de la barra: todo lo que tenga adentro queda centrado en la pantalla como un solo grupo. `centerBegin` y `centerEnd` se cuelgan a cada lado de la caja, y así el reloj queda clavado en el centro aunque el clima y la insignia de actualización aparezcan y desaparezcan. Si ponés más de un widget en `center`, se centran juntos; si lo dejás vacío, `centerBegin` y `centerEnd` se juntan en el medio de la barra.
 
-Una regla que vale la pena interiorizar: **una vez que tienes tu propio `shell.json`, es canónico**. Hasta que personalices algo, el shell lee el archivo predeterminado de Omarchy. En el momento en que arrastras un widget, ejecutas `omarchy bar` o editas el archivo tú mismo, es tuyo — no hay fusión profunda, así que los widgets predeterminados nuevos en versiones futuras de Omarchy no aparecerán automáticamente en tu barra. `omarchy bar defaults` regresa la distribución original cuando quieras empezar de cero.
+Una regla que conviene tener clara: **una vez que tenés tu propio `shell.json`, ese es el que manda**. Hasta que personalices algo, la shell lee el archivo predeterminado de Omarchy. En cuanto arrastrás un widget, ejecutás `omarchy bar` o editás el archivo a mano, pasa a ser tuyo — no hay fusión profunda, así que los widgets predeterminados nuevos de futuras versiones de Omarchy no van a aparecer solos en tu barra. `omarchy bar defaults` vuelve a poner la distribución original cuando quieras empezar de cero.
 
-El mismo archivo también guarda tus tiempos de inactividad en el nivel superior, fuera de la clave `bar`: `idle.screensaver` e `idle.lock`, ambos en segundos desde que entraste en inactividad. Así, el protector de pantalla predeterminado entra a los 150 segundos y el bloqueo a los 300.
+El mismo archivo también guarda tus tiempos de inactividad en el nivel superior, fuera de la clave `bar`: `idle.screensaver` e `idle.lock`, los dos en segundos desde que quedaste inactivo. Así, por defecto, el salvapantallas arranca a los 150 segundos y el bloqueo a los 300.

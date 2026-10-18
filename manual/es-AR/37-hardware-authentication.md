@@ -1,19 +1,19 @@
 # Autenticación por hardware
 
-### Autenticación con huella dactilar
+### Autenticación con huella digital
 
-Muchas laptops vienen con un sensor de huella dactilar para autenticarte. Puedes usarlo con Omarchy ejecutando _Configuración > Seguridad > Huella dactilar_ en el menú de Omarchy (`Super + Space`).
+Muchas notebooks vienen con un lector de huellas para autenticarte. Lo podés usar con Omarchy abriendo _Configurar > Seguridad > Huella digital_ en el menú de Omarchy (`Super + Space`).
 
-Eso instalará el paquete de huella dactilar, registrará tu huella, la verificará y quedarás listo para usar tu huella dactilar para desbloquear desde la pantalla de bloqueo (que puedes activar con `Super + Ctrl + L`), entrar en modo sudo y autorizar solicitudes del sistema.
+Eso instala el paquete de huellas, registra tu huella, la verifica y listo: ya podés usar tu huella para desbloquear desde la pantalla de bloqueo (que activás con `Super + Ctrl + L`), entrar en modo sudo y autorizar pedidos del sistema.
 
-Una vez que la pantalla de bloqueo apaga la pantalla, el sensor reposa para ahorrar energía, así que despierta la pantalla con cualquier tecla o con el touchpad antes de tocarlo.
+Cuando la pantalla de bloqueo apaga la pantalla, el lector descansa para ahorrar energía, así que despertá la pantalla con cualquier tecla o con el touchpad antes de tocarlo.
 
-Cuando la tapa de tu laptop está cerrada, la solicitud de huella dactilar se omite automáticamente, así que vas directo a la solicitud de contraseña en lugar de esperar a un sensor que no puedes alcanzar. Si en otro caso necesitas trabajar con un teclado externo que no tiene sensor, solo presiona `CTRL + C` cuando se te pida tu huella dactilar durante `sudo`.
+Con la tapa de la notebook cerrada, el pedido de huella se saltea solo, así que vas directo al pedido de contraseña en vez de esperar a un lector al que no llegás. Si en otra situación necesitás trabajar con un teclado externo sin lector, apretá `CTRL + C` cuando `sudo` te pida la huella.
 
-Puedes eliminar la autenticación con huella dactilar en _Eliminar > Seguridad > Huella dactilar_ en el menú de Omarchy.
+Podés sacar la autenticación con huella en _Eliminar > Seguridad > Huella digital_ en el menú de Omarchy.
 
 ### Autenticación con Fido2
 
-Si usas un dispositivo Fido2, puedes configurarlo para la autenticación de `sudo` usando _Configuración > Seguridad > Fido2_ en el menú de Omarchy (`Super + Space`). Sin embargo, cubre `sudo` y las solicitudes de autorización del sistema, no el desbloqueo de tu computadora.
+Si usás un dispositivo Fido2, lo podés configurar para autenticar `sudo` con _Configurar > Seguridad > FIDO2_ en el menú de Omarchy (`Super + Space`). Eso sí, cubre `sudo` y los pedidos de autorización del sistema, no el desbloqueo de la computadora.
 
-Puedes eliminar la autenticación con fido2 en _Eliminar > Seguridad > Fido2_ en el menú de Omarchy.
+Podés sacar la autenticación con fido2 en _Eliminar > Seguridad > FIDO2_ en el menú de Omarchy.

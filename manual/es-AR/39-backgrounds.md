@@ -1,15 +1,15 @@
 # Fondos
 
-Cada tema trae su propio conjunto de fondos, y puedes agregar extras tuyos en `~/.config/omarchy/backgrounds/[theme]`. Si quieres agregar una imagen de fondo extra, digamos, al tema nord, solo pones el archivo en `~/.config/omarchy/backgrounds/nord`.
+Cada tema trae su propio conjunto de fondos, y podés sumar los tuyos en `~/.config/omarchy/backgrounds/[theme]`. Si querés agregar un fondo extra, por ejemplo, al tema nord, solo tenés que poner el archivo en `~/.config/omarchy/backgrounds/nord`.
 
-La manera más fácil de hacerlo es entrar a _Instalar > Estilo > Fondo_ en el menú de Omarchy. Eso abrirá la carpeta donde están guardados los fondos de ese tema. Presiona `Super + Shift + F` para abrir otro administrador de archivos, encuentra tu fondo y cópialo. Ahora estará incluido en las opciones de fondos entre las que puedes elegir con `Super + Ctrl + Space`.
+La forma más fácil es entrar a _Instalar > Estilo > Fondo_ en el menú de Omarchy. Eso abre la carpeta donde se guardan los fondos de ese tema. Apretá `Super + Shift + F` para abrir otro administrador de archivos, buscá tu fondo y copialo. A partir de ahí va a estar entre los fondos que podés ir cambiando con `Super + Ctrl + Space`.
 
-Los fondos pueden ser videos además de imágenes fijas. Deja un archivo `mp4`, `m4v`, `mov`, `webm`, `mkv` o `avi` en la misma carpeta y aparecerá junto a las imágenes. Los videos los reproduce el motor de fondo de pantalla OWE. Decodifica el video una sola vez para todos los monitores y reproduce su sonido por la salida de audio por defecto, y detiene la reproducción cada vez que nada puede verlo. La pantalla de bloqueo dibuja la misma decodificación, en silencio, mediante OWE. Un fondo de pantalla en video sigue costando mucha más energía que uno fijo.
+Los fondos pueden ser videos además de imágenes fijas. Tirá un archivo `mp4`, `m4v`, `mov`, `webm`, `mkv` o `avi` en la misma carpeta y aparece junto a las imágenes. Los videos los reproduce el motor de fondos de pantalla OWE. Decodifica el video una sola vez para todos los monitores, reproduce su sonido por la salida de audio predeterminada y pausa la reproducción cada vez que nada lo puede ver. La pantalla de bloqueo dibuja esa misma decodificación, sin sonido, a través de OWE. Igual, un fondo de video gasta mucha más energía que uno fijo.
 
-Los temas pueden incluir una introducción breve para un fondo fijo. Para `backgrounds/road.webp`, el video correspondiente vive en `backgrounds/intros/road.mp4`. Se reproduce automáticamente al arrancar y al cambiar a un tema con ese fondo seleccionado, y luego regresa a la imagen fija. Los videos de introducción no aparecen en el selector de fondos y nunca se repiten en bucle.
+Los temas pueden traer una intro corta para un fondo fijo. Para `backgrounds/road.webp`, el video que le corresponde vive en `backgrounds/intros/road.mp4`. Se reproduce solo al arrancar y al pasar a un tema que tenga ese fondo elegido, y después vuelve a la imagen fija. Los videos de intro no aparecen en el selector de fondos y nunca se repiten en loop.
 
-Desactivar _Activar > Apariencia > Animaciones_ también desactiva las introducciones de fondo. Omarchy hace esto por defecto en una máquina virtual. El comando `omarchy theme bg intro toggle` puede alternar las introducciones por separado. Actualizar un tema o elegir otro fondo dentro del mismo tema no reproduce una introducción.
+Apagar _Acciones > Apariencia > Animaciones_ también apaga las intros de los fondos. Omarchy lo hace por defecto en una máquina virtual. El comando `omarchy theme bg intro toggle` prende y apaga las intros por separado. Actualizar un tema o elegir otro fondo dentro del mismo tema no reproduce ninguna intro.
 
-Puedes encontrar una enorme colección de fondos geniales y curados en https://github.com/dharmx/walls.
+Hay una colección enorme de fondos geniales y bien elegidos en https://github.com/dharmx/walls.
 
-Los fondos en video conservan una imagen fija en caché en la pantalla de bloqueo mientras la reproducción está en pausa o no está disponible. Los GIF animados se reproducen en el escritorio y muestran un cuadro fijo en la pantalla de bloqueo.
+Los fondos de video dejan una imagen fija guardada en la pantalla de bloqueo mientras la reproducción está en pausa o no está disponible. Los GIF animados se reproducen en el escritorio y muestran un cuadro fijo en la pantalla de bloqueo.

@@ -1,16 +1,16 @@
 # Ajustes comunes
 
-Esta es una colección de adaptaciones comunes a la configuración de Omarchy. Ten en cuenta que ocasionalmente puede ser necesario que las actualizaciones del sistema restauren ciertas configuraciones a su estado original. Si esto sucede, tus cambios no se perderán, sino que quedarán en un archivo `.bak` en el mismo directorio.
+Esta es una colección de cambios comunes a la configuración de Omarchy. Tené en cuenta que, de vez en cuando, una actualización del sistema puede necesitar volver ciertas configuraciones a su estado original. Si pasa, tus cambios no se pierden: quedan en un archivo `.bak` en la misma carpeta.
 
-Si arruinas algo, puedes restaurar configuraciones individuales a su configuración original desde _Actualizar > Configuración_ en el menú de Omarchy. Si arruinas _todo_ de verdad, puedes restablecer todas las configuraciones con `omarchy-reinstall`.
+Si rompés algo, podés volver configuraciones sueltas a su estado original desde _Actualizar > Configuración_ en el menú de Omarchy. Si rompés _todo_ en serio, podés restablecer todas las configuraciones con `omarchy-reinstall`.
 
-### Mostrar todos los íconos de la bandeja todo el tiempo
+### Mostrar siempre todos los íconos de la bandeja
 
-Por defecto, los íconos de la bandeja, como Dropbox, 1Password o Steam, están ocultos detrás de la flecha expansora de la bandeja, que los muestra cuando pasas el cursor sobre ella. Si quieres tenerlos expuestos todo el tiempo, haz clic derecho en la flecha expansora para abrir el administrador de íconos de la bandeja y luego fija los íconos que quieres mantener visibles (también puedes ocultar los que nunca quieres ver).
+Por defecto, los íconos de la bandeja, como Dropbox, 1Password o Steam, quedan escondidos detrás de la flechita de la bandeja, que los muestra cuando le pasás el cursor por encima. Si los querés tener siempre a la vista, hacé clic derecho en la flechita para abrir el administrador de íconos de la bandeja y fijá los que querés dejar visibles (también podés ocultar los que no querés ver nunca).
 
 ### Esquinas redondeadas en las ventanas
 
-El diseño predeterminado de Omarchy es de esquinas rectas, pero si quieres suavizarlo un poco, puedes cambiar `~/.config/hypr/looknfeel.lua` para que el redondeo ya no esté comentado:
+El diseño predeterminado de Omarchy usa esquinas rectas, pero si lo querés suavizar un poco, podés cambiar `~/.config/hypr/looknfeel.lua` para que el redondeo deje de estar comentado:
 
 ```
 hl.config({
@@ -21,9 +21,9 @@ hl.config({
 })
 ```
 
-### Eliminar los espacios entre ventanas
+### Sacar los espacios entre ventanas
 
-En las pantallas de laptop, algunas personas prefieren no desperdiciar ningún píxel en espacios entre ventanas (o incluso en una barra superior, que puedes desactivar con `Super + Shift + Space`). Puedes desactivar todos los espacios y bordes con `Super + Shift + Backspace`, o eliminarlos permanentemente quitando los comentarios en esta sección de `~/.config/hypr/looknfeel.lua`:
+En las pantallas de notebook, hay gente que prefiere no gastar ni un píxel en espacios entre ventanas (ni en una barra superior, que podés ocultar con `Super + Shift + Space`). Podés sacar todos los espacios y bordes con `Super + Shift + Backspace`, o sacarlos para siempre descomentando esta sección de `~/.config/hypr/looknfeel.lua`:
 
 ```
 hl.config({

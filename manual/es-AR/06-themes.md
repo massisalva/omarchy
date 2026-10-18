@@ -1,12 +1,12 @@
 # Temas
 
-Omarchy incluye veintidós temas hermosos. Puedes elegir entre ellos en _Estilo > Tema_ en el menú de Omarchy (`Super + Space`) o saltar directamente al selector de temas con `Super + Ctrl + Shift + Space`.
+Omarchy trae veintidós temas hermosos. Podés elegir entre ellos en _Estilo > Tema_ en el menú de Omarchy (`Super + Space`) o ir directo al selector de temas con `Super + Ctrl + Shift + Space`.
 
-Cada tema le da estilo al escritorio, la terminal, neovim, la pantalla de actividad (btop), Chromium y todo el shell de Omarchy: barra superior, menú, notificaciones, OSD y la pantalla de bloqueo. (En Obsidian, debes seleccionar manualmente el tema de Omarchy en _Apariencia > Temas_ dentro de la app).
+Cada tema le da estilo al escritorio, la terminal, neovim, el monitor de actividad (btop), Chromium y toda la shell de Omarchy: barra superior, menú, notificaciones, OSD y pantalla de bloqueo. (En Obsidian, tenés que elegir a mano el tema de Omarchy en _Apariencia > Temas_ dentro de la app).
 
-Los temas tienen un conjunto de imágenes de fondo entre las que puedes elegir con `Super + Ctrl + Space`.
+Los temas traen un conjunto de fondos de pantalla que podés ir cambiando con `Super + Ctrl + Space`.
 
-Puedes encontrar aún más temas en [la página de temas extra](https://omarchy.org/themes/) o incluso [crear tu propio tema](43-making-your-own-theme.md).
+Podés encontrar todavía más temas en [la página de temas extra](https://omarchy.org/themes/) o incluso [crear tu propio tema](43-making-your-own-theme.md).
 
  ![tokyo-night](../themes/tokyo-night/preview.png)
 _Tokyo Night_
@@ -67,7 +67,7 @@ _White_
 
 ### Desbloqueos
 
-Los temas también pueden tener un diseño de desbloqueo personalizado, que se usa en el proceso de descifrado al arrancar. Puedes seleccionar uno en _Estilo > Desbloquear_. Se ven así:
+Los temas también pueden tener una pantalla de desbloqueo propia, que se usa al descifrar el disco durante el arranque. Podés elegir una en _Estilo > Desbloqueo_. Se ven así:
 
  ![catppuccin](../themes/catppuccin/preview-unlock.png)
 _Catppuccin_

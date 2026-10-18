@@ -1,11 +1,11 @@
-# Llenar PDF
+# Completar PDFs
 
-Omarchy viene con un visor de PDF agradable y básico llamado Document Viewer. Este es el programa que abrirá cualquier PDF en el que simplemente hagas doble clic.
+Omarchy trae un visor de PDF lindo y simple llamado Document Viewer. Es el programa que abre cualquier PDF cuando le hacés doble clic.
 
-Pero solo puedes usar Document Viewer para llenar PDF que hayan sido configurados como formularios. Si necesitas llenar PDF que no lo han sido, o necesitas firmar un PDF, usa [Signed](https://github.com/omacom/signed). Inícialo desde el lanzador de aplicaciones (`Super + Space`), o haz clic derecho en el archivo, selecciona _Open With..._ y elige Signed.
+Pero con Document Viewer solo podés completar los PDFs que fueron armados como formularios. Si necesitás completar PDFs que no lo son, o firmar un PDF, usá [Signed](https://github.com/omacom/signed). Abrilo desde el lanzador de aplicaciones (`Super + Space`), o hacé clic derecho en el archivo, elegí _Open With..._ y después Signed.
 
-Presiona `T` para escribir texto y `D` para poner la fecha de hoy. Ambos caen donde esté el puntero de tu mouse. Arrastra cualquier cosa para moverla, arrastra su esquina para hacerla más grande o más pequeña, y haz doble clic en el texto para cambiarlo.
+Apretá `T` para escribir texto y `D` para poner la fecha de hoy. Los dos aparecen donde esté el puntero del mouse. Arrastrá cualquier cosa para moverla, arrastrá su esquina para agrandarla o achicarla, y hacé doble clic en el texto para cambiarlo.
 
-Para firmar, necesitarás una imagen de tu firma: un escaneo, o una foto bien iluminada de ella sobre papel blanco. Abre el menú _Signature_ (`Shift + S`), elige _Add signature..._, escoge la imagen y dale un nombre. Signed quita el papel y conserva la tinta. De ahí en adelante, `S` pone tu firma bajo el puntero del mouse.
+Para firmar, vas a necesitar una imagen de tu firma: un escaneo, o una foto bien iluminada de la firma sobre papel blanco. Abrí el menú _Signature_ (`Shift + S`), elegí _Add signature..._, seleccioná la imagen y ponele un nombre. Signed saca el papel y se queda con la tinta. A partir de ahí, `S` pone tu firma bajo el puntero del mouse.
 
-Cuando termines, usa _Save signed copy..._ (`Ctrl + S`) para guardar el PDF llenado junto al original, que nunca se modifica. Presiona `?` dentro de Signed para ver todos los atajos.
+Cuando termines, usá _Save signed copy..._ (`Ctrl + S`) para guardar el PDF completado al lado del original, que nunca se modifica. Apretá `?` dentro de Signed para ver todos los atajos.
