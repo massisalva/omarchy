@@ -11,6 +11,7 @@ matching guide before starting:
 - [`agents/skills/acceptance-tests.md`](agents/skills/acceptance-tests.md) - writing or running graphical acceptance tests under `test/acceptance.d/`
 - [`agents/skills/visual-verification.md`](agents/skills/visual-verification.md) - verifying any change with a visual effect in the running UI
 - [`agents/skills/migrations.md`](agents/skills/migrations.md) - creating or changing migrations under `migrations/`
+- [`agents/skills/es-ar-upstream-sync.md`](agents/skills/es-ar-upstream-sync.md) - this fork: merging upstream and keeping `es-AR` translated
 
 # Documentation Layout
 
