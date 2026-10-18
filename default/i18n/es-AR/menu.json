@@ -604,22 +604,22 @@
     "label": "Emacs"
   },
   "setup.plugin": {
-    "label": "Complementos"
+    "label": "Plugins"
   },
   "setup.plugin.enable": {
-    "label": "Activar complemento"
+    "label": "Activar plugin"
   },
   "setup.plugin.disable": {
-    "label": "Desactivar complemento"
+    "label": "Desactivar plugin"
   },
   "setup.plugin.add": {
-    "label": "Agregar complemento"
+    "label": "Agregar plugin"
   },
   "setup.plugin.clone": {
-    "label": "Clonar complemento"
+    "label": "Clonar plugin"
   },
   "setup.plugin.remove": {
-    "label": "Eliminar complemento"
+    "label": "Eliminar plugin"
   },
   "setup.security": {
     "label": "Seguridad"
@@ -712,7 +712,7 @@
     "label": "Navegador"
   },
   "install.webapp": {
-    "label": "Aplicación web"
+    "label": "Web app"
   },
   "install.terminal": {
     "label": "Terminal"
@@ -966,7 +966,7 @@
     "title": "Eliminar"
   },
   "remove.webapp": {
-    "label": "Aplicación web"
+    "label": "Web app"
   },
   "remove.tui": {
     "label": "TUI"

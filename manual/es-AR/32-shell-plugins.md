@@ -23,7 +23,7 @@ omarchy plugin enable omarchy.tailscale
 omarchy plugin disable omarchy.weather
 ```
 
-O usá el menú: _Configurar > Complementos_ tiene Activar, Desactivar, Agregar, Clonar y Eliminar, cada uno con un selector que solo ofrece los plugins que tienen sentido para esa acción.
+O usá el menú: _Configurar > Plugins_ tiene Activar, Desactivar, Agregar, Clonar y Eliminar, cada uno con un selector que solo ofrece los plugins que tienen sentido para esa acción.
 
 El estado de activado se guarda en `~/.config/omarchy/shell.json`, y la regla cambia un poco según el tipo de plugin. Un plugin de terceros está activado justo cuando su id aparece en algún lado de ese archivo: como entrada de la distribución de la barra, como entrada en `plugins[]` o como `bar.id`. Los plugins oficiales que no son widgets de la barra funcionan al revés: vienen prendidos y solo se apagan si están en `disabledPlugins[]`.
 
@@ -66,7 +66,7 @@ Esta es mi parte favorita. Si querés cambiar cómo funciona un widget integrado
 omarchy plugin clone omarchy.clock
 ```
 
-Eso copia todo el plugin a `~/.config/omarchy/plugins/dhh.clock` (con tu nombre de usuario, no el mío), lo renombra a "My Clock", lo activa y hace que la shell use tu copia en lugar del integrado, conservando la posición y los ajustes si era un widget de la barra. Agregá `--edit` para abrir la carpeta nueva en tu `$EDITOR` en el momento, que es lo que hace por vos _Configurar > Complementos > Clonar complemento_ en el menú.
+Eso copia todo el plugin a `~/.config/omarchy/plugins/dhh.clock` (con tu nombre de usuario, no el mío), lo renombra a "My Clock", lo activa y hace que la shell use tu copia en lugar del integrado, conservando la posición y los ajustes si era un widget de la barra. Agregá `--edit` para abrir la carpeta nueva en tu `$EDITOR` en el momento, que es lo que hace por vos _Configurar > Plugins > Clonar plugin_ en el menú.
 
 El prefijo con tu nombre de usuario hace que el id de tu clon sea tuyo, así que si lo compartís no choca con el de nadie. Las llamadas al id integrado original van a tu clon, así que nada que haga referencia a `omarchy.clock` necesita cambiarse. Y si la embarrás, `omarchy plugin remove dhh.clock` vuelve a poner el integrado.
 

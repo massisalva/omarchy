@@ -76,7 +76,7 @@ Si no querés programas como Obsidian, LibreOffice o cualquiera de las otras cos
 
 Abrí _Eliminar > Paquete_ para ver todos los paquetes instalados. Después marcá con Tab los paquetes que quieras sacar y borrá todo lo marcado con Enter.
 
-Y podés usar _Eliminar > Aplicación web_ desde el menú de Omarchy para sacar cualquiera de las web apps preinstaladas que no quieras.
+Y podés usar _Eliminar > Web app_ desde el menú de Omarchy para sacar cualquiera de las web apps preinstaladas que no quieras.
 
 O abrí _Eliminar > Programas preinstalados_ para barrer de una vez con todos los extras preinstalados — web apps, TUIs y aplicaciones opcionales. Los atajos de teclado que los abrían se van con ellos, así que te queda una hoja en blanco de atajos para llenar con los tuyos en `~/.config/hypr/bindings.lua`.
 
