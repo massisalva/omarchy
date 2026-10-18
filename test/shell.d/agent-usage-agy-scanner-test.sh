@@ -21,14 +21,16 @@ agy_dir="$TEST_HOME/.gemini/antigravity-cli"
 mkdir -p "$agy_dir/brain/session-1/.system_generated/logs"
 
 today_ms=$(python3 -c 'import time; print(int(time.time() * 1000))')
+# Transcript steps are stamped now so the "today" totals never age out.
+now_iso=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 cat >"$agy_dir/history.jsonl" <<EOF
 {"display":"hello","timestamp":$today_ms,"workspace":"$TEST_HOME/work","conversationId":"session-1"}
 EOF
 
-cat >"$agy_dir/brain/session-1/.system_generated/logs/transcript.jsonl" <<'EOF'
-{"step_index":0,"source":"USER_EXPLICIT","type":"USER_INPUT","status":"DONE","created_at":"2026-10-02T12:00:00Z","content":"<USER_SETTINGS_CHANGE>\nThe user changed setting `Model Selection` to Gemini 3.8 Flash (High).\n</USER_SETTINGS_CHANGE>"}
-{"step_index":1,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-02T12:00:01Z","input_tokens":100,"cache_read_tokens":50,"output_tokens":25,"content":"Hello!"}
-{"step_index":2,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-10-02T12:00:05Z","input_tokens":120,"cache_read_tokens":60,"output_tokens":30,"content":"More output"}
+sed "s/__NOW__/$now_iso/" >"$agy_dir/brain/session-1/.system_generated/logs/transcript.jsonl" <<'EOF'
+{"step_index":0,"source":"USER_EXPLICIT","type":"USER_INPUT","status":"DONE","created_at":"__NOW__","content":"<USER_SETTINGS_CHANGE>\nThe user changed setting `Model Selection` to Gemini 3.8 Flash (High).\n</USER_SETTINGS_CHANGE>"}
+{"step_index":1,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"__NOW__","input_tokens":100,"cache_read_tokens":50,"output_tokens":25,"content":"Hello!"}
+{"step_index":2,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"__NOW__","input_tokens":120,"cache_read_tokens":60,"output_tokens":30,"content":"More output"}
 EOF
 
 result=$(HOME="$TEST_HOME" AGY_CONFIG_DIR="$agy_dir" XDG_CACHE_HOME="$TEST_HOME/.cache" \
