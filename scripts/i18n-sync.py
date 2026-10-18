@@ -464,6 +464,7 @@ def muse_json(prompt, model):
 REGIONAL_NOTES = {
     "pt": "European Portuguese as written in Portugal (estar a fazer, equipa, ecrã, ficheiro, utilizador); Brazilian forms are a defect.",
     "pt-BR": "Brazilian Portuguese.",
+    "es-AR": "Rioplatense Spanish as written in Argentina, with voseo (elegí, confirmá, querés, tenés), acá instead of aquí, notebook for a laptop, parlantes for speakers; tú forms are a defect.",
     "es-MX": "Mexican Spanish.",
     "zh-CN": "Simplified Chinese.",
     "zh-TW": "Traditional Chinese in Taiwan usage.",
