@@ -88,6 +88,14 @@
     "decimal": ".",
     "zeroDigit": "0"
   },
+  "es-AR": {
+    "name": "Español (Argentina)",
+    "englishName": "Spanish (Argentina)",
+    "formatLocale": "es-AR",
+    "locale": "es_AR.UTF-8",
+    "decimal": ",",
+    "zeroDigit": "0"
+  },
   "es-MX": {
     "name": "Español (México)",
     "englishName": "Spanish (Mexico)",
