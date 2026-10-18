@@ -55,7 +55,7 @@ También podés activar [gestos del touchpad](https://wiki.hypr.land/Configuring
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
 ```
 
-En las notebooks Dell XPS con touchpad háptico, también podés poner la fuerza del clic en baja, media o alta en _Acciones > Hardware > Respuesta háptica del touchpad_.
+En las notebooks Dell XPS con touchpad háptico, también podés poner la fuerza del clic en baja, media o alta en _Acciones > Hardware > Respuesta háptica_.
 
 ### Escribir en chino, japonés y otros idiomas
 
@@ -65,7 +65,7 @@ La escritura arranca en modo latino. Apretá `Super + I` para recorrer los méto
 
 El indicador de teclado aparece a la derecha de la barra cuando tenés varias distribuciones de teclado o métodos de entrada. Hacé clic para cambiar el idioma de entrada; el japonés muestra あ para hiragana. Para elegir entre caracteres japoneses, pasá a japonés, escribí una palabra como `nihongo` y apretá Space dos veces. Apretá Enter para aceptar. Si además tenés varias distribuciones de teclado, hacé clic derecho en el indicador para recorrerlas.
 
-Usá _Configurar > Escritura > Distribuciones de teclado_ para elegir distribuciones como inglés y francés, entre las mismas opciones que ofrece la instalación. Usá _Configurar > Escritura > Métodos de entrada_ para elegir qué motores de composición están activos. Los dos selectores se abren dentro del menú de Omarchy con lo que tenés elegido ya marcado. Hacé clic o apretá Enter para marcar o desmarcar una opción; cada cambio se aplica al instante. Desmarcar un método de entrada lo saca del ciclo sin desinstalarlo; el teclado sigue disponible.
+Usá _Configurar > Escritura > Teclados_ para elegir distribuciones como inglés y francés, entre las mismas opciones que ofrece la instalación. Usá _Configurar > Escritura > Métodos de entrada_ para elegir qué motores de composición están activos. Los dos selectores se abren dentro del menú de Omarchy con lo que tenés elegido ya marcado. Hacé clic o apretá Enter para marcar o desmarcar una opción; cada cambio se aplica al instante. Desmarcar un método de entrada lo saca del ciclo sin desinstalarlo; el teclado sigue disponible.
 
 Ejecutá `omarchy setup keyboard` o `omarchy setup input` para abrir los mismos selectores. Para sumar un idioma desde la línea de comandos, usá `omarchy setup input mozc`, `hangul`, `pinyin`, `chewing` o `cangjie5`. Quick, Boshiamy y Array vienen en el mismo paquete que Cangjie y aparecen en el selector de métodos de entrada. Tus teclas de cambio personalizadas se conservan. Para otras disposiciones o teclas del motor, instalá `fcitx5-configtool` con `omarchy pkg add fcitx5-configtool` y abrilo desde una terminal. Elegir un idioma de entrada no cambia el idioma del escritorio. Elegir japonés, coreano o chino en _Configurar > Idioma_ suma su método de entrada si todavía no tenés ninguno.
 

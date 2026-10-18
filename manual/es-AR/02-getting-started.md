@@ -36,7 +36,7 @@ Pero en casos especiales, como instalaciones remotas de Omarchy en computadoras 
 
 ### Idioma
 
-Omarchy habla 50 idiomas — los mismos que omarchy.org — y el inglés es el predeterminado. Para cambiarlo, abrí el menú de Omarchy y andá a _Configurar > Idioma_, o ejecutá `omarchy language <code>` en una terminal (`omarchy language list` muestra los códigos). El menú, el escritorio y las notificaciones de Omarchy cambian de idioma al instante, y también cada aplicación que abras después. Las apps que ya estaban abiertas cambian cuando las reiniciás.
+Omarchy habla 51 idiomas — los 50 de omarchy.org más este español rioplatense — y el inglés es el predeterminado. Para cambiarlo, abrí el menú de Omarchy y andá a _Configurar > Idioma_, o ejecutá `omarchy language <code>` en una terminal (`omarchy language list` muestra los códigos). El menú, el escritorio y las notificaciones de Omarchy cambian de idioma al instante, y también cada aplicación que abras después. Las apps que ya estaban abiertas cambian cuando las reiniciás.
 
 ### Ayuda si te trabás
 

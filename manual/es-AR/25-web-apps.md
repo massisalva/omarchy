@@ -1,10 +1,10 @@
 # Web apps
 
-Podés agregar tus propias web apps con _Instalar > Aplicación web_ en el menú de Omarchy (`Super + Space`). Te va a pedir el nombre de la app, su URL y la URL del ícono, si no lo puede sacar del favicon. Hay íconos PNG buenísimos para muchas web apps populares en [Dashboard Icons](https://dashboardicons.com).
+Podés agregar tus propias web apps con _Instalar > Web app_ en el menú de Omarchy (`Super + Space`). Te va a pedir el nombre de la app, su URL y la URL del ícono, si no lo puede sacar del favicon. Hay íconos PNG buenísimos para muchas web apps populares en [Dashboard Icons](https://dashboardicons.com).
 
 Después vas a encontrarlas en el lanzador de aplicaciones (`Super + Space`), y usan la hermosa ventana de web app sin bordes.
 
-Si querés sacar una web app, andá a _Eliminar > Aplicación web_ en el menú de Omarchy.
+Si querés sacar una web app, andá a _Eliminar > Web app_ en el menú de Omarchy.
 
 Conviene que inicies sesión en todas tus cuentas con un navegador común antes de usar los atajos de las web apps. El marco finito que las envuelve no se lleva bien con 1password, así que es más fácil haber iniciado sesión directamente antes.
 
@@ -78,7 +78,7 @@ Abrís Discord desde el lanzador de aplicaciones (`Super + Space`).
 
 Elegí _Instalar > Servicio > Microsoft_ para agregar Outlook, Word, Excel, PowerPoint, Teams y OneDrive como web apps. Cada app tiene su propio lanzador y se abre directamente, con las URLs comerciales de Microsoft 365 y el perfil de navegador que ya tenés. Se abren en las mismas ventanas de navegador que las demás web apps de Omarchy; no instalan el cliente aparte de Teams para Linux.
 
-Sacá el paquete completo con _Eliminar > Servicio > Microsoft_, o apps sueltas con _Eliminar > Aplicación web_. También podés instalar solo las apps que quieras con _Instalar > Aplicación web_.
+Sacá el paquete completo con _Eliminar > Servicio > Microsoft_, o apps sueltas con _Eliminar > Web app_. También podés instalar solo las apps que quieras con _Instalar > Web app_.
 
 Para una nube gubernamental o soberana, editá la URL en la línea `Exec=` del lanzador que corresponda en `~/.local/share/applications/`, como `Microsoft Teams.desktop`, con la URL que te dé tu organización. Escribí cualquier `%` literal de esa línea como `%%`. Los cambios se aplican la próxima vez que la abras. Si volvés a ejecutar el instalador del paquete, sus lanzadores vuelven a las URLs predeterminadas.
 
