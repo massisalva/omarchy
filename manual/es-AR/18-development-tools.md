@@ -47,7 +47,7 @@ Si ya tenés una tabla `[settings]`, agregá la entrada ahí; si ya hay una list
 
 ### Quitar y restaurar las predeterminadas
 
-_Eliminar > Programas preinstalados_ hace que mise ignore, para tu usuario, las herramientas que declara Omarchy, agregándolas a `ignored_config_paths` en `~/.config/mise/miserc.toml`. _Instalar > Programas preinstalados_ vuelve a sacar esa línea. Las herramientas que declares vos, en tu propia configuración o en el `mise.toml` de un proyecto, siguen funcionando en los dos casos. Si elegís un agente predeterminado o configurás Python después de quitar las preinstaladas, esa herramienta se agrega a tu propia configuración. Las dos opciones afectan solo a tu usuario; los demás usuarios de la máquina conservan su propia elección.
+_Eliminar > Preinstalados_ hace que mise ignore, para tu usuario, las herramientas que declara Omarchy, agregándolas a `ignored_config_paths` en `~/.config/mise/miserc.toml`. _Instalar > Preinstalados_ vuelve a sacar esa línea. Las herramientas que declares vos, en tu propia configuración o en el `mise.toml` de un proyecto, siguen funcionando en los dos casos. Si elegís un agente predeterminado o configurás Python después de quitar las preinstaladas, esa herramienta se agrega a tu propia configuración. Las dos opciones afectan solo a tu usuario; los demás usuarios de la máquina conservan su propia elección.
 
 ## Docker
 

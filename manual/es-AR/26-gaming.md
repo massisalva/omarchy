@@ -28,7 +28,7 @@ Para arrancar:
 2. Abrí RetroArch con `Super + Space` escribiendo `retro`.
 3. Escaneá la carpeta `~/Games/roms` y listo para jugar.
 
-También podés darle a un juego favorito su propia entrada en el lanzador de aplicaciones con _Instalar > Juegos > Lanzador de juegos RetroArch_, que te deja elegir un núcleo y una ROM y saltar directo al juego desde `Super + Space`.
+También podés darle a un juego favorito su propia entrada en el lanzador de aplicaciones con _Instalar > Juegos > Lanzador RetroArch_, que te deja elegir un núcleo y una ROM y saltar directo al juego desde `Super + Space`.
 
  ![gaming-retroarch](images/gaming-retroarch.webp)
 

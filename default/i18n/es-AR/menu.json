@@ -111,10 +111,10 @@
     "label": "Barra transparente"
   },
   "trigger.appearance.top-bar.indicators": {
-    "label": "Indicadores de barra"
+    "label": "Indicadores"
   },
   "trigger.appearance.top-bar.indicators.battery-percentage": {
-    "label": "Porcentaje de batería"
+    "label": "% de batería"
   },
   "trigger.appearance.top-bar.indicators.clock": {
     "label": "Reloj"
@@ -177,10 +177,10 @@
     "label": "Dock"
   },
   "trigger.appearance.dock.autohide": {
-    "label": "Ocultar dock automáticamente"
+    "label": "Autoocultar dock"
   },
   "trigger.appearance.dock.always-on": {
-    "label": "Dock siempre visible"
+    "label": "Dock fijo"
   },
   "trigger.appearance.dock.position": {
     "label": "Posición del dock"
@@ -198,10 +198,10 @@
     "label": "Dock derecho"
   },
   "trigger.appearance.window-gaps": {
-    "label": "Espacios entre ventanas"
+    "label": "Separación"
   },
   "trigger.appearance.window-corners": {
-    "label": "Esquinas de ventana"
+    "label": "Esquinas"
   },
   "trigger.appearance.window-corners.theme": {
     "label": "Esquinas del tema"
@@ -213,22 +213,22 @@
     "label": "Esquinas redondas"
   },
   "trigger.appearance.window-transparency": {
-    "label": "Opacidad de ventana"
+    "label": "Opacidad"
   },
   "trigger.appearance.window-transparency.opaque": {
-    "label": "Ventanas opacas"
+    "label": "Opacas"
   },
   "trigger.appearance.window-transparency.transparent": {
-    "label": "Ventanas transparentes"
+    "label": "Transparentes"
   },
   "trigger.appearance.window-transparency.glassy": {
-    "label": "Ventanas cristalinas"
+    "label": "Cristalinas"
   },
   "trigger.appearance.one-window-ratio": {
-    "label": "Proporción con una ventana"
+    "label": "Ventana cuadrada"
   },
   "trigger.appearance.workspace-layout": {
-    "label": "Distribución de espacios de trabajo",
+    "label": "Distribución",
     "title": "Distribución predeterminada de espacios"
   },
   "trigger.appearance.workspace-layout.dwindle": {
@@ -241,7 +241,7 @@
     "label": "Flotante"
   },
   "trigger.appearance.theme-sync": {
-    "label": "Sincronizar tema Herdr"
+    "label": "Tema en Herdr"
   },
   "trigger.toggle": {
     "label": "Alternar"
@@ -265,7 +265,7 @@
     "label": "Emoji"
   },
   "trigger.clipboard-history": {
-    "label": "Historial del portapapeles"
+    "label": "Portapapeles"
   },
   "trigger.reminder": {
     "label": "Recordatorio"
@@ -274,7 +274,7 @@
     "label": "Capturar"
   },
   "trigger.capture.screenshot": {
-    "label": "Captura de pantalla"
+    "label": "Captura"
   },
   "trigger.capture.screenrecord.stop": {
     "label": "Detener grabación de pantalla"
@@ -301,7 +301,7 @@
     "label": "Con audio del escritorio y micrófono"
   },
   "trigger.capture.screenrecord.webcam": {
-    "label": "Con audio del escritorio, micrófono y cámara web"
+    "label": "Con escritorio, micrófono y cámara"
   },
   "trigger.transcode": {
     "label": "Transcodificar"
@@ -313,10 +313,10 @@
     "label": "Hardware"
   },
   "trigger.tests": {
-    "label": "Prueba de velocidad"
+    "label": "Medir velocidad"
   },
   "trigger.hardware.laptop-display": {
-    "label": "Pantalla de la notebook"
+    "label": "Pantalla interna"
   },
   "trigger.hardware.mirror-display": {
     "label": "Duplicar pantalla"
@@ -328,7 +328,7 @@
     "label": "Touchpad"
   },
   "trigger.hardware.touchpad-haptics": {
-    "label": "Respuesta háptica del touchpad"
+    "label": "Respuesta háptica"
   },
   "trigger.hardware.touchpad-haptics.low": {
     "label": "baja"
@@ -364,10 +364,10 @@
     "label": "Recibir"
   },
   "trigger.tests.network-speedtest": {
-    "label": "Prueba de velocidad de red"
+    "label": "Velocidad de red"
   },
   "trigger.tests.disk-speedtest": {
-    "label": "Prueba de velocidad del disco"
+    "label": "Velocidad de disco"
   },
   "style.theme": {
     "label": "Tema"
@@ -416,19 +416,19 @@
     "label": "Editar texto"
   },
   "style.about.image": {
-    "label": "Establecer desde una imagen"
+    "label": "Desde una imagen"
   },
   "style.about.default": {
-    "label": "Restaurar valor predeterminado"
+    "label": "Volver al original"
   },
   "style.screensaver.text": {
     "label": "Editar texto"
   },
   "style.screensaver.image": {
-    "label": "Establecer desde una imagen"
+    "label": "Desde una imagen"
   },
   "style.screensaver.default": {
-    "label": "Restaurar valor predeterminado"
+    "label": "Volver al original"
   },
   "setup.monitors": {
     "label": "Monitores"
@@ -443,7 +443,7 @@
     "label": "Escritura"
   },
   "setup.typing.keyboard": {
-    "label": "Distribuciones de teclado"
+    "label": "Teclados"
   },
   "setup.typing.input": {
     "label": "Métodos de entrada"
@@ -643,7 +643,7 @@
     "label": "Docker sin sudo"
   },
   "setup.security.passwordless-sudo": {
-    "label": "Sudo sin contraseña"
+    "label": "Sudo sin clave"
   },
   "setup.config.hyprland": {
     "label": "Hyprland"
@@ -727,7 +727,7 @@
     "label": "AUR"
   },
   "install.preinstalls": {
-    "label": "Programas preinstalados"
+    "label": "Preinstalados"
   },
   "install.browser.chrome": {
     "label": "Chrome"
@@ -868,7 +868,7 @@
     "label": "Heroic (Epic Games)"
   },
   "install.gaming.retro-launcher": {
-    "label": "Lanzador de juegos RetroArch"
+    "label": "Lanzador RetroArch"
   },
   "install.development.rails": {
     "label": "Ruby on Rails"
@@ -975,7 +975,7 @@
     "label": "Windows"
   },
   "remove.preinstalls": {
-    "label": "Programas preinstalados"
+    "label": "Preinstalados"
   },
   "remove.security": {
     "label": "Seguridad",
@@ -1072,7 +1072,7 @@
     "label": "Xbox Cloud Gaming"
   },
   "remove.gaming.xbox-controllers": {
-    "label": "Controles de Xbox (󰂯)"
+    "label": "Controles Xbox (󰂯)"
   },
   "remove.gaming.battlenet": {
     "label": "Battle.net"
@@ -1228,7 +1228,7 @@
     "label": "Touchpad"
   },
   "update.password.drive": {
-    "label": "Cifrado de la unidad"
+    "label": "Cifrado del disco"
   },
   "update.password.user": {
     "label": "Usuario"

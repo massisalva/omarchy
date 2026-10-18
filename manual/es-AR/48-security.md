@@ -10,7 +10,7 @@ Omarchy se toma la seguridad muy en serio. La idea es que sea un sistema operati
 
 ## Cambiar tus contraseñas
 
-En una instalación cifrada tenés dos contraseñas: la que desbloquea el disco al arrancar y la que usás para iniciar sesión y para `sudo`. La configuración inicial las deja iguales. Las dos se cambian en _Actualizar > Contraseña_ en el menú de Omarchy — _Cifrado de la unidad_ para la primera, _Usuario_ para la segunda. Cambiar la contraseña del disco primero te pide la actual, así que tenela a mano. Si un cambio se interrumpe, volvé a abrir _Cifrado de la unidad_: te pide la contraseña que desbloquea el disco ahora y termina el cambio.
+En una instalación cifrada tenés dos contraseñas: la que desbloquea el disco al arrancar y la que usás para iniciar sesión y para `sudo`. La configuración inicial las deja iguales. Las dos se cambian en _Actualizar > Contraseña_ en el menú de Omarchy — _Cifrado del disco_ para la primera, _Usuario_ para la segunda. Cambiar la contraseña del disco primero te pide la actual, así que tenela a mano. Si un cambio se interrumpe, volvé a abrir _Cifrado del disco_: te pide la contraseña que desbloquea el disco ahora y termina el cambio.
 
 ## Pasarle a otro una máquina que ya usaste
 
@@ -20,7 +20,7 @@ Funciona restaurando la instantánea base que saca el instalador, así que solo 
 
 ## Sudo sin contraseña
 
-A veces querés que `sudo` deje de preguntar, sobre todo cuando un agente de IA está haciendo un trabajo largo en el sistema por vos. _Configurar > Seguridad > Sudo sin contraseña_ te pregunta por cuánto tiempo permitir el acceso: **15 minutes**, **1 Hour**, **1 Day** o **Permanently**. Mientras el acceso está activo, aparece un ícono de advertencia rojo al lado de los otros indicadores de la barra de menú. Hacé clic en él o volvé a ejecutar el comando para cortar el acceso. También podés pasar tu propia cantidad de minutos (de 1 a 1440) con `omarchy-sudo-passwordless 30`, o usar `omarchy-sudo-passwordless permanent`.
+A veces querés que `sudo` deje de preguntar, sobre todo cuando un agente de IA está haciendo un trabajo largo en el sistema por vos. _Configurar > Seguridad > Sudo sin clave_ te pregunta por cuánto tiempo permitir el acceso: **15 minutes**, **1 Hour**, **1 Day** o **Permanently**. Mientras el acceso está activo, aparece un ícono de advertencia rojo al lado de los otros indicadores de la barra de menú. Hacé clic en él o volvé a ejecutar el comando para cortar el acceso. También podés pasar tu propia cantidad de minutos (de 1 a 1440) con `omarchy-sudo-passwordless 30`, o usar `omarchy-sudo-passwordless permanent`.
 
 El acceso por tiempo vence solo, incluso apenas volvés de una suspensión que pasó el límite. Reiniciar la computadora lo corta antes. El acceso permanente sobrevive a los reinicios y queda activado hasta que lo desactives.
 
