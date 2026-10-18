@@ -73,7 +73,7 @@ Si desinstalás cualquiera de los dos servicios, su widget desaparece de la barr
 
 ## Indicadores
 
-El grupito del centro es el widget de indicadores. Son glifos de estado para los modos que activaste: no molestar, luz nocturna, un [recordatorio](09-reminders.md) pendiente, una grabación de pantalla en curso, mantener despierto y [dictado](11-text-extraction-dictation.md). Se prenden cuando el modo está activo y, si no, no molestan — pasá el cursor por cualquier parte de la barra para ver los que están apagados. Hacer clic en un indicador activa o desactiva ese modo. Hay uno más que solo muestra estado: una sesión remota se prende en rojo mientras alguien está conectado a esta máquina por gliff.
+El grupito del centro es el widget de indicadores. Son glifos de estado para los modos que activaste: no molestar, luz nocturna, un [recordatorio](09-reminders.md) pendiente, una grabación de pantalla en curso, mantener activo y [dictado](11-text-extraction-dictation.md). Se prenden cuando el modo está activo y, si no, no molestan — pasá el cursor por cualquier parte de la barra para ver los que están apagados. Hacer clic en un indicador activa o desactiva ese modo. Hay uno más que solo muestra estado: una sesión remota se prende en rojo mientras alguien está conectado a esta máquina por gliff.
 
 Si preferís que estén siempre visibles, poné `alwaysShow` en `true` en el widget. Y si solo te interesan algunos, listá los que querés en `items`: `["Dnd", "Reminder", "NightLight"]`. Podés tener más de un widget de indicadores, así cada sección muestra un grupo distinto.
 
