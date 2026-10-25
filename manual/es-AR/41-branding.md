@@ -16,7 +16,7 @@ Después aplicá la configuración con `omarchy plymouth set '#1d2021' '#ebdbb2'
 
 ### Salvapantallas
 
-Podés cambiar el logo del salvapantallas en _Estilo > Salvapantallas_. Es un logo en ASCII, así que podés editar el texto directamente, pero también le podés dar una imagen png o svg y la convertimos a ASCII. Queda bastante bien.
+Podés cambiar el logo del salvapantallas en _Apariencia > Marca > Salvapantallas_. Es un logo en ASCII, así que podés editar el texto directamente, pero también le podés dar una imagen png o svg y la convertimos a ASCII. Queda bastante bien.
 
  ![branding-screensaver](images/branding-screensaver.webp)
 
@@ -28,7 +28,7 @@ Ese menú tiene tres opciones:
 
 ### Pantalla Acerca de
 
-Las mismas tres opciones están en _Estilo > Acerca de_ para la pantalla _Acerca de_ que abrís desde el menú de Omarchy, y funcionan igual: el archivo es `~/.config/omarchy/branding/about.txt`, y la ventana Acerca de aparece después de cada cambio. El arte de Acerca de se convierte a un tamaño más chico que el del salvapantallas, porque tiene que entrar en una ventana en vez de llenar toda la pantalla.
+Las mismas tres opciones están en _Apariencia > Marca > Acerca de_ para la pantalla _Acerca de_ que abrís desde el menú de Omarchy, y funcionan igual: el archivo es `~/.config/omarchy/branding/about.txt`, y la ventana Acerca de aparece después de cada cambio. El arte de Acerca de se convierte a un tamaño más chico que el del salvapantallas, porque tiene que entrar en una ventana en vez de llenar toda la pantalla.
 
 Mientras la ventana está abierta, un destello verde le pasa por encima al arte cada pocos segundos y después lo deja quieto otra vez. Tu propio arte también lo tiene, siempre que cada carácter ocupe una columna de ancho, como todo lo que genera _Desde una imagen_. El arte hecho con emojis o caracteres de doble ancho queda quieto, y lo mismo pasa con la pantalla si usás tu propia configuración de fastfetch: en esos casos, un logo quieto es la animación haciéndose a un lado en vez de romperse, porque pasarles un destello por encima dejaría el resto de la línea fuera de lugar.
 

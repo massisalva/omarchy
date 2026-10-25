@@ -79,7 +79,7 @@ Abrís Signed desde el lanzador de aplicaciones (`Super + Space`), o abrís un P
 
 [Omacalc](https://github.com/omacom-io/omacalc) es la calculadora súper simple de Omarchy, que se abre en una ventana flotante.
 
-Abrís Omacalc con `Super + Ctrl + Q` (o con la tecla de calculadora, si tu teclado tiene una).
+Abrís Omacalc con `Super + Shift + Q` (o con la tecla de calculadora, si tu teclado tiene una).
 
 ## Signal
 

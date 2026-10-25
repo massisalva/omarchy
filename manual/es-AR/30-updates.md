@@ -20,6 +20,10 @@ Por último está el canal dev, que conecta Omarchy directamente a una copia git
 
 Podés cambiar de canal con _Actualizar > Canal_ desde el menú de Omarchy (o con `omarchy-channel-set` en la terminal).
 
+### Cambiar de kernel
+
+Omarchy arranca con su propio kernel, `linux-omarchy`, pero podés tener otros instalados al lado, como el kernel `linux` estándar de Arch o una versión experimental que estés probando. Cuando hay más de uno, _Actualizar > Kernel_ en el menú de Omarchy los lista con una marca al lado del que arranca por defecto. Elegí otro, poné tu contraseña una vez y va a arrancar después del próximo reinicio. Los otros kernels siguen en el menú de arranque, así que igual podés elegir uno a mano si el nuevo predeterminado te da problemas. En la terminal, `omarchy-kernel` muestra el predeterminado actual, `omarchy-kernel list` lo que está instalado y `omarchy-kernel set <kernel>` cambia de kernel.
+
 ### Actualizaciones de firmware
 
 Tus paquetes no son lo único que queda viejo. Muchas notebooks y periféricos distribuyen firmware de BIOS, SSD y docks a través del Linux Vendor Firmware Service, y _Actualizar > Firmware_ en el menú de Omarchy busca e instala lo que tu hardware tenga pendiente. La primera vez que lo usás instala `fwupd`. Mucho firmware solo se puede escribir durante un reinicio, así que no te sorprendas si te pide uno.

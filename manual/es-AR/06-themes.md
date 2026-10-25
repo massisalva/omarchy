@@ -1,10 +1,10 @@
 # Temas
 
-Omarchy trae veintidós temas hermosos. Podés elegir entre ellos en _Estilo > Tema_ en el menú de Omarchy (`Super + Space`) o ir directo al selector de temas con `Super + Ctrl + Shift + Space`.
+Omarchy trae veintidós temas hermosos. Podés elegir entre ellos en _Apariencia > Tema_ en el menú de Omarchy (`Super + Space`) o ir directo al selector de temas con `Super + Ctrl + T`.
 
 Cada tema le da estilo al escritorio, la terminal, neovim, el monitor de actividad (btop), Chromium y toda la shell de Omarchy: barra superior, menú, notificaciones, OSD y pantalla de bloqueo. (En Obsidian, tenés que elegir a mano el tema de Omarchy en _Apariencia > Temas_ dentro de la app).
 
-Los temas traen un conjunto de fondos de pantalla que podés ir cambiando con `Super + Ctrl + Space`.
+Los temas traen un conjunto de fondos de pantalla que podés ir cambiando con `Super + Ctrl + W`.
 
 Podés encontrar todavía más temas en [la página de temas extra](https://omarchy.org/themes/) o incluso [crear tu propio tema](43-making-your-own-theme.md).
 
@@ -32,8 +32,8 @@ _Miasma_
  ![hackerman](../themes/hackerman/preview.png)
 _Hackerman_
 
- ![osaka-jade](../themes/osaka-jade/preview.png)
-_Osaka Jade_
+ ![jade-horse](../themes/jade-horse/preview.png)
+_Jade Horse_
 
  ![kanagawa](../themes/kanagawa/preview.png)
 _Kanagawa_
@@ -67,7 +67,7 @@ _White_
 
 ### Desbloqueos
 
-Los temas también pueden tener una pantalla de desbloqueo propia, que se usa al descifrar el disco durante el arranque. Podés elegir una en _Estilo > Desbloqueo_. Se ven así:
+Los temas también pueden tener una pantalla de desbloqueo propia, que se usa al descifrar el disco durante el arranque. Podés elegir una en _Apariencia > Desbloqueo_. Se ven así:
 
  ![catppuccin](../themes/catppuccin/preview-unlock.png)
 _Catppuccin_
@@ -90,6 +90,9 @@ _Gruvbox_
  ![hackerman](../themes/hackerman/preview-unlock.png)
 _Hackerman_
 
+ ![jade-horse](../themes/jade-horse/preview-unlock.png)
+_Jade Horse_
+
  ![kanagawa](../themes/kanagawa/preview-unlock.png)
 _Kanagawa_
 
@@ -104,9 +107,6 @@ _Miasma_
 
  ![nord](../themes/nord/preview-unlock.png)
 _Nord_
-
- ![osaka-jade](../themes/osaka-jade/preview-unlock.png)
-_Osaka Jade_
 
  ![retro-82](../themes/retro-82/preview-unlock.png)
 _Retro 82_

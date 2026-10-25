@@ -48,7 +48,7 @@ Abrís WhatsApp con `Super + Shift + Alt + G`.
 
 Google Messages, Google Photos, Google Maps y Google Contacts también vienen como web apps.
 
-Abrís Google Messages con `Super + Shift + Ctrl + G`, Google Photos con `Super + Shift + P` y Google Maps con `Super + Shift + Alt + S`. Google Contacts está en el lanzador de aplicaciones (`Super + Space`).
+Abrís Google Messages con `Super + Shift + Ctrl + G`, Google Photos con `Super + Shift + P` y Google Maps con `Super + Shift + S`. Google Contacts está en el lanzador de aplicaciones (`Super + Space`).
 
 ## X
 

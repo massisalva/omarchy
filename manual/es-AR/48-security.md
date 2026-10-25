@@ -32,4 +32,4 @@ Tené esto bien claro: mientras está activado, cualquier cosa que corra con tu 
 
 La clave pública de todas las firmas de las ISOs y de los paquetes del repositorio de Omarchy es `40DFB630FF42BCFFB047046CF0134EE680CAC571` ([verificala en openpgp.org](https://keys.openpgp.org/search?q=pkgs%40omarchy.org)). El paquete `omarchy/omarchy-keyring` también la incluye y se va a usar para distribuir sin problemas cualquier actualización que haga falta.
 
-Encontrás la firma de cualquier versión de la ISO agregando .sig a la URL. Por ejemplo, https://iso.omarchy.org/omarchy-x.x.x.iso.sig.
+Encontrás la firma de cualquier versión de la ISO agregando `.sig` a su URL, por ejemplo `https://iso.omarchy.org/omarchy-x.x.x.iso.sig`.

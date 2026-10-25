@@ -26,7 +26,7 @@ Si querés que los íconos del administrador de archivos combinen con el color d
 
 ### Imagen de desbloqueo
 
-Los temas que traen las imágenes `unlock.png` y `preview-unlock.png` aparecen en _Estilo > Desbloqueo_. Tu `unlock.png` conviene que sea un png transparente. Y podés crear la imagen de vista previa con `omarchy plymouth preview`.
+Los temas que traen las imágenes `unlock.png` y `preview-unlock.png` aparecen en _Apariencia > Desbloqueo_. Tu `unlock.png` conviene que sea un png transparente. Y podés crear la imagen de vista previa con `omarchy plymouth preview`.
 
 ### Darle tema a apps que Omarchy no cubre
 
