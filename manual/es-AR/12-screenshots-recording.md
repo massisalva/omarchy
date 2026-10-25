@@ -1,11 +1,11 @@
 # Capturas de pantalla y grabación
 
-Todo lo que podés capturar de la pantalla sale de la tecla Print Screen. La tecla sola saca una foto, y con modificadores graba, toma un color o saca el texto de una zona. Si tu teclado directamente no tiene tecla Print Screen, `Super + Shift + S` saca la misma captura, y `Super + Ctrl + C` abre todas las opciones como menú.
+Todo lo que podés capturar de la pantalla sale de la tecla Print Screen. La tecla sola saca una foto, y con modificadores graba, toma un color o saca el texto de una zona. Si tu teclado directamente no tiene tecla Print Screen, `Super + Ctrl + Alt + C` saca la misma captura, y `Super + Ctrl + C` abre todas las opciones como menú.
 
 | Atajo | Función |
 | ------ | -------- |
 | `Print Screen` | Captura de pantalla |
-| `Super + Shift + S` | Captura de pantalla |
+| `Super + Ctrl + Alt + C` | Captura de pantalla |
 | `Alt + Print Screen` | Grabar pantalla (o detener la grabación en curso) |
 | `Super + Print Screen` | Selector de color |
 | `Super + Ctrl + Print Screen` | Extraer el texto de una zona |
@@ -14,15 +14,15 @@ Todo lo que podés capturar de la pantalla sale de la tecla Print Screen. La tec
 
 ## Capturas de pantalla
 
-Apretá `Print Screen` (o `Super + Shift + S`) y Omasnap captura el monitor con foco antes de mostrar su capa, así nada se te mueve mientras apuntás. Arrastrá para marcar una zona libre, hacé clic en una ventana para capturarla o hacé clic en un espacio vacío para capturar todo el monitor. Apretá `S` antes de marcar para capturar una zona con desplazamiento. ¿Te arrepentiste? Apretá la misma tecla otra vez para cerrar Omasnap.
+Apretá `Print Screen` (o `Super + Ctrl + Alt + C`) y Omasnap captura el monitor con foco antes de mostrar su capa, así nada se te mueve mientras apuntás. Arrastrá para marcar una zona libre, hacé clic en una ventana para capturarla o hacé clic en un espacio vacío para capturar todo el monitor. Apretá `S` antes de marcar para capturar una zona con desplazamiento. ¿Te arrepentiste? Apretá la misma tecla otra vez para cerrar Omasnap.
 
-Cuando marcás una zona, Omasnap guarda la captura, la copia al portapapeles y muestra una vista previa durante 10 segundos. Usá el botón de fijar de la vista previa o `Ctrl + P` para dejarla en pantalla, o elegí Editar para hacerle anotaciones.
+Cuando marcás una zona, Omasnap guarda la captura, la copia al portapapeles y muestra una notificación con su miniatura, igual que con una grabación de pantalla guardada. Elegí Abrir para ver la captura guardada en tu visor de imágenes, o Editar para hacerle anotaciones.
 
 El editor de anotaciones puede dibujar flechas, líneas, formas, resaltados, marcadores numerados, texto y tachados seguros; recortar o quitar una parte de la imagen; reconocer su texto con OCR; y ponerle un fondo. En el editor, apretá `Enter` para copiar y guardar el PNG terminado, `Ctrl + C` para copiarlo sin guardarlo o `Ctrl + S` para guardarlo sin copiarlo.
 
-Las capturas guardadas van a `~/Pictures/Screenshots` por defecto, con un nombre como `screenshot-2026-08-13_14-22-05-firefox.png`. Configurá `OMASNAP_SCREENSHOT_DIR` para usar otra carpeta — mirá [las preguntas frecuentes](46-faq.md) para saber dónde poner las variables de entorno de la sesión. Omasnap crea la carpeta cuando guarda la primera captura. Poné `[output] autosave = false` en `~/.config/omasnap/omasnap.conf` para desactivar el guardado automático.
+Las capturas guardadas van a `~/Pictures/Screenshots` por defecto, con un nombre como `screenshot-2026-08-13_14-22-05-firefox.png`. Configurá `OMASNAP_SCREENSHOT_DIR` para usar otra carpeta — mirá [las preguntas frecuentes](46-faq.md) para saber dónde poner las variables de entorno de la sesión. Omasnap crea la carpeta cuando guarda la primera captura. Poné `[output] autosave = false` en `~/.config/omasnap/omasnap.conf` para desactivar el guardado automático; en ese caso las capturas solo se copian y se muestran en una vista previa durante 10 segundos, que podés dejar en pantalla con su botón de fijar o con `Ctrl + P`.
 
-Desde la terminal, `omarchy screenshot` abre la misma capa, y podés elegir el modo con el que arranca: `omarchy capture screenshot region`, `windows`, `fullscreen` o `scroll`. Un segundo argumento, `copy` o `save`, se saltea la vista previa y manda la captura directo a ese destino. Para editarla antes, usá `omarchy screenshot --editor=overlay` para un editor a pantalla completa o `omarchy screenshot --editor=window` para una ventana aparte.
+Desde la terminal, `omarchy screenshot` abre la misma capa, y podés elegir el modo con el que arranca: `omarchy capture screenshot region`, `windows`, `fullscreen` o `scroll`. Un segundo argumento, `copy` o `save`, manda la captura directo a ese destino. Para editarla antes, usá `omarchy screenshot --editor=overlay` para un editor a pantalla completa o `omarchy screenshot --editor=window` para una ventana aparte.
 
 ### Manejar la selección con el teclado
 

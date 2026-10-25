@@ -59,4 +59,4 @@ Todos los comandos aceptan además `--help`, ya sea que se lo pidas a un grupo e
 
 ### Abrir el menú desde la terminal
 
-El menú de Omarchy también se puede manejar desde scripts, algo práctico para tus propios atajos. `omarchy menu` lo abre en la raíz, y podés saltar directo a cualquier punto del árbol nombrándolo: `omarchy menu summon style.theme` va directo al selector de temas, `omarchy menu toggle system` abre el menú del sistema y lo cierra si ya estaba abierto, y `omarchy menu close` lo oculta.
+El menú de Omarchy también se puede manejar desde scripts, algo práctico para tus propios atajos. `omarchy menu` lo abre en la raíz, y podés saltar directo a cualquier punto del árbol nombrándolo: `omarchy menu summon appearance.theme` va directo al selector de temas, `omarchy menu toggle system` abre el menú del sistema y lo cierra si ya estaba abierto, y `omarchy menu close` lo oculta.

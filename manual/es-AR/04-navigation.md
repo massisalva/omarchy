@@ -12,7 +12,7 @@ Después podés apretar `Super + J` para apilarlas una arriba de la otra en vez 
 
 Apretá `Super + J` de nuevo para volver a ponerlas lado a lado. Después probá `Super + Shift + Arrow Right` parado en el navegador para intercambiar las ventanas.
 
-Ahora probá `Super + Ctrl + T` para abrir el monitor de actividad. Va a aparecer como ventana flotante. Podés meterla en el mosaico con `Super + T` (y apretarlo otra vez para que vuelva a flotar). Ahora apretá `Super + Shift + F` para abrir el administrador de archivos. Te queda un lindo esquema de cuatro ventanas:
+Ahora probá `Super + Shift + T` para abrir el monitor de actividad. Va a aparecer como ventana flotante. Podés meterla en el mosaico con `Super + T` (y apretarlo otra vez para que vuelva a flotar). Ahora apretá `Super + Shift + F` para abrir el administrador de archivos. Te queda un lindo esquema de cuatro ventanas:
 
  ![navigation-fourway-tiling](images/navigation-fourway-tiling.webp)
 
@@ -56,9 +56,9 @@ hl.config({
 
 Un espacio de trabajo flotante funciona como un escritorio tradicional: las ventanas se superponen, y las movés y les cambiás el tamaño vos. Cada ventana tiene una barra de título con los colores de tu tema y botones para minimizar, maximizar y cerrar. `Super + M` también minimiza la ventana con foco. Una ventana minimizada espera en el dock; hacé clic en su app para traerla de vuelta. Hacé clic en una ventana para traerla al frente. Cambiale el tamaño desde cualquier borde o esquina. Hacé doble clic en una barra de título para maximizar la ventana sin tapar la barra superior, y otra vez para que vuelva a su tamaño anterior.
 
-Un espacio de trabajo flotante también muestra un dock, con tus apps fijadas, todo lo que está abierto y, detrás del botón de aplicaciones, una grilla con todas las apps, que también abren `Super + Alt + Space` y _Aplicaciones_ en el menú de Omarchy. Hacé clic derecho en una app de la grilla, o apretá `Delete`, para desinstalarla. Hacé clic en una app para abrirla, o para traer su ventana al frente; hacé clic otra vez para ir pasando por sus ventanas. El clic del medio abre una ventana nueva. Arrastrá un ícono por el dock para moverlo; si arrastrás una app abierta entre las demás, queda ahí. Hacé clic derecho para dejar una app fija en el dock, sacarla o cerrarla. El dock se corre cuando hay una ventana en pantalla completa. Hacé clic derecho en el botón de aplicaciones para mover el dock a otro borde o para que se esconda hasta que el puntero llegue a ese borde. La posición también está en _Acciones > Apariencia > Dock > Posición del dock_, y `omarchy dock position left` y `omarchy dock autohide on` configuran las dos cosas desde una terminal. Las apps que dejás fijas en el dock se ven atenuadas mientras no están abiertas.
+Un espacio de trabajo flotante también muestra un dock, con tus apps fijadas, todo lo que está abierto y, detrás del botón de aplicaciones, una grilla con todas las apps, que también abren `Super + Alt + Space` y _Aplicaciones_ en el menú de Omarchy. Hacé clic derecho en una app de la grilla, o apretá `Delete`, para desinstalarla. Hacé clic en una app para abrirla, o para traer su ventana al frente; hacé clic otra vez para ir pasando por sus ventanas. El clic del medio abre una ventana nueva. Arrastrá un ícono por el dock para moverlo; si arrastrás una app abierta entre las demás, queda ahí. Hacé clic derecho para dejar una app fija en el dock, sacarla o cerrarla. El dock se corre cuando hay una ventana en pantalla completa. Hacé clic derecho en el botón de aplicaciones para mover el dock a otro borde o para que se esconda hasta que el puntero llegue a ese borde. La posición también está en _Apariencia > Dock > Posición del dock_, y `omarchy dock position left` y `omarchy dock autohide on` configuran las dos cosas desde una terminal. Las apps que dejás fijas en el dock se ven atenuadas mientras no están abiertas.
 
-Los espacios de trabajo nuevos, y cualquiera al que no le hayas dado una distribución propia con `Super + L`, usan la distribución predeterminada. Si cambiás la predeterminada, todos los espacios de trabajo sin ventanas pasan a ella, mientras que los que tienen ventanas conservan la que tienen. Una ventana minimizada en el dock sigue contando como ventana del espacio de trabajo de donde salió. Elegila en _Acciones > Apariencia > Distribución_: Mosaico, Desplazamiento o Flotante. `omarchy-hyprland-workspace-layout-default scrolling` la configura desde una terminal.
+Los espacios de trabajo nuevos, y cualquiera al que no le hayas dado una distribución propia con `Super + L`, usan la distribución predeterminada. Si cambiás la predeterminada, todos los espacios de trabajo sin ventanas pasan a ella, mientras que los que tienen ventanas conservan la que tienen. Una ventana minimizada en el dock sigue contando como ventana del espacio de trabajo de donde salió. Elegila en _Apariencia > Distribución_: Mosaico, Desplazamiento o Flotante. `omarchy-hyprland-workspace-layout-default scrolling` la configura desde una terminal.
 
 ### Agrupar ventanas
 
@@ -74,11 +74,17 @@ Podés despegar una ventana de su espacio de trabajo con `Super + O`. Eso la dej
 
 ### Espacio de trabajo scratchpad
 
-Por último, hay un espacio de trabajo especial, el scratchpad, que se despliega encima de cualquier espacio de trabajo donde estés, muy parecido a una consola de Quake. Lo mostrás y lo escondés con `Super + Grave` o `Super + S`, y mandás una ventana ahí con `Super + Shift + Grave` o `Super + Alt + S`.
+Hay un espacio de trabajo especial, el scratchpad, de tamaño completo, que se superpone a cualquier espacio de trabajo donde estés. Accedés a lo que tiene con `Super + S`, y mandás ventanas ahí con `Super + Alt + S`.
 
-Funciona especialmente bien para una terminal con un agente corriendo, o para controles que querés usar rápido sin salir del espacio de trabajo actual. Para sacar una ventana del scratchpad, mandala directo a otro espacio de trabajo con algo como `Super + Shift + 1`.
+Funciona bien para controles o una terminal que querés usar rápido sin salir del espacio de trabajo actual.
 
-Mientras el scratchpad tiene una sola ventana, se despliega como un panel centrado en vez de ocupar toda la pantalla. Poné una segunda app y vuelve a todo el ancho, así las dos tienen lugar para estar lado a lado.
+### Consola Quake
+
+Por último, hay una consola Quake de media altura que se despliega encima de cualquier espacio de trabajo donde estés. La mostrás y la escondés con `Super + Grave`, y mandás una ventana ahí con `Super + Shift + Grave`.
+
+Se abre con tu agente predeterminado listo para usar. Mientras la consola tiene una sola ventana, se despliega como un panel centrado en vez de ocupar toda la pantalla. Poné una segunda app y vuelve a todo el ancho, así las dos tienen lugar para estar lado a lado.
+
+Para sacar una ventana del scratchpad o de la consola, mandala directo a otro espacio de trabajo con algo como `Super + Shift + 1`.
 
 ### ¡Cuesta acostumbrarse!
 

@@ -27,8 +27,10 @@ Podés ver todos los atajos principales con `Super + K` (los de Tmux con `Super 
 | `Super + Ctrl + Tab` | Volver al último espacio de trabajo usado en el monitor con foco |
 | `Super + Shift + 1/2/3/4` | Mandar la ventana a un espacio de trabajo del monitor con foco |
 | `Super + Shift + Alt + 1/2/3/4` | Mandar la ventana a un espacio de trabajo del monitor con foco sin seguirla |
-| `Super + S` / `Super + Grave` | Mostrar/ocultar el scratchpad |
-| `Super + Alt + S` / `Super + Shift + Grave` | Mandar la ventana al scratchpad |
+| `Super + S` | Mostrar/ocultar el scratchpad completo |
+| `Super + Alt + S` | Mandar la ventana al scratchpad completo |
+| `Super + Grave` | Mostrar/ocultar la consola Quake |
+| `Super + Shift + Grave` | Mandar la ventana a la consola Quake |
 | `Super + Shift + Ctrl + Arrows` | Mandar la ventana al monitor en esa dirección |
 | `Super + Shift + Alt + Arrows` | Mandar el espacio de trabajo al monitor en esa dirección |
 | `Super + Arrow`  | Pasar el foco a la ventana en la dirección de la flecha, cruzando al monitor de ese lado en el borde de la pantalla |
@@ -67,18 +69,16 @@ Podés ver todos los atajos principales con `Super + K` (los de Tmux con `Super 
 | ----------------------- | --------------------- |
 | `Super + Ctrl + A`           | Panel de audio    |
 | `Super + Ctrl + B`           | Panel de Bluetooth    |
-| `Super + Ctrl + W`           | Panel de Wi-Fi/red    |
+| `Super + Ctrl + N`           | Panel de Wi-Fi/red    |
 | `Super + Ctrl + D`           | Panel de pantalla    |
 | `Super + Ctrl + P`           | Panel de energía    |
 | `Super + Ctrl + Alt + D`           | Panel de calendario    |
 | `Super + Ctrl + Alt + E`           | Panel de reloj mundial    |
 | `Super + Ctrl + 1-9`           | Abrir/cerrar un panel de la barra según su posición    |
 | `Super + Ctrl + S` | Menú para compartir (con LocalSend) |
-| `Super + Ctrl + T`           | Actividad (btop)    |
 | `Super + Ctrl + C` | Controles de captura (captura de pantalla/grabación/selector) |
 | `Super + Ctrl + O` | Menú de alternar |
 | `Super + Ctrl + H` | Menú de hardware |
-| `Super + Ctrl + Q` | Calculadora |
 | `Super + Ctrl + E` | Selector de emojis |
 | `Super + Ctrl + .` | Convertir archivos multimedia |
 | `Super + Shift + Ctrl + A` | Elegir un agente de IA |
@@ -110,6 +110,8 @@ Podés ver todos los atajos principales con `Super + K` (los de Tmux con `Super 
 | `Super + Shift + M`           | Música (Spotify)    |
 | `Super + Shift + Alt + M`           | Música (cliamp)    |
 | `Super + Shift + /`           | Administrador de contraseñas (1password)    |
+| `Super + Shift + Q`           | Calculadora (Omacalc)    |
+| `Super + Shift + T`           | Actividad (btop)    |
 | `Super + Shift + N`           | Editor (Neovim)  |
 | `Super + Shift + C`           | Calendario ([HEY](https://hey.com/))  |
 | `Super + Shift + E`           | Correo ([HEY](https://hey.com/))  |
@@ -118,7 +120,7 @@ Podés ver todos los atajos principales con `Super + K` (los de Tmux con `Super 
 | `Super + Shift + Alt + A`           | IA (Grok)  |
 | `Super + Shift + G`           | Mensajería (Signal)  |
 | `Super + Shift + P`           | Google Fotos  |
-| `Super + Shift + Alt + S`           | Google Maps  |
+| `Super + Shift + S`           | Google Maps  |
 | `Super + Shift + Alt + G`           | Mensajería (WhatsApp)  |
 | `Super + Shift + Ctrl + G`           | Mensajería (Google)  |
 | `Super + Shift + O`           | Obsidian  |
@@ -145,7 +147,7 @@ En Linux, normalmente necesitás `Ctrl + Shift + C/V` para copiar y pegar en la 
 | Atajo              | Función                       |
 | ------------------- | ------------------------------ |
 | `Print Screen`            | Captura de pantalla                      |
-| `Super + Shift + S`            | Captura de pantalla (la misma, para teclados sin tecla Print Screen) |
+| `Super + Ctrl + Alt + C`            | Captura de pantalla (la misma, para teclados sin tecla Print Screen) |
 | `Super + Ctrl + C` | Menú de captura |
 | `Alt + Print Screen`            | Grabación de pantalla                     |
 | `Super + Print Screen` | Selector de color |
@@ -167,16 +169,17 @@ Todas las opciones de captura también están en _Acciones > Capturar_ en el men
 | ----------------------- | --------------------- |
 | `Super + ,` | Descartar la última notificación  |
 | `Super + Shift + ,` | Descartar todas las notificaciones |
-| `Super + Ctrl + ,` | Silenciar/reactivar las notificaciones  |
+| `Super + Ctrl + ,` | Controlar las notificaciones con el teclado  |
 | `Super + Alt + ,` | Abrir la notificación más reciente  |
 | `Super + Shift + Alt + ,` | Abrir el historial de notificaciones  |
+| `Super + Ctrl + Alt + ,` | Silenciar/reactivar las notificaciones  |
 
 ## Estilo
 
 | Atajo                  | Función              |
 | ----------------------- | --------------------- |
-| `Super + Ctrl + Shift + Space` | Elegir otro tema  |
-| `Super + Ctrl + Space` | Elegir el fondo del tema |
+| `Super + Ctrl + T` | Elegir otro tema (también `Super + Ctrl + Shift + Space`) |
+| `Super + Ctrl + W` | Elegir el fondo del tema (también `Super + Ctrl + Space`) |
 | `Super + Backspace` | Activar/desactivar la transparencia de una ventana |
 | `Super + Ctrl + Backspace` | Activar/desactivar el formato cuadrado con una sola ventana |
 
@@ -189,7 +192,6 @@ Todas las opciones de estilo también están en _Estilo_ en el menú de Omarchy 
 | Atajo                  | Función              |
 | ----------------------- | --------------------- |
 | `Super + Ctrl + I` | Activar/desactivar el bloqueo por inactividad |
-| `Super + Ctrl + N` | Activar/desactivar la luz nocturna |
 | `Super + Ctrl + Delete` | Prender/apagar la pantalla de la notebook |
 | `Super + Ctrl + Alt + Delete` | Activar/desactivar el espejo de la pantalla de la notebook |
 | `Super + Shift + Space` | Mostrar/ocultar la barra superior  |

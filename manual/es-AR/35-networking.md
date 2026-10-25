@@ -1,6 +1,6 @@
 # Redes
 
-En Omarchy, la red la maneja NetworkManager, y la controlás desde el ícono de red de la [barra superior](05-the-top-bar.md) o con `Super + Ctrl + W`.
+En Omarchy, la red la maneja NetworkManager, y la controlás desde el ícono de red de la [barra superior](05-the-top-bar.md) o con `Super + Ctrl + N`.
 
 Ese panel busca redes Wi-Fi, muestra la intensidad de la señal y se conecta. Ethernet no necesita absolutamente nada: enchufás el cable y anda. Si preferís quedarte en la terminal, `nmtui` te da los mismos controles, y también hay un grupo de comandos `omarchy network`.
 

@@ -40,7 +40,7 @@ Al hacer clic en un ícono de la barra se abre un panel, que es una ventanita en
 | Atajo | Panel |
 | --- | --- |
 | `Super + Ctrl + A` | Audio |
-| `Super + Ctrl + W` | Red |
+| `Super + Ctrl + N` | Red |
 | `Super + Ctrl + B` | Bluetooth |
 | `Super + Ctrl + D` | Pantalla |
 | `Super + Ctrl + P` | Energía |
@@ -56,6 +56,7 @@ Los paneles no son solo para mirar. Ahí es donde hacés las cosas de verdad:
 - **Energía** muestra estadísticas de la batería, cambia de perfil de energía (recuerda una elección distinta para batería y para enchufado) y muestra algo de información del sistema.
 - **Pantalla** trae un deslizador de brillo, tamaño de texto, escalas predefinidas para el monitor y — cuando tenés más de una pantalla — controles por monitor. Mirá [monitores](33-monitors.md) para la historia completa.
 - **Reloj** abre una grilla del mes con números de semana ISO y botones para cambiar de mes.
+- **Reloj mundial** tiene una fila por ciudad, con su clima y cómo le va yendo el día. La búsqueda encuentra pueblos y ciudades además de zonas horarias, así que Fort Lauderdale es Fort Lauderdale y no Nueva York. Si la línea de arriba nombra la ciudad equivocada, hacé clic y decí dónde estás; si elegís un lugar con otra zona horaria, el reloj del sistema también se mueve ahí, algo práctico cuando viajás. Pasá el mouse por una ciudad y hacé clic en el botón de persona para decir quién vive ahí: nombres comunes, o usuarios de GitHub con `@` para que aparezcan sus caras.
 
 Todos los paneles se manejan tanto con el teclado como con el mouse: las flechas mueven, Return activa, Tab pasa al panel de al lado y Escape cierra.
 
@@ -87,7 +88,7 @@ El medio de la barra es una caja: lo que esté adentro queda centrado como un so
 
 Un widget que querés tener a mano pero no siempre a la vista puede ir en el cajón de la bandeja: arrastralo sobre la bandeja y el cajón se abre para recibirlo. Queda ahí, después de los íconos de las aplicaciones, aparece cada vez que se abre el cajón y lo mantiene abierto mientras su panel esté abierto. Arrastralo de vuelta a la barra para devolverlo a su lugar.
 
-Si preferís elegir desde un menú, **Acciones → Apariencia → Barra de menú** tiene la posición, y **Fondo de barra** elige cómo se dibuja la barra: **Barra opaca**, **Barra cristalina** (translúcida, con lo de atrás desenfocado) o **Barra transparente**.
+Si preferís elegir desde un menú, **Apariencia → Barra de menú** tiene la posición, y **Fondo de barra** elige cómo se dibuja la barra: **Barra opaca**, **Barra cristalina** (translúcida, con lo de atrás desenfocado) o **Barra transparente**.
 
 Todo esto también tiene comandos, que es lo que te conviene para una configuración con [dotfiles](31-dotfiles.md):
 
@@ -109,7 +110,7 @@ omarchy plugin disable omarchy.weather
 
 ## Ocultar la barra
 
-`Super + Shift + Space` oculta la barra y la vuelve a mostrar sin cerrar la shell — los paneles y los atajos siguen andando, solo recuperás esos píxeles. También está en el menú, en **Acciones → Apariencia → Barra de menú → Ocultar barra**.
+`Super + Shift + Space` oculta la barra y la vuelve a mostrar sin cerrar la shell — los paneles y los atajos siguen andando, solo recuperás esos píxeles. También está en el menú, en **Apariencia → Barra de menú → Ocultar barra**.
 
 ## El archivo de configuración
 

@@ -12,13 +12,13 @@ Los archivos son exactamente los que escribe el propio asistente del instalador,
 |------|----------|---------|
 | `user_configuration.json` | Sí | Disco, nombre del equipo, zona horaria, teclado |
 | `user_credentials.json` | Sí | Nombre de usuario y hash de la contraseña |
-| `user_full_name.txt` | No | Nombre completo para Git |
-| `user_email_address.txt` | No | Mail para Git |
 | `user_encrypt_installation.txt` | No | `true` cuando la configuración tiene un bloque `disk_encryption` |
 | `authorized_keys` | No | Claves públicas SSH, una por línea |
 | `tailscale_authkey` | No | Clave de autenticación de Tailscale para sumarse a tu tailnet en el primer arranque |
 
 Generá el hash de la contraseña para `user_credentials.json` con `openssl passwd -6 "yourpassword"`.
+
+El nombre y el mail de los commits de git no forman parte de la instalación. Configuralos cuando la máquina ya esté andando, por ejemplo por SSH, con `omarchy setup git --name "Jane Doe" --email jane@example.com`.
 
 También podés dejar un archivo vacío llamado `defer-provisioning` en lugar de `user_credentials.json`. Eso hace la misma [instalación para otro dueño](02-getting-started.md) que podés activar de forma interactiva: la máquina se instala sin datos personales, y quien la arranque primero elige su teclado y crea su usuario. Ese es el modo para los equipos que generan imágenes, donde la unidad no debería tener las credenciales de nadie.
 

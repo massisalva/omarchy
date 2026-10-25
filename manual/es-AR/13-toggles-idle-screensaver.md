@@ -4,14 +4,14 @@ Mucho de lo que cambiás día a día no es realmente un ajuste. Es un modo que p
 
 ### El menú Alternar
 
-`Super + Ctrl + O` abre directamente _Acciones > Alternar_, o podés llegar ahí desde el menú de Omarchy (`Super + Space`). Todo lo de esa lista es un interruptor que podés prender o apagar sin pensar dónde se guarda el estado. Al lado, en _Acciones > Apariencia_, están los interruptores de cómo se ve el escritorio.
+`Super + Ctrl + O` abre directamente _Acciones > Alternar_, o podés llegar ahí desde el menú de Omarchy (`Super + Space`). Todo lo de esa lista es un interruptor que podés prender o apagar sin pensar dónde se guarda el estado. Al lado, en _Apariencia_, están los interruptores de cómo se ve el escritorio.
 
 Desde la terminal, los mismos interruptores son `omarchy toggle <thing>`. Ejecutá `omarchy toggle` solo para ver todo el grupo.
 
 | Interruptor | Atajo | Comando |
 | ------ | ------ | ------- |
-| Luz nocturna | `Super + Ctrl + N` | `omarchy toggle nightlight` |
-| Silenciar notificaciones | `Super + Ctrl + ,` | `omarchy toggle notification silencing` |
+| Luz nocturna | — | `omarchy toggle nightlight` |
+| Silenciar notificaciones | `Super + Ctrl + Alt + ,` | `omarchy toggle notification silencing` |
 | Mantener activo (sin bloqueo por inactividad) | `Super + Ctrl + I` | `omarchy toggle idle` |
 | Captura de fallos | — | `omarchy toggle crash-capture` |
 | Salvapantallas | — | `omarchy toggle screensaver` |
@@ -24,7 +24,7 @@ Desde la terminal, los mismos interruptores son `omarchy toggle <thing>`. Ejecut
 
 Los interruptores de touchpad, pantalla táctil y GPU híbrida están en _Acciones > Hardware_ (`Super + Ctrl + H`) y no en Alternar, porque aparecen solo cuando de verdad tenés ese hardware. Los de touchpad y pantalla táctil sobreviven a una recarga de Hyprland — el nombre del dispositivo desactivado se guarda en un pequeño archivo de estado que Hyprland lee al arrancar para volver a desactivarlo.
 
-_Acciones > Apariencia_ tiene la barra de menú y las animaciones, más algunas cosas que no son comandos `omarchy toggle` pero se comportan igual: el porcentaje de batería en la barra, la distribución predeterminada de los espacios de trabajo, los espacios entre ventanas (`Super + Shift + Backspace`) y el formato cuadrado con una sola ventana (`Super + Ctrl + Backspace`).
+_Apariencia_ tiene la barra de menú y las animaciones, más algunas cosas que no son comandos `omarchy toggle` pero se comportan igual: el porcentaje de batería en la barra, la distribución predeterminada de los espacios de trabajo y, en _Ventanas_, los espacios entre ventanas (`Super + Shift + Backspace`) y el formato cuadrado con una sola ventana (`Super + Ctrl + Backspace`).
 
 La mayoría son simplemente un archivo marcador en `~/.local/state/omarchy/toggles/`. Si querés hacer algo distinto según uno de ellos en un script, `omarchy-toggle-enabled` te da un código de salida en vez de obligarte a ir a buscarlo:
 
@@ -42,7 +42,7 @@ Los indicadores apagados están ocultos. Pasá el cursor por cualquier parte de 
 
 ### Luz nocturna
 
-`Super + Ctrl + N` vuelve más cálida la pantalla, a 4000K, y si lo apretás otra vez vuelve a 6500K. Lo maneja hyprsunset, que el interruptor arranca por vos si todavía no está corriendo.
+La luz nocturna vuelve más cálida la pantalla, a 4000K, y si la alternás otra vez vuelve a 6500K. Prendela o apagala desde el menú de interruptores (`Super + Ctrl + O`) o con `omarchy toggle nightlight`. La maneja hyprsunset, que el interruptor arranca por vos si todavía no está corriendo.
 
 Por defecto, hyprsunset no le hace absolutamente nada a la pantalla. `~/.config/hypr/hyprsunset.conf` viene con un perfil neutro justamente para que la pantalla quede intacta hasta que pidas calidez. Si preferís que cambie según la hora, reemplazalo por un perfil horario:
 
@@ -57,9 +57,9 @@ Después hacé que hyprsunset arranque al iniciar sesión agregando `o.launch_on
 
 ### No molestar
 
-`Super + Ctrl + ,` silencia las notificaciones. Mientras está prendido no aparece ningún aviso, y el indicador de la campana tachada queda en la barra para recordarte por qué el escritorio está tan callado.
+`Super + Ctrl + Alt + ,` silencia las notificaciones. Mientras está prendido no aparece ningún aviso, y el indicador de la campana tachada queda en la barra para recordarte por qué el escritorio está tan callado.
 
-Igual no se pierde nada. Una notificación silenciada se guarda directamente en tu historial de notificaciones, que es justo el registro que querés cuando volvés y te preguntás qué te perdiste. Abrilo con `Super + Shift + Alt + ,`. Mirá [avisos](10-notices.md) para el resto de la historia de las notificaciones.
+Igual no se pierde nada. Las notificaciones silenciadas quedan retenidas: volvé a mostrar las últimas con `Super + Shift + Alt + ,`. Mirá [avisos](10-notices.md) para el resto.
 
 Hay dos tipos de mensaje que pasan igual: los avisos de confirmación de Omarchy por algo que acabás de hacer ("Theme changed", "Screenshot saved") y las alertas críticas enviadas desde la línea de comandos. Las apps de chat que marcan todo como crítico para meterse delante tuyo no cuentan.
 
@@ -93,7 +93,7 @@ Podés arrancarlo cuando quieras desde _Sistema > Salvapantallas_ (`Super + Esc`
 
 `omarchy toggle screensaver` es lo que apaga el de inactividad, si preferís pasar directo de trabajar a bloqueado. Necesita una terminal que sepa configurar — Alacritty, Foot, Ghostty o Kitty — y te avisa si tu terminal predeterminada es otra.
 
-El logo que dibuja lo podés cambiar en _Estilo > Salvapantallas_. Subí un png o un svg y Omarchy lo convierte a ASCII. Mirá [branding](41-branding.md).
+El logo que dibuja lo podés cambiar en _Apariencia > Marca > Salvapantallas_. Subí un png o un svg y Omarchy lo convierte a ASCII. Mirá [branding](41-branding.md).
 
 ### La pantalla de bloqueo
 
