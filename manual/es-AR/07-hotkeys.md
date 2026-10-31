@@ -63,6 +63,8 @@ Podés ver todos los atajos principales con `Super + K` (los de Tmux con `Super 
 | `Ctrl + Alt + Tab`| Pasar el foco al siguiente monitor |
 | `Ctrl + Alt + Shift + Tab`| Pasar el foco al monitor anterior |
 
+Los atajos para cambiar el tamaño usan las teclas físicas `code:20` y `code:21` (XKB `<AE11>` y `<AE12>`), sin importar qué caracteres tengan impresos. En los teclados de EE. UU. esas teclas son `-` y `=`; en los japoneses (JIS), `-` y `^`; en los españoles, `'` y `¡`. En JIS, `Super + ^` es `Super + Equal`, mientras que `Super + Shift + -` (que escribe `=`) es `Super + Shift + Minus`.
+
 ## Controles del sistema
 
 | Atajo                  | Función              |
@@ -135,6 +137,7 @@ Cambiá o agregá atajos en `~/.config/hypr/bindings.lua`.
 
 | Atajo                  | Función              |
 | ----------------------- | --------------------- |
+| `Super + A`           | Seleccionar todo en las apps que aceptan `Ctrl + A`    |
 | `Super + C`           | Copiar    |
 | `Super + X`           | Cortar (no en la terminal)    |
 | `Super + V`           | Pegar    |
@@ -167,10 +170,10 @@ Todas las opciones de captura también están en _Acciones > Capturar_ en el men
 
 | Atajo                  | Función              |
 | ----------------------- | --------------------- |
-| `Super + ,` | Descartar la última notificación  |
+| `Super + ,` | Actuar sobre la última notificación: abrirla o apretar su único botón, elegir entre sus opciones, o descartarla si no tiene ninguna  |
 | `Super + Shift + ,` | Descartar todas las notificaciones |
 | `Super + Ctrl + ,` | Controlar las notificaciones con el teclado  |
-| `Super + Alt + ,` | Abrir la notificación más reciente  |
+| `Super + Alt + ,` | Descartar la última notificación  |
 | `Super + Shift + Alt + ,` | Abrir el historial de notificaciones  |
 | `Super + Ctrl + Alt + ,` | Silenciar/reactivar las notificaciones  |
 
@@ -307,7 +310,7 @@ La terminal Ghostty se instala desde _Instalar > Terminal_ en el menú de Omarch
 | ------------------- | ------------------------------ |
 | `Ctrl + L`            | Ir a una ruta                     |
 | `Space`               | Vista previa del archivo (las flechas navegan) |
-| `Backspace`      | Volver una carpeta atrás             |
+| `Alt + Up`       | Subir a la carpeta de arriba        |
 
 ## Neovim (con lazyvim)
 

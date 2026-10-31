@@ -49,11 +49,24 @@ hl.config({
 
 ### Gestos del touchpad
 
-También podés activar [gestos del touchpad](https://wiki.hypr.land/Configuring/Advanced-and-Cool/Gestures/), como deslizar con tres dedos para cambiar de espacio de trabajo:
+Deslizá los dedos en el touchpad para moverte por el escritorio:
+
+| Gesto | Acción |
+| --- | --- |
+| Tres dedos a la izquierda / derecha | Espacio de trabajo anterior / siguiente, incluidos los vacíos |
+| Tres dedos hacia arriba | Mostrar/ocultar la consola Quake |
+| Tres dedos hacia abajo | Abrir el menú de Omarchy |
+| Cuatro dedos a la izquierda / derecha | Mover la ventana activa al espacio de trabajo anterior / siguiente |
+| Cuatro dedos hacia abajo | Activar/desactivar la pantalla completa |
+
+Para cambiar uno, anulalo en `~/.config/hypr/input.lua` antes de agregar tu propio [gesto del touchpad](https://wiki.hypr.land/Configuring/Advanced-and-Cool/Gestures/), porque Hyprland no acepta dos gestos con los mismos dedos y la misma dirección:
 
 ```lua
-hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
+hl.gesture({ fingers = 3, direction = "up", action = "unset" })
+hl.gesture({ fingers = 3, direction = "up", action = "fullscreen" })
 ```
+
+Para apagar todos los gestos de Omarchy, poné `omarchy_default_gestures = false` cerca del principio de `~/.config/hypr/hyprland.lua`, antes de que se carguen los valores predeterminados de Omarchy.
 
 En las notebooks Dell XPS con touchpad háptico, también podés poner la fuerza del clic en baja, media o alta en _Acciones > Hardware > Respuesta háptica_.
 

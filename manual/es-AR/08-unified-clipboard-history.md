@@ -6,12 +6,15 @@ Omarchy resuelve los dos problemas con atajos de portapapeles unificados que fun
 
 | Atajo | Comando |
 | ------- | ----------- |
+| Super + A | Seleccionar todo |
 | Super + C | Copiar |
 | Super + X | Cortar |
 | Super + V | Pegar |
 | Super + Ctrl + V | Historial del portapapeles |
 
 _Tené en cuenta que la mayoría de los entornos de agentes usan `Ctrl + V` para pegar imágenes, pero `Super + V` para pegar texto._
+
+Usá `Super + A` y después `Super + C` para copiar todo lo que haya en un campo de texto o en otra app que acepte `Ctrl + A`. En una terminal, `Ctrl + A` te lleva al principio de la línea de comandos en vez de seleccionar el texto.
 
 ### Historial del portapapeles
 

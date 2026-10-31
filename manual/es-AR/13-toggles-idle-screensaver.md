@@ -91,7 +91,7 @@ El salvapantallas de Omarchy es arte ASCII pasando por efectos de texto aleatori
 
 Podés arrancarlo cuando quieras desde _Sistema > Salvapantallas_ (`Super + Esc`), que lo muestra aunque hayas apagado el salvapantallas por inactividad. Por defecto no tiene atajo.
 
-`omarchy toggle screensaver` es lo que apaga el de inactividad, si preferís pasar directo de trabajar a bloqueado. Necesita una terminal que sepa configurar — Alacritty, Foot, Ghostty o Kitty — y te avisa si tu terminal predeterminada es otra.
+`omarchy toggle screensaver` es lo que apaga el de inactividad, si preferís pasar directo de trabajar a bloqueado. Cualquier tecla, clic, scroll o movimiento del mouse lo cierra.
 
 El logo que dibuja lo podés cambiar en _Apariencia > Marca > Salvapantallas_. Subí un png o un svg y Omarchy lo convierte a ASCII. Mirá [branding](41-branding.md).
 

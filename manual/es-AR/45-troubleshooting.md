@@ -10,6 +10,12 @@ Omarchy da por sentado que tenés una pantalla de alta resolución 2x, lo que re
 
 En Spotify, podés usar `Ctrl + Minus` para achicar la interfaz (y `Ctrl + Plus` para agrandarla).
 
+### ¿Por qué dejaron de andar todos mis atajos con Super?
+
+En algunas notebooks ASUS ROG y TUF, `Fn + Super` es una combinación fácil de apretar sin darte cuenta que activa un bloqueo de la tecla Windows en el firmware (pensado para juegos, así no salís de uno sin querer). Nada en la pantalla te avisa que pasó. Mientras el bloqueo está activado, Super no manda nada, así que todos los atajos de Omarchy que usan Super dejan de andar y parece que se rompió Hyprland.
+
+Apretá `Fn + Super` una vez antes de ponerte a revisar `~/.config/hypr/`, y si con eso Super no vuelve, apretalo de nuevo para no dejar el bloqueo activado. Esto no es el bloqueo de Fn, que solo cambia lo que hace la fila de teclas F.
+
 ### Mi Wi-Fi, Bluetooth, audio o touchpad dejó de andar de la nada
 
 Antes de reiniciar todo, probá reiniciar solo la parte que está fallando. _Actualizar > Hardware_ en el menú de Omarchy tiene Wi-Fi, Bluetooth, Audio y Touchpad, y recargar uno de esos resuelve la mayoría de los casos de «hace cinco minutos andaba»: unos auriculares Bluetooth que no se vuelven a conectar, un touchpad que dejó de responder después de suspender, un sonido que desapareció cuando desenchufaste un monitor.

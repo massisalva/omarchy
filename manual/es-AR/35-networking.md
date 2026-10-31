@@ -24,7 +24,7 @@ Esto fija la banda, no un punto de acceso en particular, así que te seguís mov
 
 ## ¿Qué tan rápida es?
 
-_Acciones > Medir velocidad > Velocidad de red_ mide tu velocidad real de subida y de bajada con un par de indicadores. Desde la terminal es `omarchy network speedtest down` o `up`. (En ese mismo menú, al lado, hay una prueba de velocidad de disco, por si estás midiendo el otro cuello de botella.)
+_Acciones > Medir velocidad > Velocidad de red_ mide tu velocidad real de subida y de bajada con un par de indicadores. Desde la terminal es `omarchy network speedtest down` o `up`. Mide contra el servicio propio de Omarchy y cuenta solo sus transferencias de prueba. Otras descargas pueden competir por el ancho de banda, pero no se suman al resultado. (En ese mismo menú, al lado, hay una prueba de velocidad de disco, por si estás midiendo el otro cuello de botella.)
 
 ## El firewall
 

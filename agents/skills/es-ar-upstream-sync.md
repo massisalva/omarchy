@@ -134,6 +134,7 @@ python3 scripts/i18n-sync.py pending | jq '.jobs["es-AR"]'   # tiene que dar nul
 ```bash
 I18N_STRUCTURAL=1 bash test/shell.d/i18n-test.sh
 bash test/shell.d/locale-sudoers-test.sh
+bash test/shell.d/sudoers-test.sh
 # Etiquetas del menú que no entran (las 15 que ya se pasaban antes no cuentan; fijate que no haya nuevas):
 jq -r 'to_entries[] | select(.value.label) | .key as $k
   | (if ($k|test("^(trigger\\.capture\\.screenrecord|appearance\\.font|update\\.kernel)\\.[^.]+$")) then 40 else 17 end) as $max
