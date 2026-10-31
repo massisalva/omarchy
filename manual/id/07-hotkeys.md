@@ -1,23 +1,23 @@
 # Tombol Pintas
 
-Anda dapat melihat semua ikatan keyboard utama dengan `Super + K` (ikatan Tmux dengan `Super + Alt + K` dan ikatan Herdr dengan `Super + Ctrl + K`).
+Anda dapat melihat semua tombol pintas keyboard utama dengan `Super + K` (tombol pintas Tmux dengan `Super + Alt + K` dan tombol pintas Herdr dengan `Super + Ctrl + K`).
 
 ## Navigasi
 
 | Hotkey                  | Function              |
 | ----------------------- | --------------------- |
-| `Super + Space`           | Menu Omarchy (aplikasi dan segala hal lainnya)    |
-| `Super + Alt + Space` | Kisi aplikasi |
-| `Super + Escape` | Menu sistem (tangguhkan, mulai ulang, dll)  |
+| `Super + Space`           | Menu Omarchy (aplikasi dan semua hal lainnya)    |
+| `Super + Alt + Space` | Grid aplikasi |
+| `Super + Escape` | Menu sistem (suspend, restart, dll)  |
 | `Super + Ctrl + L` | Kunci komputer |
-| `Super + W` or `Super + Q` | Tutup jendela             |
+| `Super + W` atau `Super + Q` | Tutup jendela             |
 | `Ctrl + Alt + Del` | Tutup semua jendela |
 | `Super + T`               | Alihkan jendela antara tiling/floating             |
 | `Super + J` | Alihkan posisi jendela (horizontal/vertikal) |
-| `Super + O`               | Alihkan jendela melayang menjadi sticky'n'floating |
-| `Super + L`               | Beralih bergilir melalui tata letak dwindle, scrolling, dan floating |
-| `Super + Alt + L`         | Beralih bergilir melalui tata letak dalam arah sebaliknya |
-| `Super + P`               | Alihkan gaya jendela pseudo (natural v stretch) |
+| `Super + O`               | Alihkan jendela yang melenting menjadi sticky'n'floating |
+| `Super + L`               | Berpindah melalui layout dwindle, scrolling, dan floating |
+| `Super + Alt + L`         | Berpindah melalui layout secara terbalik |
+| `Super + P`               | Alihkan gaya jendela pseudo (alami vs stretch) |
 | `Super + F`                 | Masuk layar penuh              |
 | `Super + Alt + F`                 | Masuk lebar penuh              |
 | `Super + Ctrl + F`                 | Masuk layar penuh di dalam jendela              |
@@ -33,8 +33,8 @@ Anda dapat melihat semua ikatan keyboard utama dengan `Super + K` (ikatan Tmux d
 | `Super + Shift + Grave` | Pindahkan jendela ke konsol Quake |
 | `Super + Shift + Ctrl + Arrows` | Pindahkan jendela ke monitor ke arah tersebut |
 | `Super + Shift + Alt + Arrows` | Pindahkan workspace ke monitor ke arah tersebut |
-| `Super + Arrow`  | Pindahkan fokus ke jendela searah panah, menyeberang ke monitor di sisi tersebut pada tepi layar |
-| `Super + Shift + Arrow`  | Tukar jendela dengan jendela lain searah panah, termasuk jendela pada monitor di sisi tersebut |
+| `Super + Arrow`  | Pindahkan fokus ke jendela ke arah panah, melintasi ke monitor di sisi tersebut di tepi layar |
+| `Super + Shift + Arrow`  | Tukar jendela dengan jendela lain ke arah panah, termasuk jendela pada monitor di sisi tersebut |
 | `Super + Minus` | Perluas jendela ke kiri |
 | `Super + Equal` | Susutkan jendela ke kiri |
 | `Super + Shift + Minus` | Susutkan jendela ke atas |
@@ -42,26 +42,28 @@ Anda dapat melihat semua ikatan keyboard utama dengan `Super + K` (ikatan Tmux d
 | `Super + Alt + Minus/Equal` | Pengubahan ukuran yang sama dalam langkah yang lebih kecil |
 | `Super + Ctrl + Minus/Equal` | Pengubahan ukuran yang sama dalam langkah yang lebih besar |
 | `Super + Alt + Home` | Simpan lebar jendela |
-| `Super + Home` | Pulihkan lebar jendela yang tersimpan |
-| `Super + Left Mouse` | Seret jendela ke mana-mana |
+| `Super + Home` | Pulihkan lebar jendela yang disimpan |
+| `Super + Left Mouse` | Seret jendela berkeliling |
 | `Super + Right Mouse` | Ubah ukuran jendela |
 | `Super + Scroll Wheel` | Gulir melalui workspace pada monitor yang terfokus |
 | `Super + G`               | Alihkan pengelompokan jendela      |
 | `Super + Alt + G`               | Keluarkan jendela dari pengelompokan      |
-| `Super + Alt + Tab`               | Beralih bergilir antarjendela dalam pengelompokan      |
-| `Super + Alt + Shift + Tab`               | Beralih bergilir mundur antarjendela dalam pengelompokan      |
-| `Super + Alt + Scroll Wheel` | Beralih bergilir antarjendela dalam pengelompokan |
+| `Super + Alt + Tab`               | Berpindah di antara jendela dalam pengelompokan      |
+| `Super + Alt + Shift + Tab`               | Berpindah mundur di antara jendela dalam pengelompokan      |
+| `Super + Alt + Scroll Wheel` | Berpindah di antara jendela dalam pengelompokan |
 | `Super + Alt + 1/2/3/4/5`               | Lompat ke jendela tertentu dalam pengelompokan      |
-| `Super + Alt + Arrow`  | Pindahkan jendela ke dalam pengelompokan searah panah, termasuk jendela pada monitor di sisi tersebut |
-| `Super + Ctrl + Left/Right`  | Berpindah antarjendela di dalam grup tiling |
-| `Super + Ctrl + Z` | Perbesar tampilan layar (ulangi untuk memperbesar lagi) |
+| `Super + Alt + Arrow`  | Pindahkan jendela ke dalam pengelompokan ke arah panah, termasuk jendela pada monitor di sisi tersebut |
+| `Super + Ctrl + Left/Right`  | Berpindah di antara jendela di dalam grup tiling |
+| `Super + Ctrl + Z` | Perbesar tampilan layar (ulangi untuk pembesaran lebih lanjut) |
 | `Super + Ctrl + Alt + Z` | Perkecil tampilan layar sepenuhnya |
-| `Super + /` | Maju selangkah melalui opsi penskalaan monitor |
-| `Super + Alt + /` | Mundur selangkah melalui opsi penskalaan monitor |
-| `Alt + Tab` | Beralih bergilir maju melalui jendela pada workspace aktif |
-| `Alt + Shift + Tab` | Beralih bergilir mundur melalui jendela pada workspace aktif |
-| `Ctrl + Alt + Tab`| Beralih fokus bergilir maju melalui monitor |
-| `Ctrl + Alt + Shift + Tab`| Beralih fokus bergilir mundur melalui monitor |
+| `Super + /` | Melangkah maju melalui opsi penskalaan monitor |
+| `Super + Alt + /` | Melangkah mundur melalui opsi penskalaan monitor |
+| `Alt + Tab` | Berpindah maju melalui jendela pada workspace yang aktif |
+| `Alt + Shift + Tab` | Berpindah mundur melalui jendela pada workspace yang aktif |
+| `Ctrl + Alt + Tab`| Berpindah fokus maju melalui monitor |
+| `Ctrl + Alt + Shift + Tab`| Berpindah fokus mundur melalui monitor |
+
+Pintasan pengubahan ukuran menggunakan tombol fisik `code:20` dan `code:21` (XKB `<AE11>` dan `<AE12>`), terlepas dari karakter yang tercetak pada keyboard. Pada keyboard AS tombol-tombol ini adalah `-` dan `=`; pada keyboard Jepang (JIS) tombol-tombol ini adalah `-` dan `^`; pada keyboard Spanyol tombol-tombol ini adalah `'` dan `¡`. Pada JIS, `Super + ^` adalah `Super + Equal`, sedangkan `Super + Shift + -` (yang mengetik `=`) adalah `Super + Shift + Minus`.
 
 ## Kontrol sistem
 
@@ -74,9 +76,9 @@ Anda dapat melihat semua ikatan keyboard utama dengan `Super + K` (ikatan Tmux d
 | `Super + Ctrl + P`           | Panel daya    |
 | `Super + Ctrl + Alt + D`           | Panel kalender    |
 | `Super + Ctrl + Alt + E`           | Panel jam dunia    |
-| `Super + Ctrl + 1-9`           | Alihkan panel bilah berdasarkan posisi    |
+| `Super + Ctrl + 1-9`           | Alihkan panel bar berdasarkan posisi    |
 | `Super + Ctrl + S` | Menu berbagi (melalui LocalSend) |
-| `Super + Ctrl + C` | Kontrol tangkapan (screenshot/perekaman/pemilih) |
+| `Super + Ctrl + C` | Kontrol tangkapan (tangkapan layar/perekaman/pemilih) |
 | `Super + Ctrl + O` | Alihkan menu |
 | `Super + Ctrl + H` | Menu perangkat keras |
 | `Super + Ctrl + E` | Pemilih emoji |
@@ -91,25 +93,25 @@ Anda dapat melihat semua ikatan keyboard utama dengan `Super + K` (ikatan Tmux d
 | `Shift + Brightness Down` | Kecerahan layar minimum |
 | `Alt + Brightness Up/Down` | Perubahan kecerahan presisi 1% |
 | `Alt + Volume Up/Down` | Perubahan volume presisi 1% |
-| `Keyboard Brightness Up/Down` | Lampu latar keyboard lebih terang/lebih redup |
-| `Keyboard Backlight` | Beralih bergilir melalui tingkat lampu latar keyboard |
-| `Alt + Play` | Trek berikutnya |
-| `Alt + Shift + Play` | Trek sebelumnya |
+| `Keyboard Brightness Up/Down` | Lampu latar keyboard lebih terang/redup |
+| `Keyboard Backlight` | Berpindah melalui tingkat lampu latar keyboard |
+| `Alt + Play` | Lagu berikutnya |
+| `Alt + Shift + Play` | Lagu sebelumnya |
 
-## Meluncurkan aplikasi
+## Membuka aplikasi
 
 | Hotkey                  | Function              |
 | ----------------------- | --------------------- |
 | `Super + Return`           | Terminal    |
 | `Super + Alt + Return` | Terminal Tmux |
-| `Super + Ctrl + Return` | Herdr (manajer agen) |
+| `Super + Ctrl + Return` | Herdr (pengelola agen) |
 | `Super + Shift + Return`           | Browser    |
-| `Super + Shift + Alt + B`           | Browser (privat/incognito)    |
-| `Super + Shift + F`           | Manajer file    |
-| `Super + Shift + Alt + F`           | Manajer file di cwd terminal    |
+| `Super + Shift + Alt + B`           | Browser (pribadi/incognito)    |
+| `Super + Shift + F`           | Pengelola file    |
+| `Super + Shift + Alt + F`           | Pengelola file di cwd terminal    |
 | `Super + Shift + M`           | Musik (Spotify)    |
 | `Super + Shift + Alt + M`           | Musik (cliamp)    |
-| `Super + Shift + /`           | Manajer kata sandi (1password)    |
+| `Super + Shift + /`           | Pengelola kata sandi (1password)    |
 | `Super + Shift + Q`           | Kalkulator (Omacalc)    |
 | `Super + Shift + T`           | Aktivitas (btop)    |
 | `Super + Shift + N`           | Editor (Neovim)  |
@@ -118,29 +120,30 @@ Anda dapat melihat semua ikatan keyboard utama dengan `Super + K` (ikatan Tmux d
 | `Super + Shift + Alt + E`           | Email baru ([HEY](https://hey.com/))  |
 | `Super + Shift + A`           | AI (ChatGPT)  |
 | `Super + Shift + Alt + A`           | AI (Grok)  |
-| `Super + Shift + G`           | Messenger (Signal)  |
+| `Super + Shift + G`           | Aplikasi pesan (Signal)  |
 | `Super + Shift + P`           | Google Photos  |
 | `Super + Shift + S`           | Google Maps  |
-| `Super + Shift + Alt + G`           | Messenger (WhatsApp)  |
-| `Super + Shift + Ctrl + G`           | Messenger (Google)  |
+| `Super + Shift + Alt + G`           | Aplikasi pesan (WhatsApp)  |
+| `Super + Shift + Ctrl + G`           | Aplikasi pesan (Google)  |
 | `Super + Shift + O`           | Obsidian  |
 | `Super + Shift + W`           | Menulis (Omawrite)  |
 | `Super + Shift + X`           | X |
 | `Super + Shift + Alt + X`           | X Compose |
 | `Super + Shift + Y`           | YouTube |
 
-Ubah/tambah ikatan di `~/.config/hypr/bindings.lua`.
+Ubah/tambah binding di `~/.config/hypr/bindings.lua`.
 
 ## Clipboard universal
 
 | Hotkey                  | Function              |
 | ----------------------- | --------------------- |
+| `Super + A`           | Pilih semua di aplikasi yang mendukung `Ctrl + A`    |
 | `Super + C`           | Salin    |
-| `Super + X`           | Potong (bukan di terminal)    |
+| `Super + X`           | Potong (tidak di terminal)    |
 | `Super + V`           | Tempel    |
-| `Super + Ctrl + V`           | Manajer clipboard    |
+| `Super + Ctrl + V`           | Pengelola clipboard    |
 
-Biasanya di Linux, Anda perlu `Ctrl + Shift + C/V` untuk copy'n'paste di terminal dan `Ctrl + C/V` untuk melakukannya di tempat lain. Tombol pintas clipboard terpadu Omarchy ini berfungsi di mana-mana.
+Biasanya di Linux, Anda perlu `Ctrl + Shift + C/V` untuk copy-paste di terminal dan `Ctrl + C/V` untuk melakukannya di semua tempat lain. Tombol pintas clipboard terpadu Omarchy ini bekerja di mana saja.
 
 ## Tangkapan
 
@@ -149,7 +152,7 @@ Biasanya di Linux, Anda perlu `Ctrl + Shift + C/V` untuk copy'n'paste di termina
 | `Print Screen`            | Tangkapan layar                      |
 | `Super + Ctrl + Alt + C`            | Tangkapan layar (tangkapan yang sama, untuk keyboard tanpa tombol Print Screen) |
 | `Super + Ctrl + C` | Menu tangkapan |
-| `Alt + Print Screen`            | Rekaman layar                     |
+| `Alt + Print Screen`            | Perekaman layar                     |
 | `Super + Print Screen` | Pemilih warna |
 | `Super + Ctrl + Print Screen` | Ekstraksi teks ke clipboard |
 | `Super + Alt + [` | Perkecil overlay webcam saat merekam |
@@ -159,18 +162,18 @@ Biasanya di Linux, Anda perlu `Ctrl + Shift + C/V` untuk copy'n'paste di termina
 | `Super + Ctrl + X` | Mulai/hentikan dikte (memerlukan _Setup > Defaults > Dictation_) |
 | `Right Alt` / `F9` | Dikte push-to-talk (memerlukan Voxtype atau Superwhisper) |
 
-Dengan perekaman layar, tombol pintas pertama-tama menanyakan audio mana yang Anda inginkan, lalu memulai perekaman. Tekan lagi untuk berhenti. Lihat [tangkapan layar dan perekaman](12-screenshots-recording.md) untuk detailnya.
+Dengan perekaman layar, tombol pintas pertama-tama menanyakan audio mana yang Anda inginkan, lalu mulai merekam. Tekan lagi untuk berhenti. Lihat [tangkapan layar dan perekaman](12-screenshots-recording.md) untuk detailnya.
 
-Semua opsi tangkapan juga dapat diakses di bawah _Trigger > Capture_ dalam menu Omarchy (`Super + Space`).
+Semua opsi tangkapan juga dapat diakses di bawah _Trigger > Capture_ di menu Omarchy (`Super + Space`).
 
 ## Notifikasi
 
 | Hotkey                  | Function              |
 | ----------------------- | --------------------- |
-| `Super + ,` | Singkirkan notifikasi terbaru  |
-| `Super + Shift + ,` | Singkirkan semua notifikasi |
+| `Super + ,` | Bertindak atas notifikasi terbaru: buka notifikasi itu atau tekan satu-satunya tombolnya, pilih dari pilihannya, atau abaikan ketika tidak ada pilihan  |
+| `Super + Shift + ,` | Abaikan semua notifikasi |
 | `Super + Ctrl + ,` | Kendalikan notifikasi dengan keyboard  |
-| `Super + Alt + ,` | Panggil notifikasi terbaru  |
+| `Super + Alt + ,` | Abaikan notifikasi terbaru  |
 | `Super + Shift + Alt + ,` | Buka riwayat notifikasi  |
 | `Super + Ctrl + Alt + ,` | Alihkan pembungkaman notifikasi  |
 
@@ -181,24 +184,24 @@ Semua opsi tangkapan juga dapat diakses di bawah _Trigger > Capture_ dalam menu 
 | `Super + Ctrl + T` | Pilih tema baru (juga `Super + Ctrl + Shift + Space`) |
 | `Super + Ctrl + W` | Pilih latar belakang tema (juga `Super + Ctrl + Space`) |
 | `Super + Backspace` | Alihkan transparansi pada jendela |
-| `Super + Ctrl + Backspace` | Alihkan aspek persegi jendela-tunggal |
+| `Super + Ctrl + Backspace` | Alihkan aspek persegi jendela tunggal |
 
-Gambar latar belakang tambahan tersimpan di `~/.config/omarchy/backgrounds/<theme name>`. Juga tersedia melalui _Install > Style > Background_ dalam menu Omarchy.
+Gambar latar belakang tambahan berada di `~/.config/omarchy/backgrounds/<theme name>`. Juga tersedia melalui _Install > Style > Background_ di menu Omarchy.
 
-Semua opsi gaya juga dapat diakses di bawah _Style_ dalam menu Omarchy (`Super + Space`).
+Semua opsi gaya juga dapat diakses di bawah _Style_ di menu Omarchy (`Super + Space`).
 
-## Pengalih
+## Pengalihan
 
 | Hotkey                  | Function              |
 | ----------------------- | --------------------- |
 | `Super + Ctrl + I` | Alihkan penguncian saat idle |
-| `Super + Ctrl + Delete` | Alihkan tampilan laptop hidup/mati |
-| `Super + Ctrl + Alt + Delete` | Alihkan pencerminan tampilan laptop |
-| `Super + Shift + Space` | Alihkan bilah atas  |
-| `Shift + Mute` | Beralih ke keluaran audio berikutnya |
+| `Super + Ctrl + Delete` | Alihkan layar laptop hidup/mati |
+| `Super + Ctrl + Alt + Delete` | Alihkan pencerminan layar laptop |
+| `Super + Shift + Space` | Alihkan bar atas  |
+| `Shift + Mute` | Beralih ke output audio berikutnya |
 | `Shift + Play` | Beralih ke sumber media berikutnya |
 | `Super + Shift + Backspace` | Alihkan celah jendela |
-| `Super + Ctrl + Alt + F` | Alihkan desktop layar penuh (bilah atas + celah jendela) |
+| `Super + Ctrl + Alt + F` | Alihkan desktop layar penuh (bar atas + celah jendela) |
 
 ## Pengingat
 
@@ -218,7 +221,7 @@ Semua opsi gaya juga dapat diakses di bawah _Style_ dalam menu Omarchy (`Super +
 
 ## Tmux
 
-Tombol prefix adalah `Ctrl + Space` (`Ctrl + B` juga berfungsi). Anda dapat mengubah ikatan ini di `~/.config/tmux/tmux.conf`.
+Tombol prefix adalah `Ctrl + Space` (`Ctrl + B` juga bekerja). Anda dapat mengubah binding ini di `~/.config/tmux/tmux.conf`.
 
 ### Panel
 
@@ -231,7 +234,7 @@ Tombol prefix adalah `Ctrl + Space` (`Ctrl + B` juga berfungsi). Anda dapat meng
 | `Alt + Enter` | Bagi panel di bawah (tanpa prefix) |
 | `Alt + Shift + Enter` | Bagi panel di samping (tanpa prefix) |
 | `Alt + Escape` | Matikan panel (tanpa prefix) |
-| `Ctrl + Alt + Arrows` | Berpindah antarpanel |
+| `Ctrl + Alt + Arrows` | Berpindah di antara panel |
 | `Ctrl + Alt + Shift + Arrows` | Ubah ukuran panel |
 
 ### Jendela
@@ -242,7 +245,7 @@ Tombol prefix adalah `Ctrl + Space` (`Ctrl + B` juga berfungsi). Anda dapat meng
 | `Prefix + k` | Matikan jendela |
 | `Prefix + r` | Ganti nama jendela |
 | `Alt + 1-9` | Pergi ke jendela tertentu |
-| `Alt + Arrow Left/Right` | Berpindah antarjendela |
+| `Alt + Arrow Left/Right` | Berpindah di antara jendela |
 | `Alt + Shift + Arrow Left/Right` | Pindahkan jendela ke kiri/kanan |
 
 ### Sesi
@@ -254,62 +257,62 @@ Tombol prefix adalah `Ctrl + Space` (`Ctrl + B` juga berfungsi). Anda dapat meng
 | `Prefix + R` | Ganti nama sesi |
 | `Prefix + N` | Sesi berikutnya |
 | `Prefix + P` | Sesi sebelumnya |
-| `Alt + Arrow Up/Down` | Berpindah antarsesi |
+| `Alt + Arrow Up/Down` | Berpindah di antara sesi |
 | `Prefix + s` | Daftar sesi |
-| `Prefix + d` | Lepaskan diri dari sesi |
+| `Prefix + d` | Lepaskan dari sesi |
 
 ### Mode salin (gaya vi)
 
 | Hotkey                  | Function              |
 | ----------------------- | --------------------- |
 | `Prefix + [` | Masuk mode salin |
-| `v` | Mulai pemilihan (dalam mode salin) |
-| `y` | Salin pilihan (dalam mode salin) |
+| `v` | Mulai pemilihan (di mode salin) |
+| `y` | Salin pilihan (di mode salin) |
 
 ### Umum
 
 | Hotkey                  | Function              |
 | ----------------------- | --------------------- |
 | `Prefix + q` | Muat ulang konfigurasi |
-| `Prefix + ?` | Tampilkan ikatan tombol Tmux |
+| `Prefix + ?` | Tampilkan tombol pintas Tmux |
 | `Prefix + :` | Prompt perintah |
 
-### Fungsi tata letak Tmux
+### Fungsi layout Tmux
 
 Fungsi-fungsi ini harus dijalankan di dalam sesi Tmux.
 
 | Command | Function |
 | ------- | -------- |
-| `tdl <ai> [<second_ai>]` | Buat tata letak dev dengan editor, AI, dan terminal |
-| `tdlm <ai> [<second_ai>]` | Buat tata letak dev per subdirektori |
-| `tsl <count> <command>` | Buat tata letak swarm multi-panel |
+| `tdl <ai> [<second_ai>]` | Buat layout dev dengan editor, AI, dan terminal |
+| `tdlm <ai> [<second_ai>]` | Buat layout dev per subdirektori |
+| `tsl <count> <command>` | Buat layout swarm multi-panel |
 
-## Terminal Ghostty
+## Ghostty Terminal
 
-Terminal Ghostty dipasang menggunakan _Install > Terminal_ melalui menu Omarchy.
+Terminal Ghostty diinstal menggunakan _Install > Terminal_ melalui menu Omarchy.
 
 | Hotkey                  | Function              |
 | ----------------------- | --------------------- |
-| `Ctrl + Shift + E` | Belahan baru di bawah |
-| `Ctrl + Shift + O` | Belahan baru di samping |
-| `Ctrl + Alt + Arrows` | Berpindah antarbelahan |
-| `Super + Ctrl + Shift + Arrows` | Ubah ukuran belahan sebanyak 10 baris |
-| `Super + Ctrl + Shift + Alt + Arrows` | Ubah ukuran belahan sebanyak 100 baris |
+| `Ctrl + Shift + E` | Pembagian baru di bawah |
+| `Ctrl + Shift + O` | Pembagian baru di samping |
+| `Ctrl + Alt + Arrows` | Berpindah di antara pembagian |
+| `Super + Ctrl + Shift + Arrows` | Ubah ukuran pembagian sebesar 10 baris |
+| `Super + Ctrl + Shift + Alt + Arrows` | Ubah ukuran pembagian sebesar 100 baris |
 | `Ctrl + Shift + T` | Tab baru  |
-| `Ctrl + Shift + Arrows` | Berpindah antartab |
+| `Ctrl + Shift + Arrows` | Berpindah di antara tab |
 | `Alt + Numbers` | Pergi ke tab tertentu |
 | `Shift + Pg Up/Down` | Gulir riwayat |
 | `Ctrl + Left mouse` | Buka tautan di browser |
 
-## Manajer File
+## Pengelola File
 
 | Hotkey              | Function                       |
 | ------------------- | ------------------------------ |
 | `Ctrl + L`            | Pergi ke path                     |
-| `Space`               | Pratinjau file (panah untuk bernavigasi) |
-| `Backspace`      | Kembali satu folder             |
+| `Space`               | Pratinjau file (panah menavigasi) |
+| `Alt + Up`       | Naik ke folder induk        |
 
-## Neovim (dengan lazyvim)
+## Neovim (w/ lazyvim)
 
 ### Navigasi
 
@@ -317,31 +320,31 @@ Terminal Ghostty dipasang menggunakan _Install > Terminal_ melalui menu Omarchy.
 | ------------------------ | ------------------------------- |
 | `Space`                    | Tampilkan opsi perintah            |
 | `Space Space`              | Buka file melalui pencarian fuzzy      |
-| `Space E`                  | Alihkan bilah sisi                  |
+| `Space E`                  | Alihkan sidebar                  |
 | `Space G G`                | Tampilkan kontrol git               |
-| `Space S G`                | Cari isi file             |
-| `Ctrl + W W`               | Lompat antara bilah sisi dan editor |
-| `Ctrl + Left/right arrow`  | Ubah ukuran bilah sisi          |
+| `Space S G`                | Cari konten file             |
+| `Ctrl + W W`               | Lompat di antara sidebar dan editor |
+| `Ctrl + Left/right arrow`  | Ubah ukuran sidebar          |
 | `Shift + H`                      | Pergi ke tab file kiri             |
 | `Shift + L`                      | Pergi ke tab file kanan            |
 | `Space B D`                | Tutup tab file                  |
 
-### Saat berada di bilah sisi
+### Saat berada di sidebar
 
 | Hotkey                   | Function                        |
 | ------------------------ | ------------------------------- |
 | `A`                        | Tambah file baru di direktori induk      |
 | `Shift + A`                | Tambah subdirektori baru di direktori induk    |
-| `D`                        | Hapus file/dir yang disorot     |
-| `M`                        | Pindahkan file/dir yang disorot       |
-| `R`                        | Ganti nama file/dir yang disorot     |
+| `D`                        | Hapus file/direktori yang disorot     |
+| `M`                        | Pindahkan file/direktori yang disorot       |
+| `R`                        | Ganti nama file/direktori yang disorot     |
 | `?`                        | Tampilkan bantuan untuk semua perintah      |
 
 [Lihat semua tombol pintas Neovim yang dikonfigurasi oleh LazyVim](https://www.lazyvim.org/keymaps).
 
 ## Emoji Cepat
 
-Anda dapat menggunakan `Super + Ctrl + E` untuk menampilkan pemilih emoji lengkap yang akan menaruh pilihan pada clipboard atau Anda dapat menggunakan opsi akses cepat ini.
+Anda dapat menggunakan `Super + Ctrl + E` untuk menampilkan pemilih emoji lengkap yang akan menempatkan pilihan pada clipboard atau Anda dapat menggunakan opsi akses cepat ini.
 
 | Hotkey       | EM | Clue       |
 | ------------ | -- | ---------- |
@@ -357,7 +360,7 @@ Anda dapat menggunakan `Super + Ctrl + E` untuk menampilkan pemilih emoji lengka
 | `Shift + CapsLock M R` | 🤘 | rock       |
 | `Shift + CapsLock M K` | 😘 | cium       |
 | `Shift + CapsLock M E` | 🙄 | memutar mata    |
-| `Shift + CapsLock M I` | 😉 | mengedip       |
+| `Shift + CapsLock M I` | 😉 | kedip       |
 | `Shift + CapsLock M P` | 🙏 | berdoa |
 | `Shift + CapsLock M D` | 🤤 | ngiler      |
 | `Shift + CapsLock M M` | 💰 | uang      |
@@ -365,11 +368,11 @@ Anda dapat menggunakan `Super + Ctrl + E` untuk menampilkan pemilih emoji lengka
 | `Shift + CapsLock M 1` | 💯 | 100%       |
 | `Shift + CapsLock M T` | 🥂 | bersulang      |
 | `Shift + CapsLock M O` |👌 | ok |
-| `Shift + CapsLock M G` |👋 | sapaan |
+| `Shift + CapsLock M G` |👋 | salam |
 | `Shift + CapsLock M A` |💪 | lengan |
 | `Shift + CapsLock M B` |🤯 | meledak |
 
-## Pelengkapan Cepat
+## Penyelesaian Cepat
 
 | Hotkey       | Completion       |
 | ------------ |  ---------- |

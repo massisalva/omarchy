@@ -18,7 +18,7 @@ local omarchy_monitor_scale = 1
 
 Los cambios en `GDK_SCALE` se aplican a las aplicaciones que abras después del cambio (y GTK solo acepta números enteros, así que dejalo en el entero más cercano a la escala de tu monitor). Así que asegurate de cerrar las ventanas que hayan quedado gigantes después del cambio (¡o cerrá todas las ventanas con `Ctrl + Alt + Del`!).
 
-También podés recorrer rápido las escalas de monitor principales (1x, 1.25x, 1.6x, 2x, 3x, 4x) con `Super + /` para subir y `Super + Alt + /` para bajar. Si tenés la configuración predeterminada, estos cambios se mantienen después de reiniciar.
+También podés recorrer rápido las escalas de monitor principales (1x, 1.25x, 1.6x, 2x, 3x, 4x) con `Super + /` para subir y `Super + Alt + /` para bajar, o elegir una desde el panel del monitor en la barra de arriba. Estos atajos cambian solo el monitor que tiene el foco, así que la pantalla de la notebook y un monitor externo pueden tener cada uno su escala. La elección se guarda en `~/.config/hypr/monitors.lua` como una regla `hl.monitor` para ese monitor, así que se mantiene después de reiniciar y tiene prioridad sobre `omarchy_monitor_scale`, que sigue siendo la escala de todos los monitores que no tengan una regla propia. Como `GDK_SCALE` es un solo valor para todas las pantallas, estos cambios lo toman del monitor con la escala más baja: las apps de X11 se ven un poco chicas en la pantalla más densa, en vez de enormes en la otra.
 
 ### Agrandar o achicar el texto
 

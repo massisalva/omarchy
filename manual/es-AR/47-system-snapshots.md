@@ -16,6 +16,8 @@ Esto restaura tu sistema de archivos raíz, pero no tu `/home`. Así que sirve p
 
 Eso también significa que tu carpeta `~/.config` queda tal cual. Así que si volvés a una versión anterior de una biblioteca o aplicación que guarda la configuración en un formato nuevo, lo vas a tener que resolver a mano.
 
+Lo mismo pasa con el registro que lleva Omarchy de las migraciones que ya corrieron: vive en tu carpeta personal, así que sobrevive a la restauración. Las migraciones que corrieron después de sacar la instantánea siguen marcadas como hechas, aunque los cambios que hicieron en el sistema de archivos raíz se hayan deshecho, y el próximo `omarchy update` no las vuelve a correr. Así que si actualizás de nuevo después de restaurar y sigue faltando algo que había configurado una actualización anterior, lo más probable es que sea por eso.
+
 _Nota: Esta función solo está disponible en instalaciones que usan el gestor de arranque Limine, que es el predeterminado desde Omarchy 2.0. No está disponible si usás GRUB o systemd-boot._
 
 ### Saltear el menú de arranque
