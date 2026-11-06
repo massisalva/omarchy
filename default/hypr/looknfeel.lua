@@ -118,7 +118,9 @@ hl.config({
     -- died, so omarchy-restart-shell can recover the LOCK failsafe.
     allow_session_lock_restore = true,
     -- Don't chime on every terminal BEL (tab-completion misses, TUI alerts).
-    bell_sound = "none",
+    -- Comentado: la opción existe recién desde Hyprland 0.57 y el repo stable
+    -- trae la 0.56.2, que da error. Reactivar cuando llegue la 0.57.
+    -- bell_sound = "none",
   },
 
   cursor = {
