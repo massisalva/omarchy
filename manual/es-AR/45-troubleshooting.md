@@ -6,7 +6,7 @@ Primero probá [restaurar tu sistema](47-system-snapshots.md) a como estaba ante
 
 ### ¿Por qué algunas apps se ven tan grandes en mi pantalla?
 
-Omarchy da por sentado que tenés una pantalla de alta resolución 2x, lo que requiere poner `GDK_SCALE` en 2 en `~/.config/hypr/monitors.lua`. Pero si tu pantalla es 1x, podés cambiar `local omarchy_gdk_scale = 2` a 1 (y después reiniciar cualquier app que se vea gigante). Mirá [el capítulo sobre monitores](33-monitors.md).
+Omarchy da por sentado que tenés una pantalla de alta resolución 2x, así que pone `GDK_SCALE` en 2 hasta que elijas una escala en el panel de monitores. Si tu pantalla es 1x y las apps GTK o X11 se ven gigantes, elegí 1x para esa pantalla en el panel de monitores, o agregá `hl.env("GDK_SCALE", "1")` a `~/.config/hypr/monitors.lua` (y después reiniciá cualquier app que se vea gigante). Mirá [el capítulo sobre monitores](33-monitors.md).
 
 En Spotify, podés usar `Ctrl + Minus` para achicar la interfaz (y `Ctrl + Plus` para agrandarla).
 
@@ -31,6 +31,27 @@ En algunas notebooks, Omarchy aplica solo un ajuste que corrige la respuesta en 
 ### ¿Por qué no puedo iniciar sesión ni usar sudo con mi contraseña?
 
 Seguramente la escribiste mal demasiadas veces y te bloquearon. Si te pasa en la pantalla de bloqueo, podés apretar `CTRL + ALT + F2` para abrir otra TTY, iniciar sesión como root y ejecutar `faillock --reset --user [your-username]`. Eso saca el bloqueo y listo.
+
+### Acepta mi contraseña, pero vuelvo a la pantalla de inicio de sesión
+
+Un archivo de entorno de la sesión roto puede impedir que arranque el escritorio aunque la contraseña sea correcta. Conviene revisarlo sobre todo después de editar `~/.config/uwsm/env.d/`.
+
+Apretá `Ctrl + Alt + F2`, iniciá sesión con tu usuario y contraseña de siempre, y mirá el registro de usuario del arranque actual:
+
+```bash
+journalctl --user -b -t uwsm_env-preloader --no-pager
+```
+
+Buscá un error que nombre uno de tus archivos de entorno, como `bad substitution`, justo antes de un mensaje que dice que no se encontró la marca de salida del entorno. Sacá ese archivo de `env.d` antes de volver a intentar iniciar sesión. Por ejemplo, si el error nombra `99-custom`:
+
+```bash
+mkdir -p ~/.config/uwsm/disabled
+mv -i ~/.config/uwsm/env.d/99-custom ~/.config/uwsm/disabled/
+```
+
+UWSM se saltea un archivo con un error de sintaxis, pero un error fatal que solo aparece mientras el archivo se ejecuta, como `bad substitution`, igual puede impedir que arranque el escritorio. Volver a un snapshot del sistema no arregla estos archivos, porque `/home` no vuelve atrás.
+
+Cuando puedas entrar, corregí la copia guardada antes de volver a moverla a su lugar. `sh -n` detecta errores de sintaxis sin ejecutar el archivo, pero no puede detectar todos los errores que aparecen al cargarlo. Mantené una terminal que funcione abierta mientras probás los cambios.
 
 ### ¿Por qué no aparecen los pedidos de autorización de 1Password para el agente SSH o la CLI de 1Password?
 

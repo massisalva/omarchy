@@ -117,11 +117,19 @@ hl.config({
     -- Let a fresh shell re-acquire the session lock after the lock client
     -- died, so omarchy-restart-shell can recover the LOCK failsafe.
     allow_session_lock_restore = true,
+    -- Don't chime on every terminal BEL (tab-completion misses, TUI alerts).
+    bell_sound = "none",
   },
 
   cursor = {
     hide_on_key_press = true,
     warp_on_change_workspace = 1,
+  },
+
+  render = {
+    -- Keep HDR displays in SDR when a window goes fullscreen. Auto-switching
+    -- left SDR content looking washed out on the Pro Display XDR.
+    cm_auto_hdr = 0,
   },
 
   binds = {

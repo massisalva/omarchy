@@ -2,7 +2,7 @@
 
 Omarchy se configura sobre todo con los llamados dotfiles que viven en `~/.config`. Esos son tus archivos, para tus cambios. Los archivos que viven en `/usr/share/omarchy` son de Omarchy, y no deberías andar metiéndoles mano. Si necesitás cambiar algo de `/usr/share/omarchy`, lo que conviene es pisar ese valor desde `~/.config`.
 
-Las configuraciones clave se pueden editar directamente desde el menú de Omarchy (`Super + Space`), como _Configurar > Monitores_, _Configurar > Atajos de teclado_, _Configurar > Entrada_ y _Configurar > Configuración > [archivo]_. Si lo hacés así, cualquier proceso que tenga que reiniciarse después de editar la configuración se reinicia solo cuando salís del editor (Neovim por defecto — ¡`:wq`, acordate! —, pero lo podés cambiar en _Configurar > Predeterminados > Editor_).
+Las configuraciones clave se pueden editar directamente desde el menú de Omarchy (`Super + Space`), como _Configurar > Teclado > Atajos de teclado_, _Configurar > Entrada_ y _Configurar > Configuración > [archivo]_. Si lo hacés así, cualquier proceso que tenga que reiniciarse después de editar la configuración se reinicia solo cuando salís del editor (Neovim por defecto — ¡`:wq`, acordate! —, pero lo podés cambiar en _Configurar > Predeterminados > Editor_).
 
 Esta es una lista de los archivos clave de `~/.config` y de lo que controla cada uno:
 
@@ -10,7 +10,7 @@ Esta es una lista de los archivos clave de `~/.config` y de lo que controla cada
 | ----------------------- | --------------------- |
 | `~/.config/hypr/hyprland.lua` | La configuración principal de Hyprland. Carga los valores predeterminados de Omarchy más tus archivos de ajustes de abajo. [Más información sobre la configuración de Hyprland](https://wiki.hypr.land/Configuring/).  |
 | `~/.config/hypr/bindings.lua` | Tus propios atajos de teclado y los cambios a los predeterminados. |
-| `~/.config/hypr/monitors.lua` | Tus monitores, su resolución y su posición. |
+| `~/.config/hypr/monitors.lua` | Los ajustes de monitor que no cubre el panel de monitores, como la rotación, modos extra o mantener un monitor apagado. |
 | `~/.config/hypr/input.lua` | Tu distribución de teclado y los ajustes del mouse y el touchpad. |
 | `~/.config/hypr/looknfeel.lua` | Los espacios, bordes, animaciones y el resto del aspecto. |
 | `~/.config/hypr/autostart.lua` | Los procesos extra que arrancan con la sesión. |
@@ -61,6 +61,10 @@ Si reusás un id que ya existe, pisás esa fila en vez de agregar una nueva. El 
 ### Agregar tus propios exports, funciones y alias de shell
 
 Omarchy trae un montón de alias cómodos y funciones útiles, pero es muy común querer sumar los tuyos. Los alias, funciones y exports van en `~/.bashrc`. Ese archivo no se pisa con las actualizaciones. Si querés cambiar algún valor predeterminado de Omarchy, también lo podés hacer ahí sin problema.
+
+### Definir variables de entorno para el escritorio
+
+Los exports de la sesión del escritorio van en `~/.config/uwsm/env.d/`. Esos archivos se ejecutan antes de que arranque tu escritorio, así que un error de shell te puede devolver a la pantalla de inicio de sesión. Mantené una terminal que funcione abierta mientras los editás. Para desactivar uno, sacalo de `env.d`. Mirá [cómo recuperar el inicio de sesión](45-troubleshooting.md#my-password-is-accepted-but-i-return-to-the-login-screen) si un cambio no te deja entrar.
 
 ### Cambiar archivos internos de Omarchy
 
