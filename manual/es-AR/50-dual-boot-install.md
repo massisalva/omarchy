@@ -35,7 +35,7 @@ Confirmá que todo esté bien y esperá a que termine la instalación como siemp
 
 Al terminar la instalación de Omarchy, vas a ver que ahora el gestor de arranque predeterminado es Limine. Así que también podés agregarle a Limine opciones para tus otras instalaciones, como Windows.
 
-Para eso, ejecutá `limine-scan` y seguí las instrucciones para agregar lo que quieras a la configuración de limine. Después, al arrancar, vas a ver tus opciones normales de Omarchy, más el Administrador de arranque de Windows y los demás.
+Para agregar otros sistemas operativos, ejecutá `limine-scan` y seguí las instrucciones para agregar las entradas que quieras a tu configuración de Limine. El menú de arranque queda oculto por defecto y arranca Omarchy después de un segundo. Para elegir Windows u otra entrada, apretá cualquier tecla apenas arranca Limine; cuando aparezca el menú, elegí una entrada con las flechas y apretá Enter. Si Omarchy arranca antes de que aprietes una tecla, reiniciá y probá de nuevo. Si activaste _Configurar > Arranque directo_, el firmware se saltea Limine por completo, así que elegí Limine desde el menú de arranque de tu BIOS o volvé a usar _Configurar > Arranque directo_ para sacar la entrada.
 
 ## Bitlocker
 

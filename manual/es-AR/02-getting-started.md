@@ -2,7 +2,7 @@
 
 Omarchy se instala con una ISO. Podés elegir entre una instalación de disco completo, que ocupa todo el disco, o una instalación en espacio libre, que pone Omarchy en el espacio sin asignar de un disco — así es como hacés arranque dual junto a Windows u otro sistema operativo (mirá [instalación con arranque dual](50-dual-boot-install.md) — tené en cuenta que primero vas a tener que desactivar BitLocker en Windows). En cualquier caso, la instalación usa cifrado completo por defecto, y la opción de disco completo borra el disco elegido, ¡así que asegurate de hacer una copia de seguridad antes de usar uno que ya tengas!
 
-Primero [descargá la ISO de Omarchy](https://omarchy.org/), pasala a un pendrive (usá [balenaEtcher](https://etcher.balena.io/) en Mac/Windows o [caligula](https://github.com/ifd3f/caligula) en Linux) y arrancá desde el pendrive.
+Primero [descargá la ISO de Omarchy](https://omarchy.org/), pasala a un pendrive (usá [Rufus](https://rufus.ie/) en Windows, [balenaEtcher](https://etcher.balena.io/) en Mac o [caligula](https://github.com/ifd3f/caligula) en Linux) y arrancá desde el pendrive.
 
 _Tenés que desactivar Secure Boot y/o TPM en el BIOS. Si no, no vas a poder instalar Omarchy. Son esquemas de seguridad de Microsoft pensados para Windows y para distribuciones de Linux afiliadas a Microsoft._
 

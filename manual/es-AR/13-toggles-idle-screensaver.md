@@ -26,6 +26,8 @@ Los interruptores de touchpad, pantalla táctil y GPU híbrida están en _Accion
 
 _Apariencia_ tiene la barra de menú y las animaciones, más algunas cosas que no son comandos `omarchy toggle` pero se comportan igual: el porcentaje de batería en la barra, la distribución predeterminada de los espacios de trabajo y, en _Ventanas_, los espacios entre ventanas (`Super + Shift + Backspace`) y el formato cuadrado con una sola ventana (`Super + Ctrl + Backspace`).
 
+Cuando Hyprland no tiene una GPU para dibujar y usa el procesador en su lugar (llvmpipe), como en las Mac cuya GPU todavía no tiene soporte, en la mayoría de las máquinas virtuales o cuando no carga un driver de video, Omarchy apaga las animaciones, el desenfoque y las sombras para esa sesión y te avisa una vez con una notificación. _Apariencia > Con animaciones_ los vuelve a prender, y Omarchy se acuerda de eso también para las próximas sesiones.
+
 La mayoría son simplemente un archivo marcador en `~/.local/state/omarchy/toggles/`. Si querés hacer algo distinto según uno de ellos en un script, `omarchy-toggle-enabled` te da un código de salida en vez de obligarte a ir a buscarlo:
 
 ```bash

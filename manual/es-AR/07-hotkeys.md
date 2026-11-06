@@ -2,6 +2,34 @@
 
 Podés ver todos los atajos principales con `Super + K` (los de Tmux con `Super + Alt + K` y los de Herdr con `Super + Ctrl + K`).
 
+## Cómo están organizados los atajos
+
+Cada atajo está en un plano, que lo definen sus modificadores, y cada plano tiene una sola función. Eso es lo que evita que los atajos se mezclen, y hace que casi siempre puedas adivinar dónde está cada cosa.
+
+| Plano | Qué hay ahí | Ejemplos |
+| --- | --- | --- |
+| `Super + tecla` | El sistema: ventanas, espacios de trabajo, distribuciones y los menús principales | `Super + Space` menú de Omarchy, `Super + W` cerrar ventana, `Super + F` pantalla completa |
+| `Super + Shift + tecla` | Apps | `Super + Shift + B` navegador, `Super + Shift + E` correo, `Super + Shift + N` editor |
+| `Super + Ctrl + tecla` | Paneles y menús del sistema | `Super + Ctrl + A` audio, `Super + Ctrl + N` red, `Super + Ctrl + C` menú de captura |
+| `Super + Ctrl + Alt + tecla` | Acciones rápidas y avisos | `Super + Ctrl + Alt + T` mostrar la hora, `Super + Ctrl + Alt + B` batería, `Super + Ctrl + Alt + C` captura de pantalla |
+
+Sumarle `Alt` a un atajo te da una variante de lo mismo, nunca algo que no tenga nada que ver:
+
+- `Super + Shift + B` abre el navegador; `Super + Shift + Alt + B` abre una ventana privada
+- `Super + Shift + E` abre el correo; `Super + Shift + Alt + E` arranca uno nuevo
+- `Super + F` pasa a pantalla completa; `Super + Alt + F` pasa a ancho completo
+- `Super + Ctrl + C` abre el menú de captura; `Super + Ctrl + Alt + C` se saltea el menú y saca una captura de pantalla
+
+Para agregar un atajo:
+
+1. Elegí el plano según lo que hace, y después elegí la tecla.
+2. No muevas un atajo que ya existe para hacer lugar. Buscá una tecla libre en el plano que corresponde.
+3. Usá `Alt` solo para una variante del atajo que no lo tiene.
+
+Algunos atajos rompen estas reglas porque son cómodos. `Shift` con una flecha o con `Tab` mueve o invierte en vez de abrir una app, y `Print`, las teclas multimedia, `Alt + Tab` y `Ctrl + Alt + Del` funcionan como en todos lados. Son excepciones, no ejemplos para copiar.
+
+Si alguno de los predeterminados no te sirve (por ejemplo, si querés `Super + Shift + S` para capturas como en Windows), cambialo en `~/.config/hypr/bindings.lua`.
+
 ## Navegación
 
 | Atajo                  | Función              |
@@ -159,8 +187,8 @@ En Linux, normalmente necesitás `Ctrl + Shift + C/V` para copiar y pegar en la 
 | `Super + Alt + ]` | Agrandar la webcam superpuesta mientras grabás |
 | `Alt + Shift + L` | Copiar la URL actual de una web app o de Chromium |
 | `Alt + Shift + D` | Descargar el video de la página actual a `~/Videos` |
-| `Super + Ctrl + X` | Empezar/terminar el dictado (requiere _Configurar > Predeterminados > Dictado_) |
-| `Right Alt` / `F9` | Dictado mientras mantenés apretado (requiere Voxtype o Superwhisper) |
+| `Alt + Space` | Empezar/terminar el dictado (requiere _Configurar > Predeterminados > Dictado_) |
+| `Right Alt` | Mantener apretado para dictar (requiere _Configurar > Predeterminados > Dictado_) |
 
 Para las grabaciones de pantalla, el atajo primero te pregunta qué audio querés y después empieza a grabar. Apretalo otra vez para terminar. Mirá [capturas y grabación](12-screenshots-recording.md) para los detalles.
 
