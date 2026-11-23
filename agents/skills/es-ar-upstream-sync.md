@@ -1,21 +1,21 @@
 # Traer cambios de upstream y mantener es-AR al día
 
-Este fork agrega `es-AR` (español rioplatense con voseo) sobre `basecamp/omarchy`. Upstream no conoce es-AR, así que nada lo actualiza solo: hay que traer los cambios a mano y traducir lo que quede pendiente. Seguí estos pasos cada vez que quieras actualizar el fork.
+Este fork agrega `es-AR` (español rioplatense con voseo) sobre `omacom/omarchy`. Upstream no conoce es-AR, así que nada lo actualiza solo: hay que traer los cambios a mano y traducir lo que quede pendiente. Seguí estos pasos cada vez que quieras actualizar el fork.
 
 ## Cómo está armado
 
-- `origin` es el fork (`massisalva/omarchy`) y `upstream` es `basecamp/omarchy`. La rama principal es `quattro` en los dos.
-- La máquina corre en el canal `dev` desde el checkout `~/Work/omarchy` (`OMARCHY_PATH` en `/etc/omarchy.conf`). `omarchy update` hace `git pull --ff-only` desde **`origin/quattro`**, no desde upstream: lo nuevo de upstream solo llega después de esta rutina.
-- **Ese checkout es el escritorio en vivo.** Cambiar de rama, mergear o hacer pull ahí cambia los scripts, la shell y los menús en el momento, y sin correr las migraciones. Por eso todo este trabajo se hace en un worktree aparte (`~/Work/omarchy-sync`), y el checkout en vivo solo se actualiza con `omarchy update`, al final.
+- `origin` es el fork (`massisalva/omarchy`) y `upstream` es `omacom/omarchy`. La rama principal es `quattro` en los dos.
+- La máquina corre en el canal `dev` desde el checkout `~/Proyectos/omarchy` (`OMARCHY_PATH` en `/etc/omarchy.conf`). `omarchy update` hace `git pull --ff-only` desde **`origin/quattro`**, no desde upstream: lo nuevo de upstream solo llega después de esta rutina.
+- **Ese checkout es el escritorio en vivo.** Cambiar de rama, mergear o hacer pull ahí cambia los scripts, la shell y los menús en el momento, y sin correr las migraciones. Por eso todo este trabajo se hace en un worktree aparte (`~/Proyectos/omarchy-sync`), y el checkout en vivo solo se actualiza con `omarchy update`, al final.
 - El `quattro` del fork tiene commits propios (es-AR), así que traer upstream es un **merge**, nunca un fast-forward ni un rebase (el historial del fork ya está publicado).
 - El workflow "Sync translations" está desactivado en el fork a propósito: no tiene la clave de traducción y solo haría ruido. "Check translation structure" sigue activo y valida cada PR.
 
 ## 1. Ver qué trae upstream
 
-Desde `~/Work/omarchy`, sin cambiar de rama ni hacer pull (solo `fetch`, que no toca los archivos):
+Desde `~/Proyectos/omarchy`, sin cambiar de rama ni hacer pull (solo `fetch`, que no toca los archivos):
 
 ```bash
-cd ~/Work/omarchy
+cd ~/Proyectos/omarchy
 git fetch origin && git fetch upstream
 git log --oneline origin/quattro..upstream/quattro
 git merge-tree --write-tree --name-only origin/quattro upstream/quattro   # vista previa: lista los archivos en conflicto, sin tocar nada
@@ -26,12 +26,12 @@ git merge-tree --write-tree --name-only origin/quattro upstream/quattro   # vist
 ## 2. Mergear en un worktree
 
 ```bash
-git worktree add -b sync/upstream-$(date +%F) ~/Work/omarchy-sync origin/quattro
-cd ~/Work/omarchy-sync
+git worktree add -b sync/upstream-$(date +%F) ~/Proyectos/omarchy-sync origin/quattro
+cd ~/Proyectos/omarchy-sync
 git merge upstream/quattro
 ```
 
-Los pasos 3 a 8 se hacen dentro de `~/Work/omarchy-sync`.
+Los pasos 3 a 8 se hacen dentro de `~/Proyectos/omarchy-sync`.
 
 ## 3. Resolver conflictos
 
@@ -155,14 +155,14 @@ gh pr create --repo massisalva/omarchy --base quattro --title "Sync with upstrea
 Cuando pase "Check translation structure", mergeá el PR con merge commit (`gh pr merge --merge`) y borrá el worktree:
 
 ```bash
-cd ~/Work/omarchy
-git worktree remove ~/Work/omarchy-sync
+cd ~/Proyectos/omarchy
+git worktree remove ~/Proyectos/omarchy-sync
 git branch -d sync/upstream-$(date +%F)
 ```
 
 ## 9. Aplicar en el escritorio
 
-Corré `omarchy update` en una terminal (pide la contraseña). Trae `origin/quattro` al checkout en vivo, actualiza los paquetes y corre las migraciones nuevas. No hagas `git pull` a mano en `~/Work/omarchy`: dejaría el código nuevo sin sus migraciones.
+Corré `omarchy update` en una terminal (pide la contraseña). Trae `origin/quattro` al checkout en vivo, actualiza los paquetes y corre las migraciones nuevas. No hagas `git pull` a mano en `~/Proyectos/omarchy`: dejaría el código nuevo sin sus migraciones.
 
 Antes, conviene leer las migraciones que van a correr (`git diff --name-only --diff-filter=A HEAD origin/quattro -- migrations/`), sobre todo las que usan `sudo` o tocan `/boot`.
 
